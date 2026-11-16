@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC 6 Minute English: Is rejection good for us?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .vocab-highlight {
+            background-color: #fef08a;
+            border-bottom: 2px solid #eab308;
+            padding: 1px 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #854d0e;
+            transition: all 0.2s ease;
+        }
+        .vocab-highlight:hover, .vocab-highlight.active {
+            background-color: #fde047;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(234, 179, 8, 0.25);
+        }
+        .grammar-highlight {
+            border-bottom: 2px dashed #3b82f6;
+            cursor: pointer;
+            color: #1d4ed8;
+            font-weight: 500;
+        }
+        .grammar-highlight:hover {
+            background-color: #eff6ff;
+        }
+        /* 3D Flashcard Flip */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .pulse-ring {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        /* Mobile UX Utilities */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+
+    <!-- Top Header & Navigation (Clean Light Surface with #285d02 Brand Accents) -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+                <a href="../index.html" title="Quay lại Trang chủ"
+                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs sm:text-sm font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-slate-200 transition shrink-0">
+                    <i class="fa-solid fa-house text-xs sm:text-sm text-[#285d02]"></i>
+                    <span class="hidden sm:inline">Trang chủ</span>
+                </a>
+                <div class="flex gap-0.5 shrink-0">
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">C</span>
+                </div>
+                <div class="min-w-0">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#285d02]">6 Minute English</span>
+                        <span class="hidden xs:inline-block text-[10px] sm:text-xs bg-[#285d02]/10 text-[#285d02] font-semibold px-2 py-0.5 rounded-full">B1–B2</span>
+                    </div>
+                    <h1 class="text-sm sm:text-lg font-bold text-slate-900 leading-tight truncate">Is rejection good for us?</h1>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="https://www.youtube.com/watch?v=rCIs5x0SGTY" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-semibold px-3 sm:px-3.5 py-2 rounded-xl transition shadow-xs">
+                    <i class="fa-brands fa-youtube text-sm sm:text-base"></i>
+                    <span class="hidden sm:inline">Mở trên YouTube</span>
+                    <span class="sm:hidden">YouTube</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tab Navigation Bar -->
+        <div class="bg-slate-50/80 border-t border-slate-200/80 relative">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-1">
+                <button onclick="switchTab('transcript')" id="tab-transcript" class="tab-btn active snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold border-b-2 border-[#285d02] text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>1. Transcript & Từ vựng</span>
+                </button>
+                <button onclick="switchTab('speaking-structures')" id="tab-speaking-structures" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>2. Cấu trúc nói hay</span>
+                </button>
+                <button onclick="switchTab('grammar')" id="tab-grammar" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-spell-check"></i>
+                    <span>3. Cấu trúc ngữ pháp</span>
+                </button>
+                <button onclick="switchTab('shadowing')" id="tab-shadowing" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-headphones"></i>
+                    <span>4. Luyện Shadowing</span>
+                </button>
+                <button onclick="switchTab('speaking-practice')" id="tab-speaking-practice" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>5. Speaking Practice</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6">
+
+        <!-- Embedded YouTube Video Collapsible Bar -->
+        <div class="bg-white rounded-2xl shadow-xs border border-slate-200 mb-6 overflow-hidden">
+            <div class="px-5 py-3 bg-white border-b border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                    <span class="text-sm font-semibold text-slate-800">Trình phát Video/Audio bài học (YouTube)</span>
+                </div>
+                <button onclick="toggleVideo()" id="toggle-video-btn" class="text-xs font-semibold text-[#285d02] hover:bg-[#285d02]/15 flex items-center gap-1.5 bg-[#285d02]/10 px-3 py-1.5 rounded-lg transition">
+                    <i class="fa-solid fa-chevron-up" id="toggle-video-icon"></i>
+                    <span id="toggle-video-text">Thu gọn Video</span>
+                </button>
+            </div>
+            <div id="video-wrapper" class="p-5 bg-slate-50/70 flex flex-col lg:flex-row items-center gap-6">
+                <div class="w-full lg:w-7/12 aspect-video rounded-xl overflow-hidden shadow-md bg-black border border-slate-200">
+                    <iframe id="yt-player" class="w-full h-full" 
+                            src="https://www.youtube.com/embed/rCIs5x0SGTY?enablejsapi=1" 
+                            title="BBC 6 Minute English - Is rejection good for us?" 
+                            frameborder="0" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="w-full lg:w-5/12 space-y-3">
+                    <div class="inline-flex items-center gap-1.5 bg-[#285d02]/10 text-[#285d02] text-xs font-bold px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-lightbulb"></i> Hướng dẫn học hiệu quả
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Cách khai thác bài học này:</h3>
+                    <ul class="text-sm space-y-2.5 text-slate-600">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">1</span>
+                            <span>Nghe toàn bài trên YouTube và theo dõi Full Transcript bên dưới. Bấm vào các từ <span class="bg-amber-200/80 text-amber-950 px-1.5 py-0.5 rounded font-semibold text-xs">tô vàng</span> để mở Flashcard bên phải.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">2</span>
+                            <span>Chuyển qua tab <strong>Cấu trúc nói</strong> & <strong>Ngữ pháp</strong> để nắm các mẫu câu tự nhiên của người bản xứ.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">3</span>
+                            <span>Dùng tab <strong>Shadowing</strong> & <strong>Speaking Practice</strong> để luyện phát âm chuẩn và phản xạ giao tiếp.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="https://www.youtube.com/watch?v=rCIs5x0SGTY" target="_blank" class="text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-2 rounded-xl transition inline-flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[#285d02]"></i> Xem trực tiếp trên YouTube.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 1: TRANSCRIPT & INTERACTIVE FLASHCARD -->
+        <section id="section-transcript" class="tab-section">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Left Column: Transcript (7 cols) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                    <div class="p-4 sm:p-5 border-b border-slate-100 bg-white flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Full Transcript Bài Nghe</h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Nhấn vào từ vựng được highlight để xem Flashcard bên phải</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="toggleTranslation()" id="btn-toggle-trans" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-language text-[#285d02]"></i>
+                                <span>Hiện dịch tiếng Việt</span>
+                            </button>
+                            <button onclick="toggleMasterAudio()" id="btn-master-audio" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white transition flex items-center gap-1.5 shadow-2xs" title="Phát/Tạm dừng file MP3 gốc BBC">
+                                <i class="fa-solid fa-play" id="master-audio-icon"></i>
+                                <span id="master-audio-text">Nghe file gốc BBC</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Native BBC MP3 Audio Player Bar -->
+                    <div id="audio-dropzone" class="px-4 sm:px-5 py-3.5 bg-[#285d02]/5 border-b border-[#285d02]/15 flex flex-col gap-2.5 transition">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-[#285d02] flex items-center gap-1.5">
+                                    <i class="fa-solid fa-headphones-simple"></i> Audio gốc BBC 6 Minute English (MP3)
+                                </span>
+                                <span id="audio-status-badge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                                    Đang dùng âm thanh YouTube / Chưa nạp MP3
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <label for="local-mp3-input" class="cursor-pointer px-2.5 py-1 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white font-semibold transition flex items-center gap-1.5 shadow-2xs" title="Chọn file MP3 từ máy tính của bạn để phát trực tiếp">
+                                    <i class="fa-solid fa-file-audio"></i>
+                                    <span>Đính kèm file MP3 vừa tải</span>
+                                </label>
+                                <input type="file" id="local-mp3-input" accept="audio/*,.mp3" class="hidden" onchange="loadUserMp3File(this)">
+                                <button onclick="skipAudio(-5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Lùi 5 giây">-5s</button>
+                                <button onclick="skipAudio(5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Tới 5 giây">+5s</button>
+                                <select id="audio-playback-rate" onchange="changeAudioRate(this.value)" class="bg-white border border-slate-200 rounded-lg px-2 py-1 text-[11px] font-bold text-slate-700 focus:outline-none">
+                                    <option value="0.75">0.75x</option>
+                                    <option value="0.9">0.9x</option>
+                                    <option value="1" selected>1.0x</option>
+                                    <option value="1.15">1.15x</option>
+                                </select>
+                            </div>
+                        </div>
+                        <audio id="bbc-native-audio" controls preload="auto" class="w-full h-9 rounded-lg">
+                            <source src="261112_6_minute_english_learning_from_different_generations_download.mp3" type="audio/mpeg">
+                            <source src="261112_6_minute_english_learning_from_different_generations.mp3" type="audio/mpeg">
+                            <source src="https://ichef.bbci.co.uk/images/ic/raw/p0k078z5.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát file MP3.
+                        </audio>
+                        <p id="audio-helper-tip" class="text-[11px] text-slate-500 flex items-center justify-between gap-2">
+                            <span><i class="fa-solid fa-circle-info text-[#285d02] mr-1"></i> Mẹo: Nếu thanh MP3 hiện <strong>0:00 / 0:00</strong> (do giới hạn bảo mật khung Preview), hãy bấm nút xanh <strong>"Đính kèm file MP3 vừa tải"</strong> ở góc phải để nạp file MP3 của bạn vào và nghe mượt 100%!</span>
+                        </p>
+                    </div>
+
+                    <!-- Quiz Box Embedded in Transcript -->
+                    <div class="mx-4 sm:mx-5 mt-4 p-4 bg-slate-50 border border-slate-200/90 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]"><i class="fa-solid fa-circle-question mr-1"></i> Quiz trong bài</span>
+                            <span id="quiz-feedback" class="text-xs font-semibold"></span>
+                        </div>
+                        <p class="text-sm font-semibold text-slate-800 mb-3">What generation would someone born in 1982 be in?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkQuiz('a')" id="quiz-a" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">a) Generation X</button>
+                            <button onclick="checkQuiz('b')" id="quiz-b" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">b) Millennial</button>
+                            <button onclick="checkQuiz('c')" id="quiz-c" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">c) Gen Z</button>
+                        </div>
+                    </div>
+
+                    <!-- Dialogue Container (Natural page scroll on mobile, inner scroll on desktop) -->
+                    <div id="transcript-container" class="p-3.5 sm:p-6 space-y-3.5 sm:space-y-4 lg:max-h-[750px] lg:overflow-y-auto">
+                        <!-- Rendered dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Interactive Flashcard Panel (5 cols) -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="px-5 py-3.5 bg-white border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                                <span class="font-bold text-sm text-slate-900">Vocabulary Flashcard</span>
+                            </div>
+                            <span id="card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2.5 py-0.5 rounded-full font-bold">1 / 10</span>
+                        </div>
+
+                        <!-- Flashcard Body -->
+                        <div id="flashcard-display" class="p-5 sm:p-6">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+
+                        <!-- Card Navigation Footer -->
+                        <div class="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                            <button onclick="prevVocab()" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-arrow-left"></i> Từ trước
+                            </button>
+                            <button onclick="markLearned()" id="btn-mark-learned" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-regular fa-circle-check"></i> Đã thuộc từ này
+                            </button>
+                            <button onclick="nextVocab()" class="px-3.5 py-2 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                Từ tiếp <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Vocab Pills Selector -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-4">
+                        <div class="flex items-center justify-between mb-2.5">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Danh sách từ vựng trong bài</span>
+                            <span id="learned-progress" class="text-xs font-bold text-[#285d02]">Đã thuộc: 0/10</span>
+                        </div>
+                        <div id="vocab-pills" class="flex flex-wrap gap-1.5">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: SPEAKING STRUCTURES (CẤU TRÚC NÓI HAY) -->
+        <section id="section-speaking-structures" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Spoken English & Idioms</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Cấu trúc giao tiếp tự nhiên trong bài</h2>
+                    <p class="text-sm text-slate-600 mt-1">Những cụm từ và cách diễn đạt đắt giá giúp bạn nói tiếng Anh tự nhiên như người bản xứ (trích từ hội thoại của Phil, Georgie, Ian và Liz).</p>
+                </div>
+
+                <div id="speaking-structures-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: GRAMMAR STRUCTURES (CẤU TRÚC NGỮ PHÁP) -->
+        <section id="section-grammar" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Grammar in Context</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Điểm ngữ pháp trọng tâm từ Transcript</h2>
+                    <p class="text-sm text-slate-600 mt-1">Phân tích cách dùng thì, cấu trúc đảo ngữ đồng tình và mệnh đề quan hệ xuất hiện thực tế trong bài.</p>
+                </div>
+
+                <div id="grammar-list" class="space-y-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: SHADOWING PRACTICE -->
+        <section id="section-shadowing" class="tab-section hidden">
+            <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-white border-b border-slate-200">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Pronunciation & Intonation</span>
+                            <h2 class="text-2xl font-bold text-slate-900 mt-2">Luyện kỹ thuật Shadowing (Nhại giọng)</h2>
+                            <p class="text-sm text-slate-600 mt-1">Nghe câu mẫu chuẩn, chú ý các từ nhấn trọng âm (in đậm) và dấu ngắt nhịp (/), sau đó thu âm giọng của bạn để so sánh.</p>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
+                            <span class="text-xs font-medium text-slate-600">Tốc độ đọc mẫu:</span>
+                            <select id="shadowing-speed" class="bg-white text-slate-800 text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-300 focus:outline-none focus:border-[#285d02]">
+                                <option value="0.75">0.75x (Chậm - Dễ bắt nhịp)</option>
+                                <option value="0.95" selected>0.95x (Tự nhiên)</option>
+                                <option value="1.1">1.1x (Nhanh - Thử thách)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shadowing-list" class="p-6 divide-y divide-slate-200 space-y-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: SPEAKING PRACTICE (ROLEPLAY & Q&A) -->
+        <section id="section-speaking-practice" class="tab-section hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left: Speaking Prompts -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-fire text-[#285d02]"></i>
+                            <span>Chủ đề luyện nói (IELTS / Giao tiếp)</span>
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1 mb-4">Chọn một câu hỏi thảo luận lấy cảm hứng từ bài học để luyện trả lời.</p>
+                        <div id="speaking-prompts-list" class="space-y-2.5">
+                            <!-- Rendered via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Speaking Studio -->
+                <div class="lg:col-span-7 bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                    <div id="speaking-studio">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <p>Nội dung gốc: <strong>BBC Learning English - 6 Minute English</strong> (Is rejection good for us?).</p>
+            <p class="font-medium text-slate-700">Đây là thư viện học tập của Minh Fam.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto bg-slate-900 text-white text-xs font-medium px-4 py-3 rounded-xl shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-lime-400 shrink-0"></i>
+        <span id="toast-msg">Thông báo</span>
+    </div>
+
+    <!-- Mobile Bottom Sheet Flashcard Modal (Visible only on screens < 1024px when a word is tapped) -->
+    <div id="mobile-flashcard-drawer" class="fixed inset-0 z-50 hidden lg:hidden flex-col justify-end bg-slate-900/60 backdrop-blur-xs transition-opacity">
+        <div onclick="closeMobileFlashcard()" class="flex-1 w-full"></div>
+        <div class="bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 max-h-[85vh] flex flex-col overflow-hidden animate-[slideUp_0.25s_ease-out]">
+            <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                    <span class="font-bold text-sm text-slate-900">Flashcard Từ Vựng</span>
+                    <span id="mobile-card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2 py-0.5 rounded-full font-bold">1 / 10</span>
+                </div>
+                <button onclick="closeMobileFlashcard()" class="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="mobile-flashcard-body" class="p-5 overflow-y-auto space-y-4">
+                <!-- Populated dynamically when user taps a word on mobile -->
+            </div>
+            <div class="px-4 py-3 bg-slate-50 border-t border-slate-200 grid grid-cols-3 gap-2">
+                <button onclick="prevVocab()" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-arrow-left"></i> Trước
+                </button>
+                <button onclick="markLearned()" id="mobile-btn-mark-learned" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-circle-check"></i> Đã thuộc
+                </button>
+                <button onclick="nextVocab()" class="py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1">
+                    Tiếp <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // 1. VOCABULARY DATA (10 KEY ITEMS)
+        // ==========================================
+        const vocabData = [
+          {
+                    "id": "rejection",
+                    "word": "rejection",
+                    "ipa": "/rɪˈdʒekʃn/",
+                    "pos": "noun (U/C)",
+                    "meaningVi": "Sự từ chối, sự bác bỏ",
+                    "meaningEn": "Saying no to someone or refusing to accept their idea, offer, or suggestion.",
+                    "example": "Nobody likes rejection. But I think as you get older, you get used to it.",
+                    "exampleVi": "Không ai thích bị từ chối cả. Nhưng tôi nghĩ khi lớn lên, bạn sẽ quen dần với điều đó.",
+                    "speakingNote": "Trọng âm rơi vào âm tiết thứ 2 (-JEC-). Động từ tương ứng là 'reject' (/rɪˈdʒekt/). Collocations hay: 'face rejection' (đối mặt với sự từ chối), 'fear of rejection' (nỗi sợ bị từ chối)."
+          },
+          {
+                    "id": "get-used-to",
+                    "word": "get used to (something)",
+                    "ipa": "/ɡet ˈjuːst tuː/",
+                    "pos": "phrasal expression",
+                    "meaningVi": "Quen dần với điều gì đó",
+                    "meaningEn": "To become familiar with something or someone so that it no longer seems strange or difficult.",
+                    "example": "But I think as you get older, you get used to it.",
+                    "exampleVi": "Nhưng tôi nghĩ khi lớn tuổi hơn, bạn sẽ quen dần với điều đó.",
+                    "speakingNote": "Lưu ý cấu trúc: 'get used to + Noun / V-ing' (khác với 'used to + V' là thói quen trong quá khứ). Phát âm 'used to' nối liền thành /ˈjuːstə/ trong văn nói tự nhiên."
+          },
+          {
+                    "id": "have-a-go",
+                    "word": "have a go (at something)",
+                    "ipa": "/hæv ə ɡəʊ/",
+                    "pos": "idiom (informal, UK)",
+                    "meaningVi": "Thử làm điều gì đó",
+                    "meaningEn": "To try doing something, especially for the first time.",
+                    "example": "Hannah Gelbart, host of the BBC World Service podcast What in the World, had a go at the trend.",
+                    "exampleVi": "Hannah Gelbart, người dẫn podcast What in the World của BBC World Service, đã thử làm theo trào lưu này.",
+                    "speakingNote": "Cụm rất tự nhiên của tiếng Anh-Anh thay cho 'try'. Bạn có thể nói: 'Let me have a go!' (Để tôi thử xem!) hoặc 'have a go at speaking English every day'."
+          },
+          {
+                    "id": "face-my-fears",
+                    "word": "face your fears",
+                    "ipa": "/feɪs jɔː fɪəz/",
+                    "pos": "collocation",
+                    "meaningVi": "Đối mặt với nỗi sợ hãi của bản thân",
+                    "meaningEn": "To confront and deal with the things that scare you instead of avoiding them.",
+                    "example": "Coming somewhere else to try and face my fears... maybe do a bit of shopping.",
+                    "exampleVi": "Đến một nơi khác để thử đối mặt với nỗi sợ của mình... có lẽ đi mua sắm một chút.",
+                    "speakingNote": "Collocation cực kỳ đắt giá cho IELTS Speaking Part 2 & 3 khi nói về việc vượt qua thử thách, phát triển bản thân."
+          },
+          {
+                    "id": "spike",
+                    "word": "spike",
+                    "ipa": "/spaɪk/",
+                    "pos": "verb / noun",
+                    "meaningVi": "Tăng vọt đột ngột",
+                    "meaningEn": "To increase sharply and suddenly.",
+                    "example": "Walking up to the first person, I felt my adrenaline really, really spiking.",
+                    "exampleVi": "Khi bước tới chỗ người đầu tiên, tôi cảm thấy lượng adrenaline của mình tăng vọt lên.",
+                    "speakingNote": "Dùng rất hay khi mô tả cảm xúc ('my anxiety/adrenaline spiked') hoặc số liệu trong IELTS Writing Task 1 ('sales spiked in December')."
+          },
+          {
+                    "id": "socially-anxious",
+                    "word": "socially anxious",
+                    "ipa": "/ˈsəʊʃəli ˈæŋkʃəs/",
+                    "pos": "adjective phrase",
+                    "meaningVi": "Lo âu khi giao tiếp xã hội, ngại tiếp xúc với người lạ",
+                    "meaningEn": "Worried or nervous about speaking to other people, or being judged when around others.",
+                    "example": "I'm not a socially anxious person – I think I'm really confident.",
+                    "exampleVi": "Tôi không phải kiểu người hay lo âu khi giao tiếp – tôi nghĩ mình thực sự tự tin.",
+                    "speakingNote": "Chú ý phát âm 'anxious' (/ˈæŋkʃəs/). Danh từ tương ứng là 'social anxiety' (chứng lo âu xã hội)."
+          },
+          {
+                    "id": "come-easier",
+                    "word": "come easier",
+                    "ipa": "/kʌm ˈiːziə(r)/",
+                    "pos": "informal phrase",
+                    "meaningVi": "Trở nên dễ dàng hơn, tự nhiên hơn",
+                    "meaningEn": "To be easier to achieve or do, especially after practice.",
+                    "example": "Once I'd done one, the second one came easier and the third one came even easier.",
+                    "exampleVi": "Một khi tôi đã làm được lần đầu, lần thứ hai trở nên dễ dàng hơn và lần thứ ba còn dễ hơn nữa.",
+                    "speakingNote": "Cách nói rất tự nhiên thay cho 'become easier to do'. Thường dùng khi nói về kỹ năng mới: 'Speaking English comes easier with daily practice.'"
+          },
+          {
+                    "id": "perfectionism",
+                    "word": "perfectionism",
+                    "ipa": "/pəˈfekʃənɪzəm/",
+                    "pos": "noun (U)",
+                    "meaningVi": "Chủ nghĩa hoàn hảo (tâm lý đòi hỏi mọi thứ phải hoàn hảo)",
+                    "meaningEn": "The feeling or belief that everything you do needs to be completely perfect.",
+                    "example": "What we do know is that there is an increase in perfectionism among young people.",
+                    "exampleVi": "Điều chúng ta biết rõ là chủ nghĩa hoàn hảo đang gia tăng trong giới trẻ.",
+                    "speakingNote": "Trọng âm ở âm tiết thứ 2 (-FEC-). Người theo chủ nghĩa hoàn hảo gọi là 'perfectionist' (/pəˈfekʃənɪst/)."
+          },
+          {
+                    "id": "appraise",
+                    "word": "appraise",
+                    "ipa": "/əˈpreɪz/",
+                    "pos": "verb (formal)",
+                    "meaningVi": "Đánh giá, nhận xét (ai đó hoặc giá trị của việc gì)",
+                    "meaningEn": "To examine and judge someone or something carefully.",
+                    "example": "Young people are worried that people will not appraise them in a good way.",
+                    "exampleVi": "Người trẻ lo lắng rằng mọi người sẽ không đánh giá họ theo chiều hướng tích cực.",
+                    "speakingNote": "Từ vựng band C1/C2 thay cho 'judge' hoặc 'evaluate'. Danh từ là 'appraisal' (sự đánh giá, kỳ đánh giá nhân sự)."
+          }
+];
+
+        // ==========================================
+        // 2. FULL 100% TRANSCRIPT DATA WITH AUDIO TIMESTAMPS
+        // ==========================================
+        const transcriptData = [
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 0,
+                    "end": 8,
+                    "en": "Hello and welcome to 6 Minute English from BBC Learning English. I'm Georgie.",
+                    "vi": "Xin chào và chào mừng đến với chương trình 6 Minute English của BBC Learning English. Tôi là Georgie."
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 8,
+                    "end": 18,
+                    "en": "And I'm Neil. Don't forget you can find vocabulary, definitions and a worksheet for free on our website, bbclearningenglish.com.",
+                    "vi": "Và tôi là Neil. Đừng quên bạn có thể tìm từ vựng, định nghĩa và phiếu bài tập miễn phí trên trang web bbclearningenglish.com."
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 18,
+                    "end": 30,
+                    "en": "So Neil, today we're talking about <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span>. So, rejection means saying no to someone or refusing to accept their idea or suggestion. Neil, how do you feel about rejection?",
+                    "vi": "Vậy Neil, hôm nay chúng ta sẽ nói về sự từ chối (rejection). Rejection nghĩa là nói không với ai đó hoặc từ chối chấp nhận ý tưởng hay gợi ý của họ. Neil, anh cảm thấy thế nào về việc bị từ chối?"
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 30,
+                    "end": 42,
+                    "en": "Well, nobody likes <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span>. But I think as you get older, you <span onclick=\"selectVocab('get-used-to')\" class=\"vocab-highlight\" data-vocab=\"get-used-to\">get used to</span> it. And probably it's quite a good thing to experience rejection, even if it doesn't feel nice.",
+                    "vi": "À, chẳng ai thích bị từ chối cả. Nhưng tôi nghĩ khi lớn lên, bạn sẽ quen dần với nó. Và có lẽ trải qua cảm giác bị từ chối cũng khá tốt, dù nó không dễ chịu gì."
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 42,
+                    "end": 48,
+                    "en": "Yeah, I agree. We can't always get what we want, can we?",
+                    "vi": "Ừ, tôi đồng ý. Chúng ta đâu thể lúc nào cũng có được thứ mình muốn, đúng không?"
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 48,
+                    "end": 76,
+                    "en": "We can't, no. In this podcast, we'll be learning about a new internet trend called <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span> therapy and how people are using it to help them to be more confident. OK. Let's start with our quiz question, Georgie. Lots of famous people have faced rejection in their lives before they became successful, but which of these things did not happen to the animator Walt Disney before he became successful? Was it: a) he lost his job as an artist, b) his first business ran out of money, or c) his first full length film was a failure?",
+                    "vi": "Đúng vậy. Trong tập podcast này, chúng ta sẽ tìm hiểu trào lưu mạng mới gọi là 'liệu pháp từ chối' (rejection therapy) và cách mọi người dùng nó để tự tin hơn. Được rồi, hãy bắt đầu với câu hỏi đố vui nhé Georgie. Nhiều người nổi tiếng từng bị từ chối trước khi thành công, nhưng điều nào sau đây KHÔNG xảy ra với nhà làm phim hoạt hình Walt Disney trước khi ông thành công? Là: a) ông bị mất việc họa sĩ, b) công ty đầu tiên của ông cạn tiền, hay c) bộ phim dài đầu tiên của ông là một thất bại?"
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 76,
+                    "end": 86,
+                    "en": "I've got no idea, but I'm going to go with a) he lost his job as an artist. | (Neil: OK. Well, we'll find out the answer at the end of the programme.)",
+                    "vi": "Tôi chẳng biết nữa, nhưng tôi sẽ chọn đáp án a) ông bị mất việc họa sĩ. | (Neil: Được rồi. Cuối chương trình chúng ta sẽ biết đáp án.)"
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 86,
+                    "end": 100,
+                    "en": "OK Neil. So, most people don't like being rejected, but one thing to try might be something called <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span> therapy. It's a social media trend where people record themselves talking to strangers and sometimes being rejected.",
+                    "vi": "Được rồi Neil. Hầu hết mọi người không thích bị từ chối, nhưng một cách có thể thử là 'liệu pháp từ chối'. Đây là trào lưu mạng xã hội nơi mọi người tự quay cảnh mình bắt chuyện với người lạ và đôi khi bị từ chối."
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 100,
+                    "end": 114,
+                    "en": "OK. That sounds quite interesting, but let's find out how it works in practice. Hannah Gelbart, host of the BBC World Service podcast What in the World, <span onclick=\"selectVocab('have-a-go')\" class=\"vocab-highlight\" data-vocab=\"have-a-go\">had a go</span> at the trend. Let's see how she got on.",
+                    "vi": "Nghe khá thú vị đấy, nhưng hãy xem nó hoạt động thế nào trong thực tế. Hannah Gelbart, người dẫn podcast What in the World của BBC World Service, đã thử theo trào lưu này. Hãy xem cô ấy xoay xở ra sao."
+          },
+          {
+                    "speaker": "Hannah Gelbart",
+                    "role": "BBC Host / Experiment",
+                    "start": 114,
+                    "end": 146,
+                    "en": "Hey, can I come sit down at your table? (Stranger: Yeah.) Hey, how's it going? (Stranger: Good, thank you.) How's your day gone? Good afternoon. How are you doing? Can I drive your cab? Can I? Can I get behind the wheel? (Cab Driver: Don't be silly!) Don't be silly...! Coming somewhere else to try and <span onclick=\"selectVocab('face-my-fears')\" class=\"vocab-highlight\" data-vocab=\"face-my-fears\">face my fears</span>... maybe do a bit of shopping. I was wondering, can I have a nap in one of these beds? Can I just try it out? Wow – I didn't expect that one to be a yes!",
+                    "vi": "Này, tôi ngồi xuống bàn bạn được không? (Người lạ: Được chứ.) Chào, dạo này sao rồi? (Người lạ: Tốt, cảm ơn.) Ngày hôm nay thế nào? Chào buổi chiều. Bác khỏe không? Cháu lái thử xe taxi của bác được không? Cho cháu ngồi sau tay lái nhé? (Tài xế: Đừng ngớ ngẩn thế!) Đừng ngớ ngẩn...! Đến một chỗ khác để thử đối mặt với nỗi sợ của mình... chắc đi mua sắm chút. Cho hỏi, tôi có thể chợp mắt một lát trên chiếc giường này không? Tôi nằm thử được chứ? Chà – không ngờ câu đó lại được đồng ý!"
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 146,
+                    "end": 158,
+                    "en": "Well, it seems like people were pretty nice to Hannah in those examples. | (Neil: Yes. And she talks with psychologist Claudia Hammond about how she felt during the experiment.)",
+                    "vi": "Chà, có vẻ mọi người khá tử tế với Hannah trong mấy tình huống đó nhỉ. | (Neil: Đúng vậy. Và cô ấy trò chuyện với nhà tâm lý học Claudia Hammond về cảm giác của mình trong suốt thử nghiệm.)"
+          },
+          {
+                    "speaker": "Hannah Gelbart",
+                    "role": "BBC Host / Experiment",
+                    "start": 158,
+                    "end": 184,
+                    "en": "And actually, walking up to the first person, I felt my adrenaline really, really <span onclick=\"selectVocab('spike')\" class=\"vocab-highlight\" data-vocab=\"spike\">spiking</span>. I'm not a <span onclick=\"selectVocab('socially-anxious')\" class=\"vocab-highlight\" data-vocab=\"socially-anxious\">socially anxious</span> person – I think I'm really confident. But that first thing really scared me. And once I'd done one, the second one <span onclick=\"selectVocab('come-easier')\" class=\"vocab-highlight\" data-vocab=\"come-easier\">came easier</span> and the third one came even easier. And you know, by the fourth time I didn't even mind it whether they said yes or no.",
+                    "vi": "Thực ra khi bước tới chỗ người đầu tiên, tôi thấy adrenaline của mình tăng vọt lên dữ dội. Tôi không phải người hay lo âu giao tiếp – tôi nghĩ mình rất tự tin. Nhưng lần đầu tiên đó thực sự khiến tôi sợ. Và một khi đã làm được lần một, lần hai trở nên dễ dàng hơn và lần ba còn dễ hơn nữa. Bạn biết đấy, đến lần thứ tư tôi thậm chí chẳng bận tâm họ nói đồng ý hay từ chối nữa."
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 184,
+                    "end": 210,
+                    "en": "Hannah says that when she walked up to the first stranger in the video, she felt her adrenaline <span onclick=\"selectVocab('spike')\" class=\"vocab-highlight\" data-vocab=\"spike\">spiking</span>. If something spikes, it increases sharply. | (Neil: Hannah is not generally a <span onclick=\"selectVocab('socially-anxious')\" class=\"vocab-highlight\" data-vocab=\"socially-anxious\">socially anxious</span> person. Someone who is socially anxious is nervous or worried about speaking to other people.) | Each time Hannah tried to speak to a new person, she says, it <span onclick=\"selectVocab('come-easier')\" class=\"vocab-highlight\" data-vocab=\"come-easier\">came easier</span>. Come easier is an informal way to say something is easier to achieve.",
+                    "vi": "Hannah nói rằng khi bước tới chỗ người lạ đầu tiên, cô cảm thấy adrenaline tăng vọt. 'Spike' nghĩa là tăng mạnh đột ngột. | (Neil: Hannah nhìn chung không phải người lo âu giao tiếp. Người 'socially anxious' thường hồi hộp hoặc lo lắng khi nói chuyện với người khác.) | Mỗi lần thử bắt chuyện với người mới, mọi thứ lại trở nên dễ dàng hơn ('came easier' – cách nói thân mật chỉ việc gì đó dễ đạt được hơn)."
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 210,
+                    "end": 236,
+                    "en": "Now, this social media trend is called <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span> therapy, but it's not a proper form of therapy. It hasn't been tested. | (Georgie: And there are some criticisms of the videos because they involve filming your interactions with strangers, which people might not want.) | But people who post the videos say they boost their confidence. So, why do people want to ask for rejection? | (Georgie: Psychologist Claudia Hammond has some ideas, which she shared with Hannah on the BBC World Service podcast What in the World.)",
+                    "vi": "Trào lưu này được gọi là 'liệu pháp từ chối', nhưng nó không phải một dạng trị liệu tâm lý chính thống và chưa được kiểm chứng. | (Georgie: Và cũng có vài chỉ trích vì các video này quay lại tương tác với người lạ, điều mà nhiều người có thể không muốn.) | Nhưng những người đăng video nói rằng chúng giúp tăng sự tự tin. Vậy tại sao mọi người lại muốn đi xin bị từ chối? | (Georgie: Nhà tâm lý học Claudia Hammond có một vài lý giải chia sẻ với Hannah.)"
+          },
+          {
+                    "speaker": "Claudia Hammond",
+                    "role": "Psychologist",
+                    "start": 236,
+                    "end": 268,
+                    "en": "What we do know is that there is an increase in <span onclick=\"selectVocab('perfectionism')\" class=\"vocab-highlight\" data-vocab=\"perfectionism\">perfectionism</span>. People are more worried now, younger people, about how other people are judging them. And so, I wonder whether that might make people more shy of speaking to strangers – worried that the people will, you know, not <span onclick=\"selectVocab('appraise')\" class=\"vocab-highlight\" data-vocab=\"appraise\">appraise</span> them in a good way, and so doing something like this to try to counter that might feel like a positive step to people, that they're trying to do something. Also, they're fun to watch.",
+                    "vi": "Điều chúng ta biết chắc là chủ nghĩa hoàn hảo đang gia tăng. Mọi người, đặc biệt là giới trẻ ngày nay, lo lắng nhiều hơn về cách người khác phán xét mình. Nên tôi tự hỏi liệu điều đó có khiến mọi người ngại bắt chuyện với người lạ hơn không – lo rằng người ta sẽ không đánh giá mình tốt đẹp, vì vậy làm điều gì đó để chống lại nỗi sợ ấy có thể mang lại cảm giác tích cực rằng mình đang hành động. Ngoài ra, xem mấy video đó cũng vui nữa."
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 268,
+                    "end": 292,
+                    "en": "Claudia says there's an increase in <span onclick=\"selectVocab('perfectionism')\" class=\"vocab-highlight\" data-vocab=\"perfectionism\">perfectionism</span> among young people. Perfectionism is the feeling that everything you do needs to be perfect. | (Georgie: Young people are also worried about how people will <span onclick=\"selectVocab('appraise')\" class=\"vocab-highlight\" data-vocab=\"appraise\">appraise</span> them, which means judge them.) | Deliberately looking for <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span> might be an extreme way to become more confident, but it can lead to surprising discoveries. | (Georgie: Yes, and Hannah found that most strangers she spoke to were friendly and happy to help, so she didn't really experience rejection much at all.)",
+                    "vi": "Claudia nói chủ nghĩa hoàn hảo đang tăng lên ở giới trẻ – cảm giác rằng mọi thứ mình làm đều phải hoàn hảo. | (Georgie: Người trẻ cũng lo về việc người khác đánh giá – 'appraise' – họ ra sao.) | Chủ động tìm kiếm sự từ chối có thể là một cách hơi cực đoan để tự tin hơn, nhưng nó có thể dẫn đến những khám phá bất ngờ. | (Georgie: Đúng vậy, và Hannah nhận ra hầu hết người lạ cô bắt chuyện đều thân thiện và sẵn lòng giúp đỡ, nên cô chẳng bị từ chối mấy.)"
+          },
+          {
+                    "speaker": "Neil",
+                    "role": "Presenter",
+                    "start": 292,
+                    "end": 320,
+                    "en": "OK. Georgie, I think it's time now for the answer to my quiz question. I asked you which <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span> Walt Disney didn't experience before becoming successful? | (Georgie: Yes, and I went for a) I don't think he lost his job as an artist.) | Well, actually, the answer was c) his first full length film, Snow White and the Seven Dwarfs, was not a failure. It was a huge success. | (Georgie: Wow! That was his first film? That's really impressive.) | It is.",
+                    "vi": "Được rồi Georgie, đến lúc công bố đáp án câu đố rồi. Tôi đã hỏi Walt Disney KHÔNG trải qua sự từ chối nào trước khi thành công? | (Georgie: Vâng, tôi chọn a) tôi không nghĩ ông ấy bị mất việc họa sĩ.) | Thực ra đáp án là c): bộ phim dài đầu tay của ông, Nàng Bạch Tuyết và Bảy Chú Lùn, không hề thất bại mà là một thành công vang dội. | (Georgie: Ôi! Đó là phim đầu tay của ông ấy sao? Thật ấn tượng!) | Đúng vậy."
+          },
+          {
+                    "speaker": "Georgie",
+                    "role": "Presenter",
+                    "start": 320,
+                    "end": 360,
+                    "en": "OK. Let's recap the vocabulary we learned in this programme, starting with <span onclick=\"selectVocab('rejection')\" class=\"vocab-highlight\" data-vocab=\"rejection\">rejection</span>, which means saying no or refusing an idea or suggestion. | (Neil: The verb <span onclick=\"selectVocab('spike')\" class=\"vocab-highlight\" data-vocab=\"spike\">spike</span> means increase suddenly.) | Someone who is <span onclick=\"selectVocab('socially-anxious')\" class=\"vocab-highlight\" data-vocab=\"socially-anxious\">socially anxious</span> is nervous or worried about speaking to other people. | (Neil: If something <span onclick=\"selectVocab('come-easier')\" class=\"vocab-highlight\" data-vocab=\"come-easier\">comes easier</span>, it's easier to achieve.) | <span onclick=\"selectVocab('perfectionism')\" class=\"vocab-highlight\" data-vocab=\"perfectionism\">Perfectionism</span> is the feeling that everything you do needs to be perfect. | (Neil: And if you <span onclick=\"selectVocab('appraise')\" class=\"vocab-highlight\" data-vocab=\"appraise\">appraise</span> someone, you judge them.) | Once again, our six minutes are up, but you can test what you've learned with the free worksheet on our website, bbclearningenglish.com. | (Neil: Thank you for joining us and goodbye.) | Goodbye.",
+                    "vi": "Được rồi, cùng ôn lại từ vựng đã học: bắt đầu với 'rejection' (nói không hoặc từ chối ý tưởng/gợi ý). | (Neil: Động từ 'spike' nghĩa là tăng đột ngột.) | Người 'socially anxious' là người lo lắng khi nói chuyện với người khác. | (Neil: Nếu điều gì 'comes easier', tức là nó dễ đạt được hơn.) | 'Perfectionism' là cảm giác mọi thứ bạn làm phải hoàn hảo. | (Neil: Và 'appraise' ai đó nghĩa là đánh giá họ.) | Sáu phút đã hết, hãy làm phiếu bài tập miễn phí trên bbclearningenglish.com nhé. | (Neil: Cảm ơn đã lắng nghe và tạm biệt.) | Tạm biệt."
+          }
+];
+
+        // ==========================================
+        // 3. SPEAKING STRUCTURES DATA
+        // ==========================================
+        const speakingStructuresData = [
+          {
+                    "pattern": "As you get older, you get used to [it/V-ing]",
+                    "func": "Diễn tả sự thích nghi tự nhiên theo thời gian",
+                    "contextInLesson": "Neil: \"But I think as you get older, you get used to it.\"",
+                    "howToUse": "Rất hữu ích trong IELTS Speaking Part 1 & 3 khi so sánh bản thân trước đây và hiện tại hoặc nói về sự trưởng thành.",
+                    "yourExample": "As you get older, you get used to handling constructive criticism without taking it personally."
+          },
+          {
+                    "pattern": "I've got no idea, but I'm going to go with...",
+                    "func": "Khiêm tốn thừa nhận không chắc chắn và đưa ra lựa chọn",
+                    "contextInLesson": "Georgie: \"I've got no idea, but I'm going to go with a) he lost his job as an artist.\"",
+                    "howToUse": "Cụm mở đầu cực kỳ tự nhiên khi trả lời câu hỏi khó hoặc đoán thông tin mà không bị lúng túng.",
+                    "yourExample": "I've got no idea which city is older, but I'm going to go with Kyoto."
+          },
+          {
+                    "pattern": "Let's find out how it works in practice.",
+                    "func": "Chuyển ý từ lý thuyết sang ví dụ thực tế",
+                    "contextInLesson": "Neil: \"OK. That sounds quite interesting, but let's find out how it works in practice.\"",
+                    "howToUse": "Dùng để dẫn dắt câu chuyện hoặc bài thuyết trình từ khái niệm chung sang một tình huống cụ thể.",
+                    "yourExample": "The theory sounds promising, so let's see how it works in practice during our group project."
+          },
+          {
+                    "pattern": "I didn't even mind whether [A] or [B]",
+                    "func": "Thể hiện tâm lý thoải mái, không còn áp lực kết quả",
+                    "contextInLesson": "Hannah: \"And you know, by the fourth time I didn't even mind it whether they said yes or no.\"",
+                    "howToUse": "Diễn đạt sự thay đổi tích cực về mặt tâm lý sau khi vượt qua nỗi sợ ban đầu.",
+                    "yourExample": "After practicing ten mock interviews, I didn't even mind whether the questions were tough or easy."
+          },
+          {
+                    "pattern": "What we do know is that...",
+                    "func": "Nhấn mạnh một sự thật chắc chắn (dùng trợ động từ 'do')",
+                    "contextInLesson": "Claudia Hammond: \"What we do know is that there is an increase in perfectionism.\"",
+                    "howToUse": "Thêm 'do' trước động từ 'know' trong mệnh đề danh ngữ 'What we do know...' để tạo sự đối lập hoặc nhấn mạnh tính xác thực.",
+                    "yourExample": "We can't predict the future, but what we do know is that daily practice builds real confidence."
+          },
+          {
+                    "pattern": "It might be an extreme way to..., but it can lead to...",
+                    "func": "Đưa ra đánh giá cân bằng (nhượng bộ rồi nêu mặt tích cực)",
+                    "contextInLesson": "Neil: \"Deliberately looking for rejection might be an extreme way to become more confident, but it can lead to surprising discoveries.\"",
+                    "howToUse": "Mẫu câu vàng cho IELTS Speaking Part 3 & Writing Task 2 khi bàn về một xu hướng gây tranh cãi.",
+                    "yourExample": "Working abroad alone might be an extreme way to learn independence, but it can lead to huge personal growth."
+          }
+];
+
+        // ==========================================
+        // 4. GRAMMAR STRUCTURES DATA
+        // ==========================================
+        const grammarData = [
+          {
+                    "title": "1. Bị động của danh động từ: 'don't like being + V3/ed'",
+                    "quote": "Georgie: \"So, most people <strong>don't like being rejected</strong>...\"",
+                    "formula": "like / hate / mind / avoid + being + V3/ed",
+                    "explanation": "Khi nói về cảm giác của bản thân khi là đối tượng chịu tác động (bị từ chối, bị phán xét), ta dùng dạng bị động của V-ing là 'being + phân từ 2'.",
+                    "examples": [
+                              "Many young people worry about <strong>being judged</strong> by strangers.",
+                              "Nobody enjoys <strong>being turned down</strong> after a job interview."
+                    ]
+          },
+          {
+                    "title": "2. Động từ tri giác: 'feel + Tân ngữ + V-ing'",
+                    "quote": "Hannah: \"...walking up to the first person, I <strong>felt my adrenaline really, really spiking</strong>.\"",
+                    "formula": "feel / see / hear / watch + Object + V-ing",
+                    "explanation": "Diễn tả việc cảm nhận hoặc chứng kiến một hành động/quá trình đang diễn ra ngay tại thời điểm đó (adrenaline đang tăng vọt).",
+                    "examples": [
+                              "I <strong>felt my heart beating</strong> faster right before my presentation.",
+                              "She <strong>heard people laughing</strong> warmly in the café."
+                    ]
+          },
+          {
+                    "title": "3. Quá khứ hoàn thành với 'Once': 'Once I'd done one...'",
+                    "quote": "Hannah: \"And <strong>once I'd done</strong> one, the second one came easier...\"",
+                    "formula": "Once + S + had + V3/ed, S + V-ed",
+                    "explanation": "'Once' mang nghĩa 'một khi đã...'. Thì Quá khứ hoàn thành (had done) nhấn mạnh hành động thứ nhất đã hoàn tất trước khi hành động thứ hai (came easier) xảy ra.",
+                    "examples": [
+                              "<strong>Once I'd spoken</strong> to the first stranger, my nervousness faded away.",
+                              "<strong>Once you've faced</strong> your fear, it rarely seems as scary as before."
+                    ]
+          },
+          {
+                    "title": "4. Mệnh đề quan hệ nối tiếp với ', which...'",
+                    "quote": "Georgie: \"...they involve filming your interactions with strangers, <strong>which people might not want</strong>.\"",
+                    "formula": "Mệnh đề chính, which + Mệnh đề giải thích/nhận xét",
+                    "explanation": "Đại từ quan hệ 'which' đứng sau dấu phẩy thay thế cho cả mệnh đề phía trước (việc quay phim tương tác với người lạ), rất hữu ích để mở rộng câu mượt mà trong IELTS.",
+                    "examples": [
+                              "She practiced rejection therapy for 30 days, <strong>which boosted her confidence</strong> dramatically.",
+                              "Perfectionism makes people afraid of mistakes, <strong>which stops them from trying new things</strong>."
+                    ]
+          }
+];
+
+        // ==========================================
+        // 5. SHADOWING DATA (WITH NATIVE MP3 TIMESTAMPS)
+        // ==========================================
+        const shadowingData = [
+          {
+                    "id": 1,
+                    "speaker": "Neil (UK Accent)",
+                    "start": 31,
+                    "end": 41,
+                    "text": "Nobody likes rejection. But I think as you get older, you get used to it.",
+                    "guide": "<strong>NO</strong>body likes re<strong>JEC</strong>tion. / But I <strong>THINK</strong> as you get <strong>OL</strong>der, / you get <strong>USED</strong> to it.",
+                    "tip": "Nhấn mạnh 'NObody' và âm tiết '-JEC-' của 'rejection'. Đọc nối 'used_to_it' (/ˈjuːstəɪt/)."
+          },
+          {
+                    "id": 2,
+                    "speaker": "Hannah Gelbart",
+                    "start": 160,
+                    "end": 170,
+                    "text": "Walking up to the first person, I felt my adrenaline really, really spiking.",
+                    "guide": "<strong>WALK</strong>ing up to the <strong>FIRST</strong> person, / I <strong>FELT</strong> my a<strong>DRE</strong>naline / <strong>REAL</strong>ly, <strong>REAL</strong>ly <strong>SPIK</strong>ing.",
+                    "tip": "Ngắt nhẹ sau 'person', nhấn trọng âm từ 'adrenaline' ở âm thứ 2 (/əˈdrenəlɪn/) và kéo nhẹ 'really, really'."
+          },
+          {
+                    "id": 3,
+                    "speaker": "Hannah Gelbart",
+                    "start": 172,
+                    "end": 183,
+                    "text": "Once I'd done one, the second one came easier and the third one came even easier.",
+                    "guide": "<strong>ONCE</strong> I'd done <strong>ONE</strong>, / the <strong>SE</strong>cond one came <strong>EA</strong>sier / and the <strong>THIRD</strong> one came <strong>E</strong>ven <strong>EA</strong>sier.",
+                    "tip": "Nhịp điệu tăng dần sự tự tin: nhấn vào các số thứ tự 'ONE', 'SEcond', 'THIRD' và 'EAven EAsier'."
+          },
+          {
+                    "id": 4,
+                    "speaker": "Claudia Hammond",
+                    "start": 237,
+                    "end": 248,
+                    "text": "What we do know is that there is an increase in perfectionism. People are more worried now about how other people are judging them.",
+                    "guide": "What we <strong>DO</strong> know is that / there is an <strong>IN</strong>crease in per<strong>FEC</strong>tionism. / People are <strong>MORE</strong> worried now / about how other people are <strong>JUDG</strong>ing them.",
+                    "tip": "Nhấn mạnh chữ 'DO' trong 'What we DO know'. Chú ý danh từ 'INcrease' nhấn âm đầu."
+          },
+          {
+                    "id": 5,
+                    "speaker": "Neil (UK Accent)",
+                    "start": 278,
+                    "end": 288,
+                    "text": "Deliberately looking for rejection might be an extreme way to become more confident, but it can lead to surprising discoveries.",
+                    "guide": "De<strong>LIB</strong>erately looking for re<strong>JEC</strong>tion / might be an ex<strong>TREME</strong> way to become more <strong>CON</strong>fident, / but it can <strong>LEAD</strong> to sur<strong>PRIS</strong>ing dis<strong>COV</strong>eries.",
+                    "tip": "Phát âm rõ 'deliberately' (/dɪˈlɪbərətli/), hạ giọng nhẹ ở vế nhượng bộ rồi nâng nhịp tích cực ở 'surprising discoveries'."
+          }
+];
+
+        // ==========================================
+        // 6. SPEAKING PRACTICE PROMPTS
+        // ==========================================
+        const speakingPrompts = [
+          {
+                    "id": 1,
+                    "question": "1. How do you usually feel when someone says 'no' to your request or idea?",
+                    "targetVocab": [
+                              "rejection",
+                              "get used to",
+                              "appraise"
+                    ],
+                    "sampleAnswer": "Honestly, nobody likes rejection, and at first I used to feel worried about how people would appraise me. However, as I've gotten older, I've started to get used to hearing 'no' and realised it's rarely personal.",
+                    "tips": "Dùng mở bài đồng cảm 'Nobody likes rejection...' rồi áp dụng 'get used to' và 'appraise'."
+          },
+          {
+                    "id": 2,
+                    "question": "2. Do you think 'rejection therapy' is a good way to overcome social anxiety?",
+                    "targetVocab": [
+                              "socially anxious",
+                              "face your fears",
+                              "come easier",
+                              "spike"
+                    ],
+                    "sampleAnswer": "I think it can be quite effective if done respectfully. Even though your adrenaline might spike the first time you talk to a stranger, facing your fears gradually makes social interactions come easier. Still, it shouldn't replace proper support for people who are severely socially anxious.",
+                    "tips": "Trả lời cân bằng cả 2 mặt: lợi ích (face your fears, come easier) và lưu ý (không thay thế trị liệu chuyên sâu)."
+          },
+          {
+                    "id": 3,
+                    "question": "3. Why do many young people today struggle with perfectionism?",
+                    "targetVocab": [
+                              "perfectionism",
+                              "appraise",
+                              "rejection"
+                    ],
+                    "sampleAnswer": "I believe social media plays a huge role in rising perfectionism. Young people constantly compare themselves to others and worry about how peers will appraise them, which makes them terrified of making mistakes or facing any kind of rejection.",
+                    "tips": "Liên hệ đến mạng xã hội và áp lực đồng trang lứa (peer pressure) kèm từ 'perfectionism' và 'appraise'."
+          }
+];
+
+        // ==========================================
+        // 7. STATE & INITIALIZATION
+        // ==========================================
+        let currentVocabIndex = 0;
+        let showVietnamese = false;
+        let learnedWords = new Set();
+        let currentPromptIndex = 0;
+        let recognition = null;
+        let isRecording = false;
+        let segmentStopTimeout = null;
+        let isLocalMp3Loaded = false;
+
+        // ==========================================
+        // 8. RENDER FUNCTIONS
+        // ==========================================
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function renderTranscript() {
+            const container = document.getElementById('transcript-container');
+            if (!container) return;
+            container.innerHTML = transcriptData.map((item, idx) => {
+                const isPhil = item.speaker === 'Phil';
+                const isGeorgie = item.speaker === 'Georgie';
+                const badgeColor = isPhil ? 'bg-[#285d02] text-white' : 
+                                   isGeorgie ? 'bg-amber-600 text-white' : 'bg-slate-700 text-white';
+                
+                return `
+                    <div id="dialogue-row-${idx}" class="dialogue-row p-3.5 sm:p-4 rounded-xl border border-slate-100 hover:border-slate-200 bg-slate-50/60 transition group">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2.5 py-0.5 rounded-md ${badgeColor}">${item.speaker}</span>
+                                <span class="text-[11px] text-slate-400 font-medium">${item.role} • ${formatTime(item.start)}</span>
+                            </div>
+                            <button onclick="playAudioSegment(${item.start}, ${item.end}, ${idx})" class="text-xs font-semibold text-[#285d02] bg-[#285d02]/10 hover:bg-[#285d02] hover:text-white px-2.5 py-1 rounded-lg transition flex items-center gap-1" title="Nghe giọng gốc BBC đoạn này">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe gốc
+                            </button>
+                        </div>
+                        <p class="text-sm sm:text-[15px] text-slate-800 leading-relaxed">${item.en}</p>
+                        <p class="vi-translation ${showVietnamese ? 'block' : 'hidden'} text-xs sm:text-sm text-slate-600 italic mt-2 pt-2 border-t border-slate-200/70 bg-white/70 p-2.5 rounded-lg">
+                            <i class="fa-solid fa-language text-[#285d02] mr-1"></i> ${item.vi}
+                        </p>
+                    </div>
+                `;
+            }).join('');
+
+            updateActiveHighlightInTranscript();
+        }
+
+        function renderFlashcard() {
+            const v = vocabData[currentVocabIndex];
+            const counter = document.getElementById('card-counter');
+            if (counter) counter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            
+            const isLearned = learnedWords.has(v.id);
+            const btnMark = document.getElementById('btn-mark-learned');
+            if (btnMark) {
+                if (isLearned) {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-[#285d02] text-white text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc từ này`;
+                } else {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đánh dấu đã thuộc`;
+                }
+            }
+
+            const display = document.getElementById('flashcard-display');
+            if (!display) return;
+            display.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex items-start justify-between gap-2">
+                        <div>
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 mb-1">${v.pos}</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${v.word}</h3>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-sm font-mono text-[#285d02] font-semibold bg-[#285d02]/10 px-2.5 py-0.5 rounded">${v.ipa}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.9)" class="w-10 h-10 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white flex items-center justify-center shadow-sm transition" title="Nghe phát âm chuẩn">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.65)" class="px-2.5 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center transition" title="Nghe phát âm chậm">
+                                🐢 Chậm
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#285d02] mb-0.5">Nghĩa tiếng Việt & Giải thích</div>
+                        <p class="text-base font-bold text-slate-900">${v.meaningVi}</p>
+                        <p class="text-xs text-slate-600 mt-1">${v.meaningEn}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500"><i class="fa-solid fa-quote-left mr-1 text-[#285d02]"></i> Ví dụ trong bài</span>
+                            <button onclick="speakText('${v.example.replace(/'/g, "\\'")}', 0.95)" class="text-xs text-[#285d02] hover:underline font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe câu
+                            </button>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">"${v.example}"</p>
+                        <p class="text-xs text-slate-500 italic mt-1">${v.exampleVi}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80">
+                        <div class="text-[11px] font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-microphone-lines text-amber-600"></i> Speaking & Pronunciation Note
+                        </div>
+                        <p class="text-xs text-amber-950 leading-relaxed">${v.speakingNote}</p>
+                    </div>
+                </div>
+            `;
+
+            const mobileBody = document.getElementById('mobile-flashcard-body');
+            const mobileCounter = document.getElementById('mobile-card-counter');
+            const mobileBtnMark = document.getElementById('mobile-btn-mark-learned');
+            if (mobileBody) mobileBody.innerHTML = display.innerHTML;
+            if (mobileCounter) mobileCounter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            if (mobileBtnMark) {
+                if (isLearned) {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc`;
+                } else {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đã thuộc`;
+                }
+            }
+        }
+
+        function renderVocabPills() {
+            const container = document.getElementById('vocab-pills');
+            if (!container) return;
+            container.innerHTML = vocabData.map((v, idx) => {
+                const isCurrent = idx === currentVocabIndex;
+                const isLearned = learnedWords.has(v.id);
+                let classes = "text-xs px-2.5 py-1.5 rounded-lg font-medium transition flex items-center gap-1 ";
+                if (isCurrent) {
+                    classes += "bg-[#285d02] text-white font-bold shadow-xs";
+                } else if (isLearned) {
+                    classes += "bg-[#285d02]/10 text-[#285d02] border border-[#285d02]/30";
+                } else {
+                    classes += "bg-slate-100 hover:bg-slate-200 text-slate-700";
+                }
+                return `
+                    <button onclick="selectVocab('${v.id}')" class="${classes}">
+                        ${isLearned ? '<i class="fa-solid fa-check text-[10px]"></i>' : ''}
+                        <span>${v.word}</span>
+                    </button>
+                `;
+            }).join('');
+
+            const prog = document.getElementById('learned-progress');
+            if (prog) prog.textContent = `Đã thuộc: ${learnedWords.size}/${vocabData.length}`;
+            updateActiveHighlightInTranscript();
+        }
+
+        function updateActiveHighlightInTranscript() {
+            const currentId = vocabData[currentVocabIndex].id;
+            document.querySelectorAll('.vocab-highlight').forEach(el => {
+                if (el.getAttribute('data-vocab') === currentId) {
+                    el.classList.add('active', 'ring-2', 'ring-[#285d02]');
+                } else {
+                    el.classList.remove('active', 'ring-2', 'ring-[#285d02]');
+                }
+            });
+        }
+
+        function selectVocab(id) {
+            currentVocabIndex = vocabData.findIndex(v => v.id === id);
+            if (currentVocabIndex === -1) currentVocabIndex = 0;
+            renderFlashcard();
+            renderVocabPills();
+
+            if (window.innerWidth < 1024) {
+                openMobileFlashcard();
+            }
+        }
+
+        function openMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.remove('hidden');
+            drawer.classList.add('flex');
+        }
+
+        function closeMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.add('hidden');
+            drawer.classList.remove('flex');
+        }
+
+        function prevVocab() {
+            currentVocabIndex = (currentVocabIndex - 1 + vocabData.length) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function nextVocab() {
+            currentVocabIndex = (currentVocabIndex + 1) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function markLearned() {
+            const id = vocabData[currentVocabIndex].id;
+            if (learnedWords.has(id)) {
+                learnedWords.delete(id);
+                showToast(`Đã bỏ đánh dấu "${vocabData[currentVocabIndex].word}"`);
+            } else {
+                learnedWords.add(id);
+                showToast(`Tuyệt vời! Bạn đã thuộc từ "${vocabData[currentVocabIndex].word}"`);
+            }
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function toggleTranslation() {
+            showVietnamese = !showVietnamese;
+            const btn = document.getElementById('btn-toggle-trans');
+            if (btn) {
+                if (showVietnamese) {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] text-white transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language"></i> <span>Ẩn dịch tiếng Việt</span>`;
+                } else {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language text-[#285d02]"></i> <span>Hiện dịch tiếng Việt</span>`;
+                }
+            }
+            document.querySelectorAll('.vi-translation').forEach(el => {
+                el.classList.toggle('hidden', !showVietnamese);
+                el.classList.toggle('block', showVietnamese);
+            });
+        }
+
+        function renderSpeakingStructures() {
+            const grid = document.getElementById('speaking-structures-grid');
+            if (!grid) return;
+            grid.innerHTML = speakingStructuresData.map((s) => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3 hover:shadow-sm transition">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#285d02]/10 text-[#285d02]">${s.func}</span>
+                            <button onclick="speakText('${s.pattern.replace(/\[.*?\]/g, '').replace(/'/g, "\\'")}', 0.95)" class="text-xs text-slate-500 hover:text-[#285d02] font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900">${s.pattern}</h3>
+                        <div class="p-3 rounded-xl bg-white border border-slate-200/80 text-xs text-slate-700 italic">
+                            <span class="font-bold not-italic text-slate-900 block mb-0.5">Trong bài:</span>
+                            ${s.contextInLesson}
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Cách dùng:</strong> ${s.howToUse}</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-[#285d02]/5 border border-[#285d02]/15 text-xs text-slate-800">
+                        <span class="font-bold text-[#285d02] block mb-0.5"><i class="fa-solid fa-check mr-1"></i> Ví dụ áp dụng:</span>
+                        <p class="whitespace-pre-line">${s.yourExample}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderGrammar() {
+            const list = document.getElementById('grammar-list');
+            if (!list) return;
+            list.innerHTML = grammarData.map(g => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="text-lg font-bold text-slate-900">${g.title}</h3>
+                        <span class="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-[#285d02] text-white">${g.formula}</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border-l-4 border-[#285d02] text-sm text-slate-700">
+                        ${g.quote}
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">${g.explanation}</p>
+                    <div class="pt-1">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1.5">Ví dụ mở rộng:</span>
+                        <ul class="space-y-1.5">
+                            ${g.examples.map(ex => `<li class="text-xs sm:text-sm text-slate-800 flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#285d02] mt-1 text-xs"></i><span>${ex}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderShadowing() {
+            const list = document.getElementById('shadowing-list');
+            if (!list) return;
+            list.innerHTML = shadowingData.map(item => `
+                <div class="pt-6 first:pt-0 space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-[#285d02]/10 text-[#285d02]">Câu #${item.id} • ${item.speaker}</span>
+                            <span class="text-xs text-slate-400">(${formatTime(item.start)} – ${formatTime(item.end)})</span>
+                        </div>
+                        <div class="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
+                            <button onclick="playShadowingModel(${item.id})" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-play"></i> <span>Mẫu gốc</span>
+                            </button>
+                            <button onclick="speakText('${item.text.replace(/'/g, "\\'")}', parseFloat(document.getElementById('shadowing-speed')?.value || 0.95))" class="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-robot text-[#285d02]"></i> <span>Đọc chậm</span>
+                            </button>
+                            <button onclick="recordShadowing(${item.id})" id="btn-shadow-rec-${item.id}" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-300 hover:border-rose-500 text-slate-800 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <div class="text-xs text-slate-400 uppercase font-bold mb-1">Bản đánh dấu trọng âm & ngắt nhịp:</div>
+                        <p class="text-base sm:text-lg text-slate-900 leading-relaxed">${item.guide}</p>
+                        <p class="text-xs text-[#285d02] font-medium mt-2"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Mẹo: ${item.tip}</p>
+                    </div>
+
+                    <div id="shadow-result-${item.id}" class="hidden p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs"></div>
+                </div>
+            `).join('');
+        }
+
+        function playShadowingModel(id) {
+            const item = shadowingData.find(s => s.id === id);
+            if (!item) return;
+            const speed = parseFloat(document.getElementById('shadowing-speed')?.value || 0.95);
+            playAudioSegment(item.start, item.end, null, speed);
+        }
+
+        function renderSpeakingPrompts() {
+            const list = document.getElementById('speaking-prompts-list');
+            if (!list) return;
+            list.innerHTML = speakingPrompts.map((p, idx) => {
+                const active = idx === currentPromptIndex;
+                return `
+                    <button onclick="selectPrompt(${idx})" class="w-full text-left p-3.5 rounded-xl border transition ${active ? 'bg-[#285d02] text-white border-[#285d02] shadow-xs' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200'}">
+                        <p class="text-xs sm:text-sm font-bold leading-snug">${p.question}</p>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectPrompt(idx) {
+            currentPromptIndex = idx;
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+        }
+
+        function renderSpeakingStudio() {
+            const studio = document.getElementById('speaking-studio');
+            if (!studio) return;
+            const p = speakingPrompts[currentPromptIndex];
+
+            studio.innerHTML = `
+                <div class="space-y-5">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Câu hỏi đang chọn</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-2">${p.question}</h3>
+                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> ${p.tips}</p>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Từ vựng / Cấu trúc gợi ý nên dùng:</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${p.targetVocab.map(w => `<span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 border border-amber-300">${w}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-600">Câu trả lời của bạn (Gõ hoặc Bấm Mic để nói):</label>
+                            <button onclick="toggleStudioRecording()" id="btn-studio-mic" class="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-microphone"></i> Bắt đầu nói
+                            </button>
+                        </div>
+                        <textarea id="speaking-user-input" rows="4" 
+                                  placeholder="Nhấn 'Bắt đầu nói' để thu âm bằng giọng nói hoặc tự gõ câu trả lời của bạn vào đây..."
+                                  class="w-full p-3.5 rounded-xl border border-slate-200 focus:border-[#285d02] focus:outline-none text-sm text-slate-800 bg-slate-50"></textarea>
+                        <div class="flex items-center justify-between">
+                            <button onclick="evaluateSpeakingAnswer()" class="px-4 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold transition">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Kiểm tra từ vựng đã dùng
+                            </button>
+                            <button onclick="document.getElementById('sample-answer-box').classList.toggle('hidden')" class="text-xs font-semibold text-[#285d02] hover:underline">
+                                Xem / Ẩn câu trả lời mẫu Band 7.5+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="speaking-eval-feedback" class="hidden p-3.5 rounded-xl bg-[#285d02]/5 border border-[#285d02]/20 text-xs text-slate-800"></div>
+
+                    <div id="sample-answer-box" class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]">Sample Answer (Gợi ý trả lời mẫu)</span>
+                            <button onclick="speakText('${p.sampleAnswer.replace(/'/g, "\\'")}', 0.95)" class="text-xs font-semibold text-[#285d02] hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe mẫu
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed italic">"${p.sampleAnswer}"</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function evaluateSpeakingAnswer() {
+            const input = document.getElementById('speaking-user-input')?.value || '';
+            const fb = document.getElementById('speaking-eval-feedback');
+            if (!fb) return;
+
+            if (!input.trim()) {
+                showToast("Hãy nhập hoặc thu âm câu trả lời của bạn trước nhé!");
+                return;
+            }
+
+            const p = speakingPrompts[currentPromptIndex];
+            const used = p.targetVocab.filter(v => input.toLowerCase().includes(v.toLowerCase().split('...')[0].trim()));
+
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+                <p class="font-bold text-[#285d02] mb-1">Đánh giá nhanh câu trả lời (${input.trim().split(/\s+/).length} từ):</p>
+                <p>Bạn đã sử dụng <strong>${used.length}/${p.targetVocab.length}</strong> cụm từ mục tiêu: 
+                ${used.length > 0 ? used.map(u => `<span class="underline font-semibold">${u}</span>`).join(', ') : 'Chưa có cụm từ mục tiêu nào được phát hiện. Hãy thử chèn thêm các từ gợi ý màu vàng ở trên nhé!'}</p>
+            `;
+        }
+
+        // ==========================================
+        // 9. TAB NAVIGATION, VIDEO & QUIZ CONTROLS
+        // ==========================================
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
+            const activeSec = document.getElementById(`section-${tabName}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+                btn.classList.add('border-transparent', 'text-slate-600', 'font-medium');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-600', 'font-medium');
+                activeBtn.classList.add('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+            }
+        }
+
+        function toggleVideo() {
+            const wrapper = document.getElementById('video-wrapper');
+            const icon = document.getElementById('toggle-video-icon');
+            const text = document.getElementById('toggle-video-text');
+            if (!wrapper) return;
+
+            const isHidden = wrapper.classList.toggle('hidden');
+            if (icon) icon.className = isHidden ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up';
+            if (text) text.textContent = isHidden ? 'Mở rộng Video' : 'Thu gọn Video';
+        }
+
+        function checkQuiz(choice) {
+            const fb = document.getElementById('quiz-feedback');
+            document.querySelectorAll('.quiz-opt').forEach(btn => {
+                btn.className = "quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 transition";
+            });
+
+            const selectedBtn = document.getElementById(`quiz-${choice}`);
+            if (choice === 'b') {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-[#285d02] text-white border border-[#285d02] transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-[#285d02]";
+                    fb.textContent = "Chính xác! Sinh năm 1982 thuộc thế hệ Millennial (Gen Y).";
+                }
+            } else {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-300 transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-rose-600";
+                    fb.textContent = "Chưa đúng! Georgie cũng đoán nhầm giống bạn, đáp án đúng là b) Millennial.";
+                }
+            }
+        }
+
+        // ==========================================
+        // 10. NATIVE MP3 AUDIO PLAYER & YOUTUBE SYNC
+        // ==========================================
+        function getNativeAudio() {
+            return document.getElementById('bbc-native-audio');
+        }
+
+        function loadUserMp3File(inputEl) {
+            const file = inputEl.files && inputEl.files[0];
+            if (!file) return;
+            attachBlobToAudio(file);
+        }
+
+        function attachBlobToAudio(file) {
+            const audio = getNativeAudio();
+            if (!audio) return;
+            const objectUrl = URL.createObjectURL(file);
+            audio.src = objectUrl;
+            audio.load();
+            isLocalMp3Loaded = true;
+
+            const badge = document.getElementById('audio-status-badge');
+            if (badge) {
+                badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Đã kết nối: ${file.name}`;
+            }
+
+            const tip = document.getElementById('audio-helper-tip');
+            if (tip) {
+                tip.innerHTML = `<span class="text-[#285d02] font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Đã nạp file MP3 thành công! Bây giờ bạn có thể bấm Play hoặc bấm "Nghe gốc" ở từng câu thoại bên dưới.</span>`;
+            }
+
+            audio.play().then(() => {
+                showToast("Đã nạp và phát file MP3 gốc thành công!");
+            }).catch(() => {
+                showToast("Đã nạp file MP3! Hãy bấm nút Play để nghe.");
+            });
+        }
+
+        function bindNativeAudioEvents() {
+            const audio = getNativeAudio();
+            if (!audio) return;
+
+            audio.addEventListener('loadedmetadata', () => {
+                if (audio.duration && audio.duration > 0) {
+                    isLocalMp3Loaded = true;
+                    const badge = document.getElementById('audio-status-badge');
+                    if (badge) {
+                        badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                        badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> MP3 Sẵn sàng (${formatTime(audio.duration)})`;
+                    }
+                }
+            });
+
+            audio.addEventListener('play', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-pause';
+                if (text) text.textContent = 'Tạm dừng MP3';
+            });
+
+            audio.addEventListener('pause', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-play';
+                if (text) text.textContent = 'Nghe file gốc BBC';
+            });
+
+            const dropzone = document.getElementById('audio-dropzone');
+            if (dropzone) {
+                dropzone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.add('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('dragleave', () => {
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                        attachBlobToAudio(e.dataTransfer.files[0]);
+                    }
+                });
+            }
+        }
+
+        function controlYouTubePlayer(command, args = []) {
+            const iframe = document.getElementById('yt-player');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'command',
+                    func: command,
+                    args: args
+                }), '*');
+            }
+        }
+
+        function toggleMasterAudio() {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            } else {
+                const input = document.getElementById('local-mp3-input');
+                if (input) input.click();
+                showToast("Hãy chọn file MP3 từ máy tính của bạn để phát trực tiếp!");
+            }
+        }
+
+        function skipAudio(seconds) {
+            const audio = getNativeAudio();
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                audio.currentTime = Math.max(0, Math.min(audio.duration, audio.currentTime + seconds));
+            } else {
+                showToast("Hãy đính kèm file MP3 bằng nút 'Đính kèm file MP3 vừa tải' trước nhé!");
+            }
+        }
+
+        function changeAudioRate(rate) {
+            const audio = getNativeAudio();
+            if (audio) audio.playbackRate = parseFloat(rate);
+            controlYouTubePlayer('setPlaybackRate', [parseFloat(rate)]);
+        }
+
+        function playAudioSegment(startSec, endSec, rowIdx = null, customRate = null) {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            document.querySelectorAll('.dialogue-row').forEach(el => {
+                el.classList.remove('bg-[#285d02]/5', 'border-[#285d02]/30');
+            });
+            if (rowIdx !== null) {
+                const activeRow = document.getElementById(`dialogue-row-${rowIdx}`);
+                if (activeRow) activeRow.classList.add('bg-[#285d02]/5', 'border-[#285d02]/30');
+            }
+
+            const rate = customRate || parseFloat(document.getElementById('audio-playback-rate')?.value || 1);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                controlYouTubePlayer('pauseVideo');
+                audio.playbackRate = rate;
+                audio.currentTime = startSec;
+                audio.play().then(() => {
+                    const durationMs = ((endSec - startSec) / rate) * 1000;
+                    segmentStopTimeout = setTimeout(() => {
+                        audio.pause();
+                    }, durationMs);
+                }).catch(() => {
+                    showToast("Hãy bấm Play trên thanh Audio để bắt đầu nghe.");
+                });
+                return;
+            }
+
+            const wrapper = document.getElementById('video-wrapper');
+            if (wrapper && wrapper.classList.contains('hidden')) {
+                toggleVideo();
+            }
+            controlYouTubePlayer('setPlaybackRate', [rate]);
+            controlYouTubePlayer('seekTo', [startSec, true]);
+            controlYouTubePlayer('playVideo');
+            showToast(`Đang phát đoạn ${formatTime(startSec)} - ${formatTime(endSec)} qua YouTube (Hoặc đính kèm MP3 để nghe trực tiếp)`);
+
+            const durationMs = ((endSec - startSec) / rate) * 1000;
+            segmentStopTimeout = setTimeout(() => {
+                controlYouTubePlayer('pauseVideo');
+            }, durationMs);
+        }
+
+        // ==========================================
+        // 11. SPEECH SYNTHESIS & RECOGNITION
+        // ==========================================
+        function speakText(text, rate = 0.95) {
+            if (!('speechSynthesis' in window)) {
+                showToast("Trình duyệt của bạn không hỗ trợ đọc văn bản tự động.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = rate;
+
+            const voices = window.speechSynthesis.getVoices();
+            const ukVoice = voices.find(v => v.lang.includes('en-GB')) || voices.find(v => v.lang.includes('en'));
+            if (ukVoice) utterance.voice = ukVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function initSpeechRecognition() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (SpeechRecognition) {
+                recognition = new SpeechRecognition();
+                recognition.lang = 'en-GB';
+                recognition.interimResults = false;
+                recognition.maxAlternatives = 1;
+            }
+        }
+
+        function recordShadowing(id) {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById(`btn-shadow-rec-${id}`);
+            const resBox = document.getElementById(`shadow-result-${id}`);
+            const targetObj = shadowingData.find(s => s.id === id);
+
+            btn.classList.add('pulse-ring', 'bg-rose-600', 'text-white');
+            btn.innerHTML = `<i class="fa-solid fa-ear-listen"></i> <span>Đang nghe...</span>`;
+
+            recognition.onresult = (event) => {
+                const spoken = event.results[0][0].transcript;
+                const similarity = calculateSimilarity(targetObj.text, spoken);
+                resBox.classList.remove('hidden');
+                resBox.innerHTML = `
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-[#285d02]">Kết quả nhận diện giọng nói:</span>
+                        <span class="font-bold px-2 py-0.5 rounded ${similarity >= 75 ? 'bg-[#285d02]/15 text-[#285d02]' : 'bg-amber-200 text-amber-900'}">Độ khớp: ${similarity}%</span>
+                    </div>
+                    <p class="text-slate-700 italic">"${spoken}"</p>
+                `;
+            };
+
+            recognition.onerror = () => {
+                showToast("Không nghe rõ giọng nói. Vui lòng thử lại và cấp quyền Micro.");
+            };
+
+            recognition.onend = () => {
+                btn.classList.remove('pulse-ring', 'bg-rose-600', 'text-white');
+                btn.innerHTML = `<i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>`;
+            };
+
+            recognition.start();
+        }
+
+        function toggleStudioRecording() {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById('btn-studio-mic');
+            const input = document.getElementById('speaking-user-input');
+
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                return;
+            }
+
+            isRecording = true;
+            btn.classList.add('pulse-ring');
+            btn.innerHTML = `<i class="fa-solid fa-stop"></i> Dừng thu âm`;
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                input.value = (input.value ? input.value + ' ' : '') + transcript;
+            };
+
+            recognition.onend = () => {
+                isRecording = false;
+                btn.classList.remove('pulse-ring');
+                btn.innerHTML = `<i class="fa-solid fa-microphone"></i> Bắt đầu nói`;
+            };
+
+            recognition.start();
+        }
+
+        function calculateSimilarity(str1, str2) {
+            const clean1 = str1.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const clean2 = str2.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const matches = clean1.filter(word => clean2.includes(word));
+            return Math.min(100, Math.round((matches.length / clean1.length) * 100));
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // ==========================================
+        // 12. INITIALIZE APP ON WINDOW LOAD
+        // ==========================================
+        window.onload = function () {
+            renderTranscript();
+            renderFlashcard();
+            renderVocabPills();
+            renderSpeakingStructures();
+            renderGrammar();
+            renderShadowing();
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+            initSpeechRecognition();
+            bindNativeAudioEvents();
+        };
+    </script>
+</body>
+</html>

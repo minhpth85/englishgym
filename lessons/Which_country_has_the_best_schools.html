@@ -1,0 +1,1775 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC 6 Minute English: Which country has the best schools?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .vocab-highlight {
+            background-color: #fef08a;
+            border-bottom: 2px solid #eab308;
+            padding: 1px 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #854d0e;
+            transition: all 0.2s ease;
+        }
+        .vocab-highlight:hover, .vocab-highlight.active {
+            background-color: #fde047;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(234, 179, 8, 0.25);
+        }
+        .grammar-highlight {
+            border-bottom: 2px dashed #3b82f6;
+            cursor: pointer;
+            color: #1d4ed8;
+            font-weight: 500;
+        }
+        .grammar-highlight:hover {
+            background-color: #eff6ff;
+        }
+        /* 3D Flashcard Flip */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .pulse-ring {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        /* Mobile UX Utilities */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+
+    <!-- Top Header & Navigation (Clean Light Surface with #285d02 Brand Accents) -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+                <a href="../index.html" title="Quay lại Trang chủ"
+                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs sm:text-sm font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-slate-200 transition shrink-0">
+                    <i class="fa-solid fa-house text-xs sm:text-sm text-[#285d02]"></i>
+                    <span class="hidden sm:inline">Trang chủ</span>
+                </a>
+                <div class="flex gap-0.5 shrink-0">
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">C</span>
+                </div>
+                <div class="min-w-0">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#285d02]">6 Minute English</span>
+                        <span class="hidden xs:inline-block text-[10px] sm:text-xs bg-[#285d02]/10 text-[#285d02] font-semibold px-2 py-0.5 rounded-full">B1–B2</span>
+                    </div>
+                    <h1 class="text-sm sm:text-lg font-bold text-slate-900 leading-tight truncate">Which country has the best schools?</h1>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="https://www.youtube.com/watch?v=Xbv4IIqwW-4" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-semibold px-3 sm:px-3.5 py-2 rounded-xl transition shadow-xs">
+                    <i class="fa-brands fa-youtube text-sm sm:text-base"></i>
+                    <span class="hidden sm:inline">Mở trên YouTube</span>
+                    <span class="sm:hidden">YouTube</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tab Navigation Bar -->
+        <div class="bg-slate-50/80 border-t border-slate-200/80 relative">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-1">
+                <button onclick="switchTab('transcript')" id="tab-transcript" class="tab-btn active snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold border-b-2 border-[#285d02] text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>1. Transcript & Từ vựng</span>
+                </button>
+                <button onclick="switchTab('speaking-structures')" id="tab-speaking-structures" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>2. Cấu trúc nói hay</span>
+                </button>
+                <button onclick="switchTab('grammar')" id="tab-grammar" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-spell-check"></i>
+                    <span>3. Cấu trúc ngữ pháp</span>
+                </button>
+                <button onclick="switchTab('shadowing')" id="tab-shadowing" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-headphones"></i>
+                    <span>4. Luyện Shadowing</span>
+                </button>
+                <button onclick="switchTab('speaking-practice')" id="tab-speaking-practice" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>5. Speaking Practice</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6">
+
+        <!-- Embedded YouTube Video Collapsible Bar -->
+        <div class="bg-white rounded-2xl shadow-xs border border-slate-200 mb-6 overflow-hidden">
+            <div class="px-5 py-3 bg-white border-b border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                    <span class="text-sm font-semibold text-slate-800">Trình phát Video/Audio bài học (YouTube)</span>
+                </div>
+                <button onclick="toggleVideo()" id="toggle-video-btn" class="text-xs font-semibold text-[#285d02] hover:bg-[#285d02]/15 flex items-center gap-1.5 bg-[#285d02]/10 px-3 py-1.5 rounded-lg transition">
+                    <i class="fa-solid fa-chevron-up" id="toggle-video-icon"></i>
+                    <span id="toggle-video-text">Thu gọn Video</span>
+                </button>
+            </div>
+            <div id="video-wrapper" class="p-5 bg-slate-50/70 flex flex-col lg:flex-row items-center gap-6">
+                <div class="w-full lg:w-7/12 aspect-video rounded-xl overflow-hidden shadow-md bg-black border border-slate-200">
+                    <iframe id="yt-player" class="w-full h-full" 
+                            src="https://www.youtube.com/embed/Xbv4IIqwW-4?enablejsapi=1" 
+                            title="BBC 6 Minute English - Which country has the best schools?" 
+                            frameborder="0" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="w-full lg:w-5/12 space-y-3">
+                    <div class="inline-flex items-center gap-1.5 bg-[#285d02]/10 text-[#285d02] text-xs font-bold px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-lightbulb"></i> Hướng dẫn học hiệu quả
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Cách khai thác bài học này:</h3>
+                    <ul class="text-sm space-y-2.5 text-slate-600">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">1</span>
+                            <span>Nghe toàn bài trên YouTube và theo dõi Full Transcript bên dưới. Bấm vào các từ <span class="bg-amber-200/80 text-amber-950 px-1.5 py-0.5 rounded font-semibold text-xs">tô vàng</span> để mở Flashcard bên phải.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">2</span>
+                            <span>Chuyển qua tab <strong>Cấu trúc nói</strong> & <strong>Ngữ pháp</strong> để nắm các mẫu câu tự nhiên của người bản xứ.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">3</span>
+                            <span>Dùng tab <strong>Shadowing</strong> & <strong>Speaking Practice</strong> để luyện phát âm chuẩn và phản xạ giao tiếp.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="https://www.youtube.com/watch?v=Xbv4IIqwW-4" target="_blank" class="text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-2 rounded-xl transition inline-flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[#285d02]"></i> Xem trực tiếp trên YouTube.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 1: TRANSCRIPT & INTERACTIVE FLASHCARD -->
+        <section id="section-transcript" class="tab-section">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Left Column: Transcript (7 cols) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                    <div class="p-4 sm:p-5 border-b border-slate-100 bg-white flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Full Transcript Bài Nghe</h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Nhấn vào từ vựng được highlight để xem Flashcard bên phải</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="toggleTranslation()" id="btn-toggle-trans" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-language text-[#285d02]"></i>
+                                <span>Hiện dịch tiếng Việt</span>
+                            </button>
+                            <button onclick="toggleMasterAudio()" id="btn-master-audio" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white transition flex items-center gap-1.5 shadow-2xs" title="Phát/Tạm dừng file MP3 gốc BBC">
+                                <i class="fa-solid fa-play" id="master-audio-icon"></i>
+                                <span id="master-audio-text">Nghe file gốc BBC</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Native BBC MP3 Audio Player Bar -->
+                    <div id="audio-dropzone" class="px-4 sm:px-5 py-3.5 bg-[#285d02]/5 border-b border-[#285d02]/15 flex flex-col gap-2.5 transition">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-[#285d02] flex items-center gap-1.5">
+                                    <i class="fa-solid fa-headphones-simple"></i> Audio gốc BBC 6 Minute English (MP3)
+                                </span>
+                                <span id="audio-status-badge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                                    Đang dùng âm thanh YouTube / Chưa nạp MP3
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <label for="local-mp3-input" class="cursor-pointer px-2.5 py-1 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white font-semibold transition flex items-center gap-1.5 shadow-2xs" title="Chọn file MP3 từ máy tính của bạn để phát trực tiếp">
+                                    <i class="fa-solid fa-file-audio"></i>
+                                    <span>Đính kèm file MP3 vừa tải</span>
+                                </label>
+                                <input type="file" id="local-mp3-input" accept="audio/*,.mp3" class="hidden" onchange="loadUserMp3File(this)">
+                                <button onclick="skipAudio(-5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Lùi 5 giây">-5s</button>
+                                <button onclick="skipAudio(5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Tới 5 giây">+5s</button>
+                                <select id="audio-playback-rate" onchange="changeAudioRate(this.value)" class="bg-white border border-slate-200 rounded-lg px-2 py-1 text-[11px] font-bold text-slate-700 focus:outline-none">
+                                    <option value="0.75">0.75x</option>
+                                    <option value="0.9">0.9x</option>
+                                    <option value="1" selected>1.0x</option>
+                                    <option value="1.15">1.15x</option>
+                                </select>
+                            </div>
+                        </div>
+                        <audio id="bbc-native-audio" controls preload="auto" class="w-full h-9 rounded-lg">
+                            <source src="261112_6_minute_english_learning_from_different_generations_download.mp3" type="audio/mpeg">
+                            <source src="261112_6_minute_english_learning_from_different_generations.mp3" type="audio/mpeg">
+                            <source src="https://ichef.bbci.co.uk/images/ic/raw/p0k078z5.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát file MP3.
+                        </audio>
+                        <p id="audio-helper-tip" class="text-[11px] text-slate-500 flex items-center justify-between gap-2">
+                            <span><i class="fa-solid fa-circle-info text-[#285d02] mr-1"></i> Mẹo: Nếu thanh MP3 hiện <strong>0:00 / 0:00</strong> (do giới hạn bảo mật khung Preview), hãy bấm nút xanh <strong>"Đính kèm file MP3 vừa tải"</strong> ở góc phải để nạp file MP3 của bạn vào và nghe mượt 100%!</span>
+                        </p>
+                    </div>
+
+                    <!-- Quiz Box Embedded in Transcript -->
+                    <div class="mx-4 sm:mx-5 mt-4 p-4 bg-slate-50 border border-slate-200/90 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]"><i class="fa-solid fa-circle-question mr-1"></i> Quiz trong bài</span>
+                            <span id="quiz-feedback" class="text-xs font-semibold"></span>
+                        </div>
+                        <p class="text-sm font-semibold text-slate-800 mb-3">What generation would someone born in 1982 be in?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkQuiz('a')" id="quiz-a" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">a) Generation X</button>
+                            <button onclick="checkQuiz('b')" id="quiz-b" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">b) Millennial</button>
+                            <button onclick="checkQuiz('c')" id="quiz-c" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">c) Gen Z</button>
+                        </div>
+                    </div>
+
+                    <!-- Dialogue Container (Natural page scroll on mobile, inner scroll on desktop) -->
+                    <div id="transcript-container" class="p-3.5 sm:p-6 space-y-3.5 sm:space-y-4 lg:max-h-[750px] lg:overflow-y-auto">
+                        <!-- Rendered dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Interactive Flashcard Panel (5 cols) -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="px-5 py-3.5 bg-white border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                                <span class="font-bold text-sm text-slate-900">Vocabulary Flashcard</span>
+                            </div>
+                            <span id="card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2.5 py-0.5 rounded-full font-bold">1 / 10</span>
+                        </div>
+
+                        <!-- Flashcard Body -->
+                        <div id="flashcard-display" class="p-5 sm:p-6">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+
+                        <!-- Card Navigation Footer -->
+                        <div class="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                            <button onclick="prevVocab()" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-arrow-left"></i> Từ trước
+                            </button>
+                            <button onclick="markLearned()" id="btn-mark-learned" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-regular fa-circle-check"></i> Đã thuộc từ này
+                            </button>
+                            <button onclick="nextVocab()" class="px-3.5 py-2 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                Từ tiếp <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Vocab Pills Selector -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-4">
+                        <div class="flex items-center justify-between mb-2.5">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Danh sách từ vựng trong bài</span>
+                            <span id="learned-progress" class="text-xs font-bold text-[#285d02]">Đã thuộc: 0/10</span>
+                        </div>
+                        <div id="vocab-pills" class="flex flex-wrap gap-1.5">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: SPEAKING STRUCTURES (CẤU TRÚC NÓI HAY) -->
+        <section id="section-speaking-structures" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Spoken English & Idioms</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Cấu trúc giao tiếp tự nhiên trong bài</h2>
+                    <p class="text-sm text-slate-600 mt-1">Những cụm từ và cách diễn đạt đắt giá giúp bạn nói tiếng Anh tự nhiên như người bản xứ (trích từ hội thoại của Phil, Georgie, Ian và Liz).</p>
+                </div>
+
+                <div id="speaking-structures-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: GRAMMAR STRUCTURES (CẤU TRÚC NGỮ PHÁP) -->
+        <section id="section-grammar" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Grammar in Context</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Điểm ngữ pháp trọng tâm từ Transcript</h2>
+                    <p class="text-sm text-slate-600 mt-1">Phân tích cách dùng thì, cấu trúc đảo ngữ đồng tình và mệnh đề quan hệ xuất hiện thực tế trong bài.</p>
+                </div>
+
+                <div id="grammar-list" class="space-y-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: SHADOWING PRACTICE -->
+        <section id="section-shadowing" class="tab-section hidden">
+            <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-white border-b border-slate-200">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Pronunciation & Intonation</span>
+                            <h2 class="text-2xl font-bold text-slate-900 mt-2">Luyện kỹ thuật Shadowing (Nhại giọng)</h2>
+                            <p class="text-sm text-slate-600 mt-1">Nghe câu mẫu chuẩn, chú ý các từ nhấn trọng âm (in đậm) và dấu ngắt nhịp (/), sau đó thu âm giọng của bạn để so sánh.</p>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
+                            <span class="text-xs font-medium text-slate-600">Tốc độ đọc mẫu:</span>
+                            <select id="shadowing-speed" class="bg-white text-slate-800 text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-300 focus:outline-none focus:border-[#285d02]">
+                                <option value="0.75">0.75x (Chậm - Dễ bắt nhịp)</option>
+                                <option value="0.95" selected>0.95x (Tự nhiên)</option>
+                                <option value="1.1">1.1x (Nhanh - Thử thách)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shadowing-list" class="p-6 divide-y divide-slate-200 space-y-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: SPEAKING PRACTICE (ROLEPLAY & Q&A) -->
+        <section id="section-speaking-practice" class="tab-section hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left: Speaking Prompts -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-fire text-[#285d02]"></i>
+                            <span>Chủ đề luyện nói (IELTS / Giao tiếp)</span>
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1 mb-4">Chọn một câu hỏi thảo luận lấy cảm hứng từ bài học để luyện trả lời.</p>
+                        <div id="speaking-prompts-list" class="space-y-2.5">
+                            <!-- Rendered via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Speaking Studio -->
+                <div class="lg:col-span-7 bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                    <div id="speaking-studio">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <p>Nội dung gốc: <strong>BBC Learning English - 6 Minute English</strong> (Which country has the best schools?).</p>
+            <p class="font-medium text-slate-700">Đây là thư viện học tập của Minh Fam.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto bg-slate-900 text-white text-xs font-medium px-4 py-3 rounded-xl shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-lime-400 shrink-0"></i>
+        <span id="toast-msg">Thông báo</span>
+    </div>
+
+    <!-- Mobile Bottom Sheet Flashcard Modal (Visible only on screens < 1024px when a word is tapped) -->
+    <div id="mobile-flashcard-drawer" class="fixed inset-0 z-50 hidden lg:hidden flex-col justify-end bg-slate-900/60 backdrop-blur-xs transition-opacity">
+        <div onclick="closeMobileFlashcard()" class="flex-1 w-full"></div>
+        <div class="bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 max-h-[85vh] flex flex-col overflow-hidden animate-[slideUp_0.25s_ease-out]">
+            <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                    <span class="font-bold text-sm text-slate-900">Flashcard Từ Vựng</span>
+                    <span id="mobile-card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2 py-0.5 rounded-full font-bold">1 / 10</span>
+                </div>
+                <button onclick="closeMobileFlashcard()" class="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="mobile-flashcard-body" class="p-5 overflow-y-auto space-y-4">
+                <!-- Populated dynamically when user taps a word on mobile -->
+            </div>
+            <div class="px-4 py-3 bg-slate-50 border-t border-slate-200 grid grid-cols-3 gap-2">
+                <button onclick="prevVocab()" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-arrow-left"></i> Trước
+                </button>
+                <button onclick="markLearned()" id="mobile-btn-mark-learned" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-circle-check"></i> Đã thuộc
+                </button>
+                <button onclick="nextVocab()" class="py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1">
+                    Tiếp <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // 1. VOCABULARY DATA (10 KEY ITEMS)
+        // ==========================================
+        const vocabData = [
+    {
+        "id": "contentious",
+        "word": "contentious",
+        "ipa": "/kənˈtenʃəs/",
+        "pos": "adjective",
+        "meaningVi": "Gây tranh cãi, dễ gây bất đồng",
+        "meaningEn": "Causing or likely to cause disagreement or argument; controversial.",
+        "example": "When they were introduced first of all, that was a very contentious idea.",
+        "exampleVi": "Khi mới được giới thiệu lần đầu, đó là một ý tưởng rất gây tranh cãi.",
+        "speakingNote": "Từ nâng cao thay cho \"controversial\" trong IELTS Speaking/Writing (ví dụ: \"a contentious issue/topic\"). Trọng âm rơi vào âm tiết thứ 2: conTENtious."
+    },
+    {
+        "id": "outpace",
+        "word": "outpace",
+        "ipa": "/ˌaʊtˈpeɪs/",
+        "pos": "verb",
+        "meaningVi": "Vượt tốc độ, phát triển nhanh hơn và bỏ xa",
+        "meaningEn": "Go, rise, or improve faster than someone or something else.",
+        "example": "Many large European countries are being outpaced by smaller nations.",
+        "exampleVi": "Nhiều quốc gia châu Âu lớn đang bị các quốc gia nhỏ hơn bỏ xa về tốc độ phát triển.",
+        "speakingNote": "Tiền tố \"out-\" mang nghĩa \"vượt hơn/tốt hơn\". Trọng âm rơi vào \"PACE\" (/ˌaʊtˈpeɪs/)."
+    },
+    {
+        "id": "outperform",
+        "word": "outperform",
+        "ipa": "/ˌaʊtpəˈfɔːm/",
+        "pos": "verb",
+        "meaningVi": "Thể hiện tốt hơn, đạt kết quả vượt trội hơn",
+        "meaningEn": "Perform better than someone or something else.",
+        "example": "They're being outpaced and outperformed by these fast, upcoming countries.",
+        "exampleVi": "Họ đang bị các quốc gia đang lên nhanh chóng này vượt mặt cả về tốc độ lẫn thành tích.",
+        "speakingNote": "Rất hay dùng trong IELTS Writing Task 1 & Speaking Part 3 khi so sánh thành tích, điểm số hoặc doanh số."
+    },
+    {
+        "id": "rival",
+        "word": "rival",
+        "ipa": "/ˈraɪvl/",
+        "pos": "noun (C) / adjective",
+        "meaningVi": "Đối thủ cạnh tranh",
+        "meaningEn": "A person, group, or country competing with another for the same goal or superiority.",
+        "example": "Singapore, Estonia and Taiwan are described as economic rivals to large European nations.",
+        "exampleVi": "Singapore, Estonia và Đài Loan được mô tả là những đối thủ kinh tế của các nước châu Âu lớn.",
+        "speakingNote": "Collocations phổ biến: \"economic rivals\", \"fierce rivals\", \"rival companies\"."
+    },
+    {
+        "id": "knowledge-economy",
+        "word": "knowledge economy",
+        "ipa": "/ˈnɒlɪdʒ ɪˈkɒnəmi/",
+        "pos": "noun phrase",
+        "meaningVi": "Nền kinh tế tri thức",
+        "meaningEn": "A service economy based on highly skilled industries such as IT, finance, or advanced engineering.",
+        "example": "If you want to have a knowledge economy, an economy based on skills, this is how you measure it.",
+        "exampleVi": "Nếu bạn muốn xây dựng một nền kinh tế tri thức – nền kinh tế dựa trên kỹ năng – thì đây là cách bạn đo lường nó.",
+        "speakingNote": "Cụm từ vựng đắt giá cho chủ đề Education & Work trong IELTS Speaking Part 3."
+    },
+    {
+        "id": "regardless",
+        "word": "regardless (of)",
+        "ipa": "/rɪˈɡɑːdləs əv/",
+        "pos": "adverb / preposition",
+        "meaningVi": "Bất chấp, không phân biệt, không bị ảnh hưởng bởi",
+        "meaningEn": "Without considering, or without being influenced by something.",
+        "example": "Countries which make sure that all their pupils get through a certain level of education, regardless of their background, do well.",
+        "exampleVi": "Những quốc gia đảm bảo mọi học sinh đều đạt đến một trình độ giáo dục nhất định, bất kể xuất thân của các em, thường đạt kết quả tốt.",
+        "speakingNote": "Cẩn thận đừng viết nhầm thành *\"regardless to\"*; luôn đi với giới từ **of** (\"regardless of + Noun/V-ing\")."
+    },
+    {
+        "id": "segregate",
+        "word": "segregate",
+        "ipa": "/ˈseɡrɪɡeɪt/",
+        "pos": "verb",
+        "meaningVi": "Phân tách, tách riêng các nhóm",
+        "meaningEn": "To separate one group of people or things from another and keep them apart.",
+        "example": "If you are teaching them by different levels or abilities, then you are segregating them.",
+        "exampleVi": "Nếu bạn dạy học sinh theo các trình độ hoặc năng lực khác nhau, tức là bạn đang phân tách các em.",
+        "speakingNote": "Danh từ là \"segregation\" (/ˌseɡrɪˈɡeɪʃn/). Hay dùng khi bàn về bình đẳng giáo dục (educational equality)."
+    },
+    {
+        "id": "carry-out",
+        "word": "carry out",
+        "ipa": "/ˈkæri aʊt/",
+        "pos": "phrasal verb",
+        "meaningVi": "Tiến hành, thực hiện (khảo sát, nghiên cứu, bài kiểm tra)",
+        "meaningEn": "To conduct, do, or complete a task, test, or piece of research.",
+        "example": "The rankings are based on tests carried out by the OECD every three years.",
+        "exampleVi": "Bảng xếp hạng dựa trên các bài kiểm tra do OECD tiến hành ba năm một lần.",
+        "speakingNote": "Collocations chuẩn học thuật: \"carry out tests / research / a survey / an experiment\"."
+    },
+    {
+        "id": "prioritise",
+        "word": "prioritise",
+        "ipa": "/praɪˈɒrətaɪz/",
+        "pos": "verb",
+        "meaningVi": "Ưu tiên, đặt lên hàng đầu",
+        "meaningEn": "To decide which things are most important and deal with them first.",
+        "example": "Sean Coughlan tells us that those countries that prioritise getting everyone to a certain level do well.",
+        "exampleVi": "Sean Coughlan cho chúng ta biết rằng những quốc gia ưu tiên đưa mọi học sinh đạt đến một trình độ nhất định đều làm tốt.",
+        "speakingNote": "Có thể dùng \"prioritise + Noun\" hoặc \"prioritise + V-ing\". Trọng âm rơi vào âm tiết thứ 2: priORitise."
+    },
+    {
+        "id": "correspondent",
+        "word": "correspondent",
+        "ipa": "/ˌkɒrəˈspɒndənt/",
+        "pos": "noun (C)",
+        "meaningVi": "Phóng viên thường trú / phóng viên chuyên trách",
+        "meaningEn": "A journalist employed by a media organisation to report on a particular subject or from a particular country.",
+        "example": "Well, here is former BBC education correspondent Sean Coughlan talking to BBC World Service.",
+        "exampleVi": "Vâng, đây là cựu phóng viên chuyên trách mảng giáo dục của BBC, Sean Coughlan, đang trò chuyện với đài BBC World Service.",
+        "speakingNote": "Phân biệt với \"journalist\" (nhà báo nói chung): \"education/foreign correspondent\" chỉ người chuyên trách đưa tin một lĩnh vực/khu vực."
+    }
+];
+
+        // ==========================================
+        // 2. FULL 100% TRANSCRIPT DATA WITH AUDIO TIMESTAMPS
+        // ==========================================
+        const transcriptData = [
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 0,
+        "end": 5,
+        "en": "Hello. This is 6 Minute English from BBC Learning English. I'm Phil.",
+        "vi": "Xin chào. Đây là chương trình 6 Minute English từ BBC Learning English. Tôi là Phil."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 5,
+        "end": 8,
+        "en": "And I'm Beth.",
+        "vi": "Và tôi là Beth."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 8,
+        "end": 21,
+        "en": "So, Beth, we're talking about the best education systems in the world today. You went to school here in Britain. What do you think of the British education system? Do you think it could be the best?",
+        "vi": "Vậy, Beth, hôm nay chúng ta đang nói về những hệ thống giáo dục tốt nhất trên thế giới. Bạn đã đi học ở Anh. Bạn nghĩ sao về hệ thống giáo dục Anh? Bạn có nghĩ nó có thể là tốt nhất không?"
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 21,
+        "end": 34,
+        "en": "I think it's quite good, there's probably a couple of things that I personally would change about it, but I would say it's quite good, but maybe not the best in the world.",
+        "vi": "Tôi nghĩ nó khá tốt, có lẽ có một vài điều mà cá nhân tôi muốn thay đổi, nhưng tôi sẽ nói là nó khá tốt, dù có lẽ chưa phải tốt nhất thế giới."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 34,
+        "end": 40,
+        "en": "Well, in this programme, we are going to be talking about the Pisa rankings.",
+        "vi": "Vâng, trong chương trình hôm nay, chúng ta sẽ nói về bảng xếp hạng Pisa."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 40,
+        "end": 65,
+        "en": "The rankings are based on tests <span onclick=\"selectVocab('carry-out')\" class=\"vocab-highlight\" data-vocab=\"carry-out\">carried out</span> by the OECD, that's an international organisation, every three years. These tests attempt to show which countries are the most effective at teaching maths, science and reading. But is that really possible to measure? Well, here is former BBC education <span onclick=\"selectVocab('correspondent')\" class=\"vocab-highlight\" data-vocab=\"correspondent\">correspondent</span> Sean Coughlan talking to BBC World Service programme 'The Global Story'.",
+        "vi": "Bảng xếp hạng dựa trên các bài kiểm tra do OECD – một tổ chức quốc tế – tiến hành ba năm một lần. Những bài kiểm tra này cố gắng chỉ ra quốc gia nào dạy toán, khoa học và đọc hiểu hiệu quả nhất. Nhưng liệu điều đó có thực sự đo lường được không? Đây là cựu phóng viên chuyên trách giáo dục của BBC, Sean Coughlan, chia sẻ trên chương trình \"The Global Story\" của BBC World Service."
+    },
+    {
+        "speaker": "Sean Coughlan",
+        "role": "Guest",
+        "start": 65,
+        "end": 82,
+        "en": "When they were introduced first of all, that was a very <span onclick=\"selectVocab('contentious')\" class=\"vocab-highlight\" data-vocab=\"contentious\">contentious</span> idea, because people said 'how can you possibly compare big countries… how can you compare America to Luxembourg or to, you know, or to parts of China, or whatever?'",
+        "vi": "Khi chúng mới được đưa ra lần đầu, đó là một ý tưởng rất gây tranh cãi, bởi vì mọi người nói rằng \"làm sao có thể so sánh những quốc gia lớn... làm sao bạn so sánh nước Mỹ với Luxembourg hay với một số khu vực của Trung Quốc được chứ?\""
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 82,
+        "end": 102,
+        "en": "Sean said that the tests were <span onclick=\"selectVocab('contentious')\" class=\"vocab-highlight\" data-vocab=\"contentious\">contentious</span>. If something is <span onclick=\"selectVocab('contentious')\" class=\"vocab-highlight\" data-vocab=\"contentious\">contentious</span>, then it is something that people might argue about – it's controversial. So, at first, Pisa tests were <span onclick=\"selectVocab('contentious')\" class=\"vocab-highlight\" data-vocab=\"contentious\">contentious</span> because not everyone believed it was fair to compare very different countries.",
+        "vi": "Sean nói rằng các bài kiểm tra này gây tranh cãi (\"contentious\"). Nếu một điều gì đó là \"contentious\", tức là điều mà mọi người có thể tranh luận – nó gây tranh cãi. Vì vậy, ban đầu, bài thi Pisa gây tranh cãi vì không phải ai cũng tin việc so sánh những quốc gia quá khác biệt là công bằng."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 102,
+        "end": 120,
+        "en": "Phil, I've got a question for you about them. So, in 2022, Singapore was top of the reading rankings. But which of these countries came second? Was it: a) The USA? b) Ireland? or, c) The UK?",
+        "vi": "Phil, tôi có một câu hỏi cho bạn về bảng xếp hạng này. Năm 2022, Singapore đứng đầu bảng xếp hạng kỹ năng đọc. Vậy quốc gia nào đứng thứ hai? Đó là: a) Mỹ? b) Ireland? hay c) Anh?"
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 120,
+        "end": 125,
+        "en": "I think it might be b) Ireland.",
+        "vi": "Tôi nghĩ có thể là b) Ireland."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 125,
+        "end": 145,
+        "en": "OK. Well, we will find out if that's correct at the end of the programme. A common pattern in the Pisa rankings is that the most successful countries tend to be smaller. Talking to BBC World Service programme 'The Global Story', Sean Coughlan tells us that many large countries from Western Europe don't score that highly in the rankings.",
+        "vi": "Được rồi, chúng ta sẽ biết đáp án có đúng không ở cuối chương trình nhé. Một quy luật phổ biến trong bảng xếp hạng Pisa là các quốc gia thành công nhất thường có quy mô nhỏ hơn. Chia sẻ với chương trình \"The Global Story\", Sean Coughlan cho biết nhiều nước lớn ở Tây Âu không đạt điểm cao lắm trong bảng xếp hạng."
+    },
+    {
+        "speaker": "Sean Coughlan",
+        "role": "Guest",
+        "start": 145,
+        "end": 168,
+        "en": "They're being <span onclick=\"selectVocab('outpace')\" class=\"vocab-highlight\" data-vocab=\"outpace\">outpaced</span> and <span onclick=\"selectVocab('outperform')\" class=\"vocab-highlight\" data-vocab=\"outperform\">outperformed</span> by these fast, upcoming countries – you know, Singapore, or Estonia, or Taiwan, or those sort of places which we don't historically think of as being economic <span onclick=\"selectVocab('rival')\" class=\"vocab-highlight\" data-vocab=\"rival\">rivals</span>, but I suppose the argument for the PISA tests is, if you want to have a <span onclick=\"selectVocab('knowledge-economy')\" class=\"vocab-highlight\" data-vocab=\"knowledge-economy\">knowledge economy</span>, an economy based on skills, this is how you measure it.",
+        "vi": "Họ đang bị vượt mặt về tốc độ và thành tích bởi những quốc gia đang lên nhanh chóng – như Singapore, Estonia, Đài Loan, hoặc những nơi mà trước đây ta vốn không coi là đối thủ kinh tế. Nhưng tôi cho rằng lý lẽ ủng hộ bài thi PISA là: nếu bạn muốn có một nền kinh tế tri thức – nền kinh tế dựa trên kỹ năng – thì đây là cách bạn đo lường nó."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 168,
+        "end": 182,
+        "en": "We heard that many large European countries are being <span onclick=\"selectVocab('outpace')\" class=\"vocab-highlight\" data-vocab=\"outpace\">outpaced</span> by smaller nations. If someone <span onclick=\"selectVocab('outpace')\" class=\"vocab-highlight\" data-vocab=\"outpace\">outpaces</span> you, they are going faster than you – at a higher pace.",
+        "vi": "Chúng ta vừa nghe rằng nhiều nước châu Âu lớn đang bị các quốc gia nhỏ hơn vượt tốc độ. Nếu ai đó \"outpaces\" bạn, tức là họ đang tiến nhanh hơn bạn – với nhịp độ cao hơn."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 182,
+        "end": 204,
+        "en": "We use the prefix 'out-' to say that someone or something is better at doing something. We also heard that smaller nations are '<span onclick=\"selectVocab('outperform')\" class=\"vocab-highlight\" data-vocab=\"outperform\">outperforming</span>' larger ones – they are performing better. Singapore, Estonia and Taiwan are described as economic <span onclick=\"selectVocab('rival')\" class=\"vocab-highlight\" data-vocab=\"rival\">rivals</span> to large European nations – that means that they are competing with them, economically.",
+        "vi": "Chúng ta dùng tiền tố \"out-\" để nói ai đó hoặc cái gì đó làm tốt hơn ở một việc nào đó. Ta cũng nghe rằng các quốc gia nhỏ đang thể hiện vượt trội hơn (\"outperforming\") các nước lớn – tức là đạt kết quả tốt hơn. Singapore, Estonia và Đài Loan được mô tả là đối thủ kinh tế của các nước châu Âu lớn – nghĩa là họ đang cạnh tranh về mặt kinh tế."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 204,
+        "end": 218,
+        "en": "We also heard about a <span onclick=\"selectVocab('knowledge-economy')\" class=\"vocab-highlight\" data-vocab=\"knowledge-economy\">knowledge economy</span>. This is an economy based on service industries that require workers to be highly educated, such as IT, finance or advanced engineering.",
+        "vi": "Chúng ta cũng nghe nhắc tới \"knowledge economy\" (nền kinh tế tri thức). Đây là nền kinh tế dựa vào các ngành dịch vụ đòi hỏi người lao động có trình độ học vấn cao, như công nghệ thông tin, tài chính hoặc kỹ thuật tiên tiến."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 218,
+        "end": 238,
+        "en": "So, what makes countries perform better in these tests? Let's hear again from BBC World Service programme, 'The Global Story'. Sean Coughlan tells us that those countries that <span onclick=\"selectVocab('prioritise')\" class=\"vocab-highlight\" data-vocab=\"prioritise\">prioritise</span> getting everyone to a certain level do well. We also hear from Rando Kuustik, an Estonian school principal.",
+        "vi": "Vậy điều gì giúp các quốc gia đạt thành tích tốt hơn trong các bài kiểm tra này? Hãy cùng nghe lại từ chương trình \"The Global Story\". Sean Coughlan nói rằng những nước ưu tiên đưa tất cả học sinh đạt tới một trình độ nhất định sẽ làm tốt. Chúng ta cũng sẽ nghe chia sẻ từ Rando Kuustik, hiệu trưởng một trường học ở Estonia."
+    },
+    {
+        "speaker": "Sean Coughlan",
+        "role": "Guest",
+        "start": 238,
+        "end": 250,
+        "en": "Countries which make sure that all their pupils get through a certain level of education to a certain standard, <span onclick=\"selectVocab('regardless')\" class=\"vocab-highlight\" data-vocab=\"regardless\">regardless</span> of their background, do well.",
+        "vi": "Những quốc gia đảm bảo rằng mọi học sinh của mình đều hoàn thành một bậc học đạt chuẩn nhất định, bất kể xuất thân của các em ra sao, đều đạt kết quả tốt."
+    },
+    {
+        "speaker": "Rando Kuustik",
+        "role": "Guest",
+        "start": 250,
+        "end": 266,
+        "en": "If you are teaching them by different level or abilities, then you are <span onclick=\"selectVocab('segregate')\" class=\"vocab-highlight\" data-vocab=\"segregate\">segregating</span> them and we don't want to <span onclick=\"selectVocab('segregate')\" class=\"vocab-highlight\" data-vocab=\"segregate\">segregate</span> any people in the world, why we are doing that in the schools? This one of the main things why Estonia is successful.",
+        "vi": "Nếu bạn dạy học sinh theo các trình độ hay năng lực khác nhau, tức là bạn đang phân tách các em, mà chúng ta không muốn phân tách bất kỳ ai trên thế giới này, vậy tại sao lại làm điều đó trong trường học? Đây là một trong những lý do chính giúp Estonia thành công."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 266,
+        "end": 282,
+        "en": "Sean said the most successful systems educate everyone to a particular standard, <span onclick=\"selectVocab('regardless')\" class=\"vocab-highlight\" data-vocab=\"regardless\">regardless</span> of their background. If one thing happens <span onclick=\"selectVocab('regardless')\" class=\"vocab-highlight\" data-vocab=\"regardless\">regardless</span> of something else, it means that the something else is not important, or not a problem.",
+        "vi": "Sean nói rằng những hệ thống thành công nhất giáo dục mọi người đạt một tiêu chuẩn cụ thể, bất kể xuất thân của họ. Nếu một việc xảy ra \"regardless of\" một yếu tố khác, nghĩa là yếu tố kia không quan trọng hoặc không phải vấn đề."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 282,
+        "end": 292,
+        "en": "Rando Kuustik said that Estonian schools do not want to <span onclick=\"selectVocab('segregate')\" class=\"vocab-highlight\" data-vocab=\"segregate\">segregate</span> students. <span onclick=\"selectVocab('segregate')\" class=\"vocab-highlight\" data-vocab=\"segregate\">Segregate</span> means to separate and keep apart.",
+        "vi": "Rando Kuustik nói rằng các trường học ở Estonia không muốn phân tách học sinh. \"Segregate\" có nghĩa là chia tách và giữ tách biệt."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 292,
+        "end": 300,
+        "en": "So, we've just heard about Estonia, but what about your question, Beth? What about those countries?",
+        "vi": "Chúng ta vừa nghe về Estonia, thế còn câu hỏi của bạn thì sao, Beth? Kết quả của các quốc gia đó thế nào?"
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 300,
+        "end": 322,
+        "en": "I asked you which out of the USA, Ireland, and the UK came second for reading in the 2022 Pisa rankings. You said Ireland, and that was the correct answer. Well done! OK, let's recap the vocabulary we've learned in this programme about education rankings, starting with <span onclick=\"selectVocab('contentious')\" class=\"vocab-highlight\" data-vocab=\"contentious\">contentious</span> - argued about or controversial.",
+        "vi": "Tôi đã hỏi bạn trong số Mỹ, Ireland và Anh, nước nào đứng thứ hai về kỹ năng đọc trong bảng xếp hạng Pisa 2022. Bạn chọn Ireland và đó là đáp án chính xác. Chúc mừng bạn! Được rồi, hãy ôn lại từ vựng ta đã học về xếp hạng giáo dục, bắt đầu với \"contentious\" – gây tranh cãi."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 322,
+        "end": 328,
+        "en": "If you're <span onclick=\"selectVocab('outpace')\" class=\"vocab-highlight\" data-vocab=\"outpace\">outpaced</span> by someone, they are going faster than you are.",
+        "vi": "Nếu bạn bị ai đó \"outpaced\", tức là họ đang đi nhanh hơn bạn."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 328,
+        "end": 332,
+        "en": "<span onclick=\"selectVocab('rival')\" class=\"vocab-highlight\" data-vocab=\"rival\">Rivals</span> are competitors.",
+        "vi": "\"Rivals\" là những đối thủ cạnh tranh."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 332,
+        "end": 342,
+        "en": "A <span onclick=\"selectVocab('knowledge-economy')\" class=\"vocab-highlight\" data-vocab=\"knowledge-economy\">knowledge economy</span> is one based on industries that need highly educated workers, such as IT, finance or advanced engineering.",
+        "vi": "Nền kinh tế tri thức (\"knowledge economy\") là nền kinh tế dựa trên các ngành công nghiệp cần nhân lực trình độ cao như CNTT, tài chính hay kỹ thuật tiên tiến."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 342,
+        "end": 350,
+        "en": "If something happens <span onclick=\"selectVocab('regardless')\" class=\"vocab-highlight\" data-vocab=\"regardless\">regardless</span> of a second thing, the second thing has no impact on it happening.",
+        "vi": "Nếu một việc xảy ra \"regardless of\" một việc thứ hai, thì việc thứ hai không ảnh hưởng gì đến việc đó."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 350,
+        "end": 372,
+        "en": "And finally, if people are <span onclick=\"selectVocab('segregate')\" class=\"vocab-highlight\" data-vocab=\"segregate\">segregated</span>, different groups of people are separated and kept apart. Once again, our six minutes are up. Remember to visit our website, bbclearningenglish.com, where you'll find a worksheet and quiz related to this programme, and we'll see you again soon for more trending topics and useful vocabulary, here at 6 Minute English. Goodbye for now!",
+        "vi": "Và cuối cùng, nếu mọi người bị \"segregated\", tức là các nhóm khác nhau bị chia tách và giữ tách biệt. Một lần nữa, sáu phút của chúng ta đã hết. Hãy nhớ truy cập trang web bbclearningenglish.com để làm bài tập và trắc nghiệm liên quan đến chương trình này, và hẹn gặp lại các bạn sớm với nhiều chủ đề thịnh hành cùng từ vựng hữu ích tại 6 Minute English. Tạm biệt nhé!"
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 372,
+        "end": 375,
+        "en": "Bye!",
+        "vi": "Tạm biệt!"
+    }
+];
+
+        // ==========================================
+        // 3. SPEAKING STRUCTURES DATA
+        // ==========================================
+        const speakingStructuresData = [
+    {
+        "pattern": "I think it's quite good, there's probably a couple of things that I personally would change...",
+        "func": "Đưa ra đánh giá cân bằng, lịch sự (khen trước rồi mới góp ý nhẹ)",
+        "contextInLesson": "Beth: \"I think it's quite good, there's probably a couple of things that I personally would change about it...\"",
+        "howToUse": "Cực kỳ tự nhiên trong IELTS Speaking Part 1/3 khi được hỏi ý kiến về trường học, thành phố hoặc hệ thống giáo dục.",
+        "yourExample": "I think public transport here is quite good; there's probably a couple of things I personally would improve, like late-night bus frequency."
+    },
+    {
+        "pattern": "How can you possibly + V ...?",
+        "func": "Đặt câu hỏi tu từ bày tỏ sự hoài nghi hoặc bất ngờ",
+        "contextInLesson": "Sean Coughlan: \"People said 'how can you possibly compare big countries… how can you compare America to Luxembourg?'\"",
+        "howToUse": "Thêm \"possibly\" sau \"how can you\" giúp nhấn mạnh tính phi lý hoặc khó tin của sự việc.",
+        "yourExample": "How can you possibly judge a student’s entire creativity based on a single two-hour exam?"
+    },
+    {
+        "pattern": "A common pattern in [X] is that ... tend to ...",
+        "func": "Nêu một quy luật hoặc xu hướng chung một cách khách quan",
+        "contextInLesson": "Beth: \"A common pattern in the Pisa rankings is that the most successful countries tend to be smaller.\"",
+        "howToUse": "Dùng \"tend to\" để tránh khái quát hóa tuyệt đối, giúp câu trả lời IELTS nghe chín chắn hơn.",
+        "yourExample": "A common pattern in modern workplaces is that younger employees tend to value flexibility over rigid schedules."
+    },
+    {
+        "pattern": "I suppose the argument for [X] is ...",
+        "func": "Trình bày lập luận ủng hộ một quan điểm (dù bản thân có thể còn băn khoăn)",
+        "contextInLesson": "Sean Coughlan: \"But I suppose the argument for the PISA tests is, if you want to have a knowledge economy, this is how you measure it.\"",
+        "howToUse": "Rất hữu ích khi phân tích hai mặt của một vấn đề trong IELTS Speaking Part 3.",
+        "yourExample": "I suppose the argument for standardised testing is that it gives universities an objective way to compare applicants."
+    },
+    {
+        "pattern": "We use the prefix [X] to say that ...",
+        "func": "Giải thích quy luật cấu tạo từ hoặc mở rộng ý trong giao tiếp",
+        "contextInLesson": "Beth: \"We use the prefix 'out-' to say that someone or something is better at doing something.\"",
+        "howToUse": "Ghi nhớ mẹo tiền tố \"out-\" (outpace, outperform, outgrow, outlive) để tăng vốn từ vựng linh hoạt.",
+        "yourExample": "Digital textbooks are starting to outpace traditional printed books in many universities."
+    },
+    {
+        "pattern": "... regardless of [Noun / Noun Phrase]",
+        "func": "Nhấn mạnh tính công bằng, không bị chi phối bởi yếu tố ngoại cảnh",
+        "contextInLesson": "Sean Coughlan: \"...get through a certain level of education to a certain standard, regardless of their background.\"",
+        "howToUse": "Thay thế hoàn hảo cho \"no matter what\" khi theo sau là danh từ.",
+        "yourExample": "Every child deserves access to quality healthcare, regardless of where they live."
+    }
+];
+
+        // ==========================================
+        // 4. GRAMMAR STRUCTURES DATA
+        // ==========================================
+        const grammarData = [
+    {
+        "title": "1. Rút gọn mệnh đề quan hệ dạng bị động (Past Participle Clause)",
+        "quote": "Beth: \"The rankings are based on tests <strong>carried out by the OECD</strong> every three years.\"",
+        "formula": "Noun + V3/ed (rút gọn của \"which are + V3/ed\")",
+        "explanation": "Thay vì nói dài dòng \"tests which are carried out by the OECD\", rút gọn còn \"carried out\" giúp câu văn gọn, súc tích và mang văn phong học thuật chuẩn Band 7.5+.",
+        "examples": [
+            "A survey <strong>conducted last year</strong> showed a rise in online learning.",
+            "Policies <strong>designed to support disadvantaged students</strong> often improve national scores."
+        ]
+    },
+    {
+        "title": "2. Bị động thì Hiện tại tiếp diễn (Present Continuous Passive)",
+        "quote": "Sean Coughlan: \"They<strong>'re being outpaced and outperformed</strong> by these fast, upcoming countries.\"",
+        "formula": "S + am/is/are + being + V3/ed",
+        "explanation": "Dùng để nhấn mạnh một sự thay đổi hoặc xu hướng đang diễn ra ngay tại thời điểm hiện tại tác động lên chủ thể.",
+        "examples": [
+            "Traditional teaching methods <strong>are being replaced</strong> by interactive digital tools.",
+            "Large economies <strong>are being challenged</strong> by smaller, more agile nations."
+        ]
+    },
+    {
+        "title": "3. Mệnh đề quan hệ xác định với \"which\" & \"that\"",
+        "quote": "Sean Coughlan: \"Countries <strong>which make sure that all their pupils get through a certain level</strong>... do well.\"",
+        "formula": "Noun (chỉ vật/quốc gia) + which/that + V ...",
+        "explanation": "Dùng mệnh đề quan hệ để định nghĩa rõ nhóm đối tượng đang được nhắc đến (không phải tất cả các nước, mà chỉ những nước làm được điều này).",
+        "examples": [
+            "Schools <strong>that prioritise student wellbeing</strong> tend to achieve better long-term results.",
+            "Industries <strong>which rely on advanced engineering</strong> need highly educated graduates."
+        ]
+    },
+    {
+        "title": "4. Tiền tố \"out-\" biến động từ thường thành nghĩa \"vượt trội hơn\"",
+        "quote": "Beth: \"We use the prefix 'out-' to say that someone or something is better at doing something.\"",
+        "formula": "out + Verb (outpace, outperform, outnumber, outgrow)",
+        "explanation": "Nắm quy luật tiền tố \"out-\" giúp bạn hiểu nhanh nghĩa của hàng loạt động từ ghép mà không cần tra từ điển.",
+        "examples": [
+            "Demand for tech skills continues to <strong>outgrow</strong> the current supply of graduates.",
+            "In many cities, bicycles now <strong>outnumber</strong> cars during rush hour."
+        ]
+    }
+];
+
+        // ==========================================
+        // 5. SHADOWING DATA (WITH NATIVE MP3 TIMESTAMPS)
+        // ==========================================
+        const shadowingData = [
+    {
+        "id": 1,
+        "speaker": "Beth",
+        "start": 21,
+        "end": 34,
+        "text": "I think it's quite good, there's probably a couple of things that I personally would change about it.",
+        "guide": "I <strong>THINK</strong> it's <strong>QUITE</strong> good, / there's <strong>PRO</strong>bably a <strong>COU</strong>ple of things / that I <strong>PER</strong>sonally would <strong>CHANGE</strong> about it.",
+        "tip": "Nhấn nhẹ vào \"quite\" và \"personally\" để thể hiện quan điểm cá nhân tự nhiên; nối âm \"change about it\" (/tʃeɪndʒ‿əˈbaʊt‿ɪt/)."
+    },
+    {
+        "id": 2,
+        "speaker": "Beth",
+        "start": 40,
+        "end": 50,
+        "text": "The rankings are based on tests carried out by the OECD every three years.",
+        "guide": "The <strong>RAN</strong>kings are <strong>BASED</strong> on tests / <strong>CAR</strong>ried <strong>OUT</strong> by the O-E-C-D / <strong>EV</strong>ery <strong>THREE</strong> <strong>YEARS</strong>.",
+        "tip": "Nối âm \"based on\" (/beɪst‿ɒn/) và \"carried out\" (/ˈkærid‿aʊt/). Đọc rõ từng chữ cái O-E-C-D."
+    },
+    {
+        "id": 3,
+        "speaker": "Sean Coughlan",
+        "start": 145,
+        "end": 156,
+        "text": "They're being outpaced and outperformed by these fast, upcoming countries.",
+        "guide": "They're being out<strong>PACED</strong> and outper<strong>FORMED</strong> / by these <strong>FAST</strong>, up<strong>CO</strong>ming <strong>COUN</strong>tries.",
+        "tip": "Đặt trọng âm đúng vào âm tiết thứ 2 của \"outPACED\" và âm tiết thứ 3 của \"outperFORMED\" để tạo nhịp điệu mạnh mẽ."
+    },
+    {
+        "id": 4,
+        "speaker": "Sean Coughlan",
+        "start": 238,
+        "end": 250,
+        "text": "Countries which make sure that all their pupils get through a certain level of education, regardless of their background, do well.",
+        "guide": "<strong>COUN</strong>tries which make <strong>SURE</strong> / that <strong>ALL</strong> their pupils get through a <strong>CER</strong>tain level of edu<strong>CA</strong>tion, / re<strong>GARD</strong>less of their <strong>BACK</strong>ground, / <strong>DO</strong> <strong>WELL</strong>.",
+        "tip": "Ngắt cụm rõ ràng trước và sau \"regardless of their background\" (cụm xen giữa), rồi nhấn mạnh \"do well\" ở cuối câu."
+    },
+    {
+        "id": 5,
+        "speaker": "Beth",
+        "start": 300,
+        "end": 312,
+        "text": "I asked you which out of the USA, Ireland, and the UK came second for reading in the 2022 Pisa rankings.",
+        "guide": "I <strong>ASKED</strong> you which out of the <strong>U-S-A</strong>, / <strong>I</strong>reland, / and the <strong>U-K</strong> / came <strong>SE</strong>cond for <strong>REA</strong>ding in the 2022 <strong>PI</strong>sa rankings.",
+        "tip": "Lên giọng nhẹ ở hai mục đầu khi liệt kê (\"USA\", \"Ireland\") và hạ giọng ở mục cuối (\"UK\")."
+    }
+];
+
+        // ==========================================
+        // 6. SPEAKING PRACTICE PROMPTS
+        // ==========================================
+        const speakingPrompts = [
+    {
+        "id": 1,
+        "question": "1. Do you think international rankings like PISA are a fair way to measure a country’s education system?",
+        "targetVocab": [
+            "contentious",
+            "carry out",
+            "outperform"
+        ],
+        "sampleAnswer": "I think international rankings are quite contentious. On one hand, tests carried out by organisations like the OECD give us useful data on how students perform in core subjects like maths and science. On the other hand, it's hard to fairly compare huge, diverse nations with small countries that consistently outperform them, because cultural and economic contexts are completely different.",
+        "tips": "Dùng \"contentious\" ngay câu mở đầu, sau đó trình bày hai mặt (\"On one hand... On the other hand...\") kết hợp \"carried out\" và \"outperform\"."
+    },
+    {
+        "id": 2,
+        "question": "2. What makes an education system truly successful in preparing students for the future?",
+        "targetVocab": [
+            "knowledge economy",
+            "prioritise",
+            "regardless"
+        ],
+        "sampleAnswer": "In today's knowledge economy, a successful education system shouldn't just focus on top achievers. Instead, governments should prioritise giving every student a strong foundation in critical thinking and problem-solving, regardless of their family background. When everyone reaches a solid standard, the whole society benefits.",
+        "tips": "Liên hệ đến \"knowledge economy\" và bài học từ Estonia trong transcript: \"prioritise\" sự đồng đều \"regardless of\" xuất thân."
+    },
+    {
+        "id": 3,
+        "question": "3. Should schools group students by academic ability, or keep everyone in mixed-ability classes?",
+        "targetVocab": [
+            "segregate",
+            "rival",
+            "outpace"
+        ],
+        "sampleAnswer": "Personally, I'm against dividing students too early because separating them by ability can segregate children and lower the confidence of those placed in lower groups. While some worry that faster learners might outpace their peers in mixed classes, inclusive classrooms actually reduce unhealthy rival attitudes and encourage students to support one another.",
+        "tips": "Vận dụng ý kiến của hiệu trưởng Rando Kuustik về việc không nên \"segregate\" học sinh, kết hợp khéo léo \"outpace\" và \"rival\"."
+    }
+];
+
+        // ==========================================
+        // 7. STATE & INITIALIZATION
+        // ==========================================
+        let currentVocabIndex = 0;
+        let showVietnamese = false;
+        let learnedWords = new Set();
+        let currentPromptIndex = 0;
+        let recognition = null;
+        let isRecording = false;
+        let segmentStopTimeout = null;
+        let isLocalMp3Loaded = false;
+
+        // ==========================================
+        // 8. RENDER FUNCTIONS
+        // ==========================================
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function renderTranscript() {
+            const container = document.getElementById('transcript-container');
+            if (!container) return;
+            container.innerHTML = transcriptData.map((item, idx) => {
+                const isPhil = item.speaker === 'Phil';
+                const isGeorgie = item.speaker === 'Georgie';
+                const badgeColor = isPhil ? 'bg-[#285d02] text-white' : 
+                                   isGeorgie ? 'bg-amber-600 text-white' : 'bg-slate-700 text-white';
+                
+                return `
+                    <div id="dialogue-row-${idx}" class="dialogue-row p-3.5 sm:p-4 rounded-xl border border-slate-100 hover:border-slate-200 bg-slate-50/60 transition group">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2.5 py-0.5 rounded-md ${badgeColor}">${item.speaker}</span>
+                                <span class="text-[11px] text-slate-400 font-medium">${item.role} • ${formatTime(item.start)}</span>
+                            </div>
+                            <button onclick="playAudioSegment(${item.start}, ${item.end}, ${idx})" class="text-xs font-semibold text-[#285d02] bg-[#285d02]/10 hover:bg-[#285d02] hover:text-white px-2.5 py-1 rounded-lg transition flex items-center gap-1" title="Nghe giọng gốc BBC đoạn này">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe gốc
+                            </button>
+                        </div>
+                        <p class="text-sm sm:text-[15px] text-slate-800 leading-relaxed">${item.en}</p>
+                        <p class="vi-translation ${showVietnamese ? 'block' : 'hidden'} text-xs sm:text-sm text-slate-600 italic mt-2 pt-2 border-t border-slate-200/70 bg-white/70 p-2.5 rounded-lg">
+                            <i class="fa-solid fa-language text-[#285d02] mr-1"></i> ${item.vi}
+                        </p>
+                    </div>
+                `;
+            }).join('');
+
+            updateActiveHighlightInTranscript();
+        }
+
+        function renderFlashcard() {
+            const v = vocabData[currentVocabIndex];
+            const counter = document.getElementById('card-counter');
+            if (counter) counter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            
+            const isLearned = learnedWords.has(v.id);
+            const btnMark = document.getElementById('btn-mark-learned');
+            if (btnMark) {
+                if (isLearned) {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-[#285d02] text-white text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc từ này`;
+                } else {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đánh dấu đã thuộc`;
+                }
+            }
+
+            const display = document.getElementById('flashcard-display');
+            if (!display) return;
+            display.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex items-start justify-between gap-2">
+                        <div>
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 mb-1">${v.pos}</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${v.word}</h3>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-sm font-mono text-[#285d02] font-semibold bg-[#285d02]/10 px-2.5 py-0.5 rounded">${v.ipa}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.9)" class="w-10 h-10 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white flex items-center justify-center shadow-sm transition" title="Nghe phát âm chuẩn">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.65)" class="px-2.5 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center transition" title="Nghe phát âm chậm">
+                                🐢 Chậm
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#285d02] mb-0.5">Nghĩa tiếng Việt & Giải thích</div>
+                        <p class="text-base font-bold text-slate-900">${v.meaningVi}</p>
+                        <p class="text-xs text-slate-600 mt-1">${v.meaningEn}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500"><i class="fa-solid fa-quote-left mr-1 text-[#285d02]"></i> Ví dụ trong bài</span>
+                            <button onclick="speakText('${v.example.replace(/'/g, "\\'")}', 0.95)" class="text-xs text-[#285d02] hover:underline font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe câu
+                            </button>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">"${v.example}"</p>
+                        <p class="text-xs text-slate-500 italic mt-1">${v.exampleVi}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80">
+                        <div class="text-[11px] font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-microphone-lines text-amber-600"></i> Speaking & Pronunciation Note
+                        </div>
+                        <p class="text-xs text-amber-950 leading-relaxed">${v.speakingNote}</p>
+                    </div>
+                </div>
+            `;
+
+            const mobileBody = document.getElementById('mobile-flashcard-body');
+            const mobileCounter = document.getElementById('mobile-card-counter');
+            const mobileBtnMark = document.getElementById('mobile-btn-mark-learned');
+            if (mobileBody) mobileBody.innerHTML = display.innerHTML;
+            if (mobileCounter) mobileCounter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            if (mobileBtnMark) {
+                if (isLearned) {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc`;
+                } else {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đã thuộc`;
+                }
+            }
+        }
+
+        function renderVocabPills() {
+            const container = document.getElementById('vocab-pills');
+            if (!container) return;
+            container.innerHTML = vocabData.map((v, idx) => {
+                const isCurrent = idx === currentVocabIndex;
+                const isLearned = learnedWords.has(v.id);
+                let classes = "text-xs px-2.5 py-1.5 rounded-lg font-medium transition flex items-center gap-1 ";
+                if (isCurrent) {
+                    classes += "bg-[#285d02] text-white font-bold shadow-xs";
+                } else if (isLearned) {
+                    classes += "bg-[#285d02]/10 text-[#285d02] border border-[#285d02]/30";
+                } else {
+                    classes += "bg-slate-100 hover:bg-slate-200 text-slate-700";
+                }
+                return `
+                    <button onclick="selectVocab('${v.id}')" class="${classes}">
+                        ${isLearned ? '<i class="fa-solid fa-check text-[10px]"></i>' : ''}
+                        <span>${v.word}</span>
+                    </button>
+                `;
+            }).join('');
+
+            const prog = document.getElementById('learned-progress');
+            if (prog) prog.textContent = `Đã thuộc: ${learnedWords.size}/${vocabData.length}`;
+            updateActiveHighlightInTranscript();
+        }
+
+        function updateActiveHighlightInTranscript() {
+            const currentId = vocabData[currentVocabIndex].id;
+            document.querySelectorAll('.vocab-highlight').forEach(el => {
+                if (el.getAttribute('data-vocab') === currentId) {
+                    el.classList.add('active', 'ring-2', 'ring-[#285d02]');
+                } else {
+                    el.classList.remove('active', 'ring-2', 'ring-[#285d02]');
+                }
+            });
+        }
+
+        function selectVocab(id) {
+            currentVocabIndex = vocabData.findIndex(v => v.id === id);
+            if (currentVocabIndex === -1) currentVocabIndex = 0;
+            renderFlashcard();
+            renderVocabPills();
+
+            if (window.innerWidth < 1024) {
+                openMobileFlashcard();
+            }
+        }
+
+        function openMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.remove('hidden');
+            drawer.classList.add('flex');
+        }
+
+        function closeMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.add('hidden');
+            drawer.classList.remove('flex');
+        }
+
+        function prevVocab() {
+            currentVocabIndex = (currentVocabIndex - 1 + vocabData.length) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function nextVocab() {
+            currentVocabIndex = (currentVocabIndex + 1) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function markLearned() {
+            const id = vocabData[currentVocabIndex].id;
+            if (learnedWords.has(id)) {
+                learnedWords.delete(id);
+                showToast(`Đã bỏ đánh dấu "${vocabData[currentVocabIndex].word}"`);
+            } else {
+                learnedWords.add(id);
+                showToast(`Tuyệt vời! Bạn đã thuộc từ "${vocabData[currentVocabIndex].word}"`);
+            }
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function toggleTranslation() {
+            showVietnamese = !showVietnamese;
+            const btn = document.getElementById('btn-toggle-trans');
+            if (btn) {
+                if (showVietnamese) {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] text-white transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language"></i> <span>Ẩn dịch tiếng Việt</span>`;
+                } else {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language text-[#285d02]"></i> <span>Hiện dịch tiếng Việt</span>`;
+                }
+            }
+            document.querySelectorAll('.vi-translation').forEach(el => {
+                el.classList.toggle('hidden', !showVietnamese);
+                el.classList.toggle('block', showVietnamese);
+            });
+        }
+
+        function renderSpeakingStructures() {
+            const grid = document.getElementById('speaking-structures-grid');
+            if (!grid) return;
+            grid.innerHTML = speakingStructuresData.map((s) => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3 hover:shadow-sm transition">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#285d02]/10 text-[#285d02]">${s.func}</span>
+                            <button onclick="speakText('${s.pattern.replace(/\[.*?\]/g, '').replace(/'/g, "\\'")}', 0.95)" class="text-xs text-slate-500 hover:text-[#285d02] font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900">${s.pattern}</h3>
+                        <div class="p-3 rounded-xl bg-white border border-slate-200/80 text-xs text-slate-700 italic">
+                            <span class="font-bold not-italic text-slate-900 block mb-0.5">Trong bài:</span>
+                            ${s.contextInLesson}
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Cách dùng:</strong> ${s.howToUse}</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-[#285d02]/5 border border-[#285d02]/15 text-xs text-slate-800">
+                        <span class="font-bold text-[#285d02] block mb-0.5"><i class="fa-solid fa-check mr-1"></i> Ví dụ áp dụng:</span>
+                        <p class="whitespace-pre-line">${s.yourExample}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderGrammar() {
+            const list = document.getElementById('grammar-list');
+            if (!list) return;
+            list.innerHTML = grammarData.map(g => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="text-lg font-bold text-slate-900">${g.title}</h3>
+                        <span class="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-[#285d02] text-white">${g.formula}</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border-l-4 border-[#285d02] text-sm text-slate-700">
+                        ${g.quote}
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">${g.explanation}</p>
+                    <div class="pt-1">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1.5">Ví dụ mở rộng:</span>
+                        <ul class="space-y-1.5">
+                            ${g.examples.map(ex => `<li class="text-xs sm:text-sm text-slate-800 flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#285d02] mt-1 text-xs"></i><span>${ex}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderShadowing() {
+            const list = document.getElementById('shadowing-list');
+            if (!list) return;
+            list.innerHTML = shadowingData.map(item => `
+                <div class="pt-6 first:pt-0 space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-[#285d02]/10 text-[#285d02]">Câu #${item.id} • ${item.speaker}</span>
+                            <span class="text-xs text-slate-400">(${formatTime(item.start)} – ${formatTime(item.end)})</span>
+                        </div>
+                        <div class="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
+                            <button onclick="playShadowingModel(${item.id})" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-play"></i> <span>Mẫu gốc</span>
+                            </button>
+                            <button onclick="speakText('${item.text.replace(/'/g, "\\'")}', parseFloat(document.getElementById('shadowing-speed')?.value || 0.95))" class="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-robot text-[#285d02]"></i> <span>Đọc chậm</span>
+                            </button>
+                            <button onclick="recordShadowing(${item.id})" id="btn-shadow-rec-${item.id}" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-300 hover:border-rose-500 text-slate-800 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <div class="text-xs text-slate-400 uppercase font-bold mb-1">Bản đánh dấu trọng âm & ngắt nhịp:</div>
+                        <p class="text-base sm:text-lg text-slate-900 leading-relaxed">${item.guide}</p>
+                        <p class="text-xs text-[#285d02] font-medium mt-2"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Mẹo: ${item.tip}</p>
+                    </div>
+
+                    <div id="shadow-result-${item.id}" class="hidden p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs"></div>
+                </div>
+            `).join('');
+        }
+
+        function playShadowingModel(id) {
+            const item = shadowingData.find(s => s.id === id);
+            if (!item) return;
+            const speed = parseFloat(document.getElementById('shadowing-speed')?.value || 0.95);
+            playAudioSegment(item.start, item.end, null, speed);
+        }
+
+        function renderSpeakingPrompts() {
+            const list = document.getElementById('speaking-prompts-list');
+            if (!list) return;
+            list.innerHTML = speakingPrompts.map((p, idx) => {
+                const active = idx === currentPromptIndex;
+                return `
+                    <button onclick="selectPrompt(${idx})" class="w-full text-left p-3.5 rounded-xl border transition ${active ? 'bg-[#285d02] text-white border-[#285d02] shadow-xs' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200'}">
+                        <p class="text-xs sm:text-sm font-bold leading-snug">${p.question}</p>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectPrompt(idx) {
+            currentPromptIndex = idx;
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+        }
+
+        function renderSpeakingStudio() {
+            const studio = document.getElementById('speaking-studio');
+            if (!studio) return;
+            const p = speakingPrompts[currentPromptIndex];
+
+            studio.innerHTML = `
+                <div class="space-y-5">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Câu hỏi đang chọn</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-2">${p.question}</h3>
+                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> ${p.tips}</p>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Từ vựng / Cấu trúc gợi ý nên dùng:</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${p.targetVocab.map(w => `<span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 border border-amber-300">${w}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-600">Câu trả lời của bạn (Gõ hoặc Bấm Mic để nói):</label>
+                            <button onclick="toggleStudioRecording()" id="btn-studio-mic" class="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-microphone"></i> Bắt đầu nói
+                            </button>
+                        </div>
+                        <textarea id="speaking-user-input" rows="4" 
+                                  placeholder="Nhấn 'Bắt đầu nói' để thu âm bằng giọng nói hoặc tự gõ câu trả lời của bạn vào đây..."
+                                  class="w-full p-3.5 rounded-xl border border-slate-200 focus:border-[#285d02] focus:outline-none text-sm text-slate-800 bg-slate-50"></textarea>
+                        <div class="flex items-center justify-between">
+                            <button onclick="evaluateSpeakingAnswer()" class="px-4 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold transition">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Kiểm tra từ vựng đã dùng
+                            </button>
+                            <button onclick="document.getElementById('sample-answer-box').classList.toggle('hidden')" class="text-xs font-semibold text-[#285d02] hover:underline">
+                                Xem / Ẩn câu trả lời mẫu Band 7.5+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="speaking-eval-feedback" class="hidden p-3.5 rounded-xl bg-[#285d02]/5 border border-[#285d02]/20 text-xs text-slate-800"></div>
+
+                    <div id="sample-answer-box" class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]">Sample Answer (Gợi ý trả lời mẫu)</span>
+                            <button onclick="speakText('${p.sampleAnswer.replace(/'/g, "\\'")}', 0.95)" class="text-xs font-semibold text-[#285d02] hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe mẫu
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed italic">"${p.sampleAnswer}"</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function evaluateSpeakingAnswer() {
+            const input = document.getElementById('speaking-user-input')?.value || '';
+            const fb = document.getElementById('speaking-eval-feedback');
+            if (!fb) return;
+
+            if (!input.trim()) {
+                showToast("Hãy nhập hoặc thu âm câu trả lời của bạn trước nhé!");
+                return;
+            }
+
+            const p = speakingPrompts[currentPromptIndex];
+            const used = p.targetVocab.filter(v => input.toLowerCase().includes(v.toLowerCase().split('...')[0].trim()));
+
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+                <p class="font-bold text-[#285d02] mb-1">Đánh giá nhanh câu trả lời (${input.trim().split(/\s+/).length} từ):</p>
+                <p>Bạn đã sử dụng <strong>${used.length}/${p.targetVocab.length}</strong> cụm từ mục tiêu: 
+                ${used.length > 0 ? used.map(u => `<span class="underline font-semibold">${u}</span>`).join(', ') : 'Chưa có cụm từ mục tiêu nào được phát hiện. Hãy thử chèn thêm các từ gợi ý màu vàng ở trên nhé!'}</p>
+            `;
+        }
+
+        // ==========================================
+        // 9. TAB NAVIGATION, VIDEO & QUIZ CONTROLS
+        // ==========================================
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
+            const activeSec = document.getElementById(`section-${tabName}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+                btn.classList.add('border-transparent', 'text-slate-600', 'font-medium');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-600', 'font-medium');
+                activeBtn.classList.add('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+            }
+        }
+
+        function toggleVideo() {
+            const wrapper = document.getElementById('video-wrapper');
+            const icon = document.getElementById('toggle-video-icon');
+            const text = document.getElementById('toggle-video-text');
+            if (!wrapper) return;
+
+            const isHidden = wrapper.classList.toggle('hidden');
+            if (icon) icon.className = isHidden ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up';
+            if (text) text.textContent = isHidden ? 'Mở rộng Video' : 'Thu gọn Video';
+        }
+
+        function checkQuiz(choice) {
+            const fb = document.getElementById('quiz-feedback');
+            document.querySelectorAll('.quiz-opt').forEach(btn => {
+                btn.className = "quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 transition";
+            });
+
+            const selectedBtn = document.getElementById(`quiz-${choice}`);
+            if (choice === 'b') {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-[#285d02] text-white border border-[#285d02] transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-[#285d02]";
+                    fb.textContent = "Chính xác! Sinh năm 1982 thuộc thế hệ Millennial (Gen Y).";
+                }
+            } else {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-300 transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-rose-600";
+                    fb.textContent = "Chưa đúng! Georgie cũng đoán nhầm giống bạn, đáp án đúng là b) Millennial.";
+                }
+            }
+        }
+
+        // ==========================================
+        // 10. NATIVE MP3 AUDIO PLAYER & YOUTUBE SYNC
+        // ==========================================
+        function getNativeAudio() {
+            return document.getElementById('bbc-native-audio');
+        }
+
+        function loadUserMp3File(inputEl) {
+            const file = inputEl.files && inputEl.files[0];
+            if (!file) return;
+            attachBlobToAudio(file);
+        }
+
+        function attachBlobToAudio(file) {
+            const audio = getNativeAudio();
+            if (!audio) return;
+            const objectUrl = URL.createObjectURL(file);
+            audio.src = objectUrl;
+            audio.load();
+            isLocalMp3Loaded = true;
+
+            const badge = document.getElementById('audio-status-badge');
+            if (badge) {
+                badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Đã kết nối: ${file.name}`;
+            }
+
+            const tip = document.getElementById('audio-helper-tip');
+            if (tip) {
+                tip.innerHTML = `<span class="text-[#285d02] font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Đã nạp file MP3 thành công! Bây giờ bạn có thể bấm Play hoặc bấm "Nghe gốc" ở từng câu thoại bên dưới.</span>`;
+            }
+
+            audio.play().then(() => {
+                showToast("Đã nạp và phát file MP3 gốc thành công!");
+            }).catch(() => {
+                showToast("Đã nạp file MP3! Hãy bấm nút Play để nghe.");
+            });
+        }
+
+        function bindNativeAudioEvents() {
+            const audio = getNativeAudio();
+            if (!audio) return;
+
+            audio.addEventListener('loadedmetadata', () => {
+                if (audio.duration && audio.duration > 0) {
+                    isLocalMp3Loaded = true;
+                    const badge = document.getElementById('audio-status-badge');
+                    if (badge) {
+                        badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                        badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> MP3 Sẵn sàng (${formatTime(audio.duration)})`;
+                    }
+                }
+            });
+
+            audio.addEventListener('play', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-pause';
+                if (text) text.textContent = 'Tạm dừng MP3';
+            });
+
+            audio.addEventListener('pause', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-play';
+                if (text) text.textContent = 'Nghe file gốc BBC';
+            });
+
+            const dropzone = document.getElementById('audio-dropzone');
+            if (dropzone) {
+                dropzone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.add('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('dragleave', () => {
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                        attachBlobToAudio(e.dataTransfer.files[0]);
+                    }
+                });
+            }
+        }
+
+        function controlYouTubePlayer(command, args = []) {
+            const iframe = document.getElementById('yt-player');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'command',
+                    func: command,
+                    args: args
+                }), '*');
+            }
+        }
+
+        function toggleMasterAudio() {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            } else {
+                const input = document.getElementById('local-mp3-input');
+                if (input) input.click();
+                showToast("Hãy chọn file MP3 từ máy tính của bạn để phát trực tiếp!");
+            }
+        }
+
+        function skipAudio(seconds) {
+            const audio = getNativeAudio();
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                audio.currentTime = Math.max(0, Math.min(audio.duration, audio.currentTime + seconds));
+            } else {
+                showToast("Hãy đính kèm file MP3 bằng nút 'Đính kèm file MP3 vừa tải' trước nhé!");
+            }
+        }
+
+        function changeAudioRate(rate) {
+            const audio = getNativeAudio();
+            if (audio) audio.playbackRate = parseFloat(rate);
+            controlYouTubePlayer('setPlaybackRate', [parseFloat(rate)]);
+        }
+
+        function playAudioSegment(startSec, endSec, rowIdx = null, customRate = null) {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            document.querySelectorAll('.dialogue-row').forEach(el => {
+                el.classList.remove('bg-[#285d02]/5', 'border-[#285d02]/30');
+            });
+            if (rowIdx !== null) {
+                const activeRow = document.getElementById(`dialogue-row-${rowIdx}`);
+                if (activeRow) activeRow.classList.add('bg-[#285d02]/5', 'border-[#285d02]/30');
+            }
+
+            const rate = customRate || parseFloat(document.getElementById('audio-playback-rate')?.value || 1);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                controlYouTubePlayer('pauseVideo');
+                audio.playbackRate = rate;
+                audio.currentTime = startSec;
+                audio.play().then(() => {
+                    const durationMs = ((endSec - startSec) / rate) * 1000;
+                    segmentStopTimeout = setTimeout(() => {
+                        audio.pause();
+                    }, durationMs);
+                }).catch(() => {
+                    showToast("Hãy bấm Play trên thanh Audio để bắt đầu nghe.");
+                });
+                return;
+            }
+
+            const wrapper = document.getElementById('video-wrapper');
+            if (wrapper && wrapper.classList.contains('hidden')) {
+                toggleVideo();
+            }
+            controlYouTubePlayer('setPlaybackRate', [rate]);
+            controlYouTubePlayer('seekTo', [startSec, true]);
+            controlYouTubePlayer('playVideo');
+            showToast(`Đang phát đoạn ${formatTime(startSec)} - ${formatTime(endSec)} qua YouTube (Hoặc đính kèm MP3 để nghe trực tiếp)`);
+
+            const durationMs = ((endSec - startSec) / rate) * 1000;
+            segmentStopTimeout = setTimeout(() => {
+                controlYouTubePlayer('pauseVideo');
+            }, durationMs);
+        }
+
+        // ==========================================
+        // 11. SPEECH SYNTHESIS & RECOGNITION
+        // ==========================================
+        function speakText(text, rate = 0.95) {
+            if (!('speechSynthesis' in window)) {
+                showToast("Trình duyệt của bạn không hỗ trợ đọc văn bản tự động.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = rate;
+
+            const voices = window.speechSynthesis.getVoices();
+            const ukVoice = voices.find(v => v.lang.includes('en-GB')) || voices.find(v => v.lang.includes('en'));
+            if (ukVoice) utterance.voice = ukVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function initSpeechRecognition() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (SpeechRecognition) {
+                recognition = new SpeechRecognition();
+                recognition.lang = 'en-GB';
+                recognition.interimResults = false;
+                recognition.maxAlternatives = 1;
+            }
+        }
+
+        function recordShadowing(id) {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById(`btn-shadow-rec-${id}`);
+            const resBox = document.getElementById(`shadow-result-${id}`);
+            const targetObj = shadowingData.find(s => s.id === id);
+
+            btn.classList.add('pulse-ring', 'bg-rose-600', 'text-white');
+            btn.innerHTML = `<i class="fa-solid fa-ear-listen"></i> <span>Đang nghe...</span>`;
+
+            recognition.onresult = (event) => {
+                const spoken = event.results[0][0].transcript;
+                const similarity = calculateSimilarity(targetObj.text, spoken);
+                resBox.classList.remove('hidden');
+                resBox.innerHTML = `
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-[#285d02]">Kết quả nhận diện giọng nói:</span>
+                        <span class="font-bold px-2 py-0.5 rounded ${similarity >= 75 ? 'bg-[#285d02]/15 text-[#285d02]' : 'bg-amber-200 text-amber-900'}">Độ khớp: ${similarity}%</span>
+                    </div>
+                    <p class="text-slate-700 italic">"${spoken}"</p>
+                `;
+            };
+
+            recognition.onerror = () => {
+                showToast("Không nghe rõ giọng nói. Vui lòng thử lại và cấp quyền Micro.");
+            };
+
+            recognition.onend = () => {
+                btn.classList.remove('pulse-ring', 'bg-rose-600', 'text-white');
+                btn.innerHTML = `<i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>`;
+            };
+
+            recognition.start();
+        }
+
+        function toggleStudioRecording() {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById('btn-studio-mic');
+            const input = document.getElementById('speaking-user-input');
+
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                return;
+            }
+
+            isRecording = true;
+            btn.classList.add('pulse-ring');
+            btn.innerHTML = `<i class="fa-solid fa-stop"></i> Dừng thu âm`;
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                input.value = (input.value ? input.value + ' ' : '') + transcript;
+            };
+
+            recognition.onend = () => {
+                isRecording = false;
+                btn.classList.remove('pulse-ring');
+                btn.innerHTML = `<i class="fa-solid fa-microphone"></i> Bắt đầu nói`;
+            };
+
+            recognition.start();
+        }
+
+        function calculateSimilarity(str1, str2) {
+            const clean1 = str1.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const clean2 = str2.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const matches = clean1.filter(word => clean2.includes(word));
+            return Math.min(100, Math.round((matches.length / clean1.length) * 100));
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // ==========================================
+        // 12. INITIALIZE APP ON WINDOW LOAD
+        // ==========================================
+        window.onload = function () {
+            renderTranscript();
+            renderFlashcard();
+            renderVocabPills();
+            renderSpeakingStructures();
+            renderGrammar();
+            renderShadowing();
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+            initSpeechRecognition();
+            bindNativeAudioEvents();
+        };
+    </script>
+</body>
+</html>

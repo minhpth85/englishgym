@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC 6 Minute English: Are you drinking enough water?</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .vocab-highlight {
+            background-color: #fef08a;
+            border-bottom: 2px solid #eab308;
+            padding: 1px 4px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #854d0e;
+            transition: all 0.2s ease;
+        }
+        .vocab-highlight:hover, .vocab-highlight.active {
+            background-color: #fde047;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(234, 179, 8, 0.25);
+        }
+        .grammar-highlight {
+            border-bottom: 2px dashed #3b82f6;
+            cursor: pointer;
+            color: #1d4ed8;
+            font-weight: 500;
+        }
+        .grammar-highlight:hover {
+            background-color: #eff6ff;
+        }
+        /* 3D Flashcard Flip */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        .pulse-ring {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        /* Mobile UX Utilities */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900">
+
+    <!-- Top Header & Navigation (Clean Light Surface with #285d02 Brand Accents) -->
+    <header class="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+        <div class="max-w-7xl mx-auto px-3.5 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+                <a href="../index.html" title="Quay lại Trang chủ"
+                   class="inline-flex items-center gap-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 text-xs sm:text-sm font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl border border-slate-200 transition shrink-0">
+                    <i class="fa-solid fa-house text-xs sm:text-sm text-[#285d02]"></i>
+                    <span class="hidden sm:inline">Trang chủ</span>
+                </a>
+                <div class="flex gap-0.5 shrink-0">
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">B</span>
+                    <span class="bg-[#285d02] text-white font-extrabold px-1.5 py-0.5 text-xs sm:text-sm rounded-sm">C</span>
+                </div>
+                <div class="min-w-0">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#285d02]">6 Minute English</span>
+                        <span class="hidden xs:inline-block text-[10px] sm:text-xs bg-[#285d02]/10 text-[#285d02] font-semibold px-2 py-0.5 rounded-full">B1–B2</span>
+                    </div>
+                    <h1 class="text-sm sm:text-lg font-bold text-slate-900 leading-tight truncate">Are you drinking enough water?</h1>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 shrink-0">
+                <a href="https://www.youtube.com/watch?v=7F1iJZr-p4E" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-semibold px-3 sm:px-3.5 py-2 rounded-xl transition shadow-xs">
+                    <i class="fa-brands fa-youtube text-sm sm:text-base"></i>
+                    <span class="hidden sm:inline">Mở trên YouTube</span>
+                    <span class="sm:hidden">YouTube</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Tab Navigation Bar -->
+        <div class="bg-slate-50/80 border-t border-slate-200/80 relative">
+            <div class="max-w-7xl mx-auto px-2 sm:px-6 flex overflow-x-auto no-scrollbar snap-x snap-mandatory gap-1">
+                <button onclick="switchTab('transcript')" id="tab-transcript" class="tab-btn active snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold border-b-2 border-[#285d02] text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>1. Transcript & Từ vựng</span>
+                </button>
+                <button onclick="switchTab('speaking-structures')" id="tab-speaking-structures" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>2. Cấu trúc nói hay</span>
+                </button>
+                <button onclick="switchTab('grammar')" id="tab-grammar" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-spell-check"></i>
+                    <span>3. Cấu trúc ngữ pháp</span>
+                </button>
+                <button onclick="switchTab('shadowing')" id="tab-shadowing" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-headphones"></i>
+                    <span>4. Luyện Shadowing</span>
+                </button>
+                <button onclick="switchTab('speaking-practice')" id="tab-speaking-practice" class="tab-btn snap-start flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm font-medium border-b-2 border-transparent text-slate-600 hover:text-[#285d02] whitespace-nowrap transition">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>5. Speaking Practice</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6">
+
+        <!-- Embedded YouTube Video Collapsible Bar -->
+        <div class="bg-white rounded-2xl shadow-xs border border-slate-200 mb-6 overflow-hidden">
+            <div class="px-5 py-3 bg-white border-b border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
+                    <span class="text-sm font-semibold text-slate-800">Trình phát Video/Audio bài học (YouTube)</span>
+                </div>
+                <button onclick="toggleVideo()" id="toggle-video-btn" class="text-xs font-semibold text-[#285d02] hover:bg-[#285d02]/15 flex items-center gap-1.5 bg-[#285d02]/10 px-3 py-1.5 rounded-lg transition">
+                    <i class="fa-solid fa-chevron-up" id="toggle-video-icon"></i>
+                    <span id="toggle-video-text">Thu gọn Video</span>
+                </button>
+            </div>
+            <div id="video-wrapper" class="p-5 bg-slate-50/70 flex flex-col lg:flex-row items-center gap-6">
+                <div class="w-full lg:w-7/12 aspect-video rounded-xl overflow-hidden shadow-md bg-black border border-slate-200">
+                    <iframe id="yt-player" class="w-full h-full" 
+                            src="https://www.youtube.com/embed/7F1iJZr-p4E?enablejsapi=1" 
+                            title="BBC 6 Minute English - Are you drinking enough water?" 
+                            frameborder="0" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="w-full lg:w-5/12 space-y-3">
+                    <div class="inline-flex items-center gap-1.5 bg-[#285d02]/10 text-[#285d02] text-xs font-bold px-3 py-1 rounded-full">
+                        <i class="fa-solid fa-lightbulb"></i> Hướng dẫn học hiệu quả
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Cách khai thác bài học này:</h3>
+                    <ul class="text-sm space-y-2.5 text-slate-600">
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">1</span>
+                            <span>Nghe toàn bài trên YouTube và theo dõi Full Transcript bên dưới. Bấm vào các từ <span class="bg-amber-200/80 text-amber-950 px-1.5 py-0.5 rounded font-semibold text-xs">tô vàng</span> để mở Flashcard bên phải.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">2</span>
+                            <span>Chuyển qua tab <strong>Cấu trúc nói</strong> & <strong>Ngữ pháp</strong> để nắm các mẫu câu tự nhiên của người bản xứ.</span>
+                        </li>
+                        <li class="flex items-start gap-2.5">
+                            <span class="w-5 h-5 rounded-full bg-[#285d02]/10 text-[#285d02] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">3</span>
+                            <span>Dùng tab <strong>Shadowing</strong> & <strong>Speaking Practice</strong> để luyện phát âm chuẩn và phản xạ giao tiếp.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="https://www.youtube.com/watch?v=7F1iJZr-p4E" target="_blank" class="text-xs font-semibold bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-2 rounded-xl transition inline-flex items-center gap-1.5 shadow-2xs">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[#285d02]"></i> Xem trực tiếp trên YouTube.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 1: TRANSCRIPT & INTERACTIVE FLASHCARD -->
+        <section id="section-transcript" class="tab-section">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Left Column: Transcript (7 cols) -->
+                <div class="lg:col-span-7 bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                    <div class="p-4 sm:p-5 border-b border-slate-100 bg-white flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <h2 class="text-lg font-bold text-slate-900">Full Transcript Bài Nghe</h2>
+                            <p class="text-xs text-slate-500 mt-0.5">Nhấn vào từ vựng được highlight để xem Flashcard bên phải</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <button onclick="toggleTranslation()" id="btn-toggle-trans" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5">
+                                <i class="fa-solid fa-language text-[#285d02]"></i>
+                                <span>Hiện dịch tiếng Việt</span>
+                            </button>
+                            <button onclick="toggleMasterAudio()" id="btn-master-audio" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white transition flex items-center gap-1.5 shadow-2xs" title="Phát/Tạm dừng file MP3 gốc BBC">
+                                <i class="fa-solid fa-play" id="master-audio-icon"></i>
+                                <span id="master-audio-text">Nghe file gốc BBC</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Native BBC MP3 Audio Player Bar -->
+                    <div id="audio-dropzone" class="px-4 sm:px-5 py-3.5 bg-[#285d02]/5 border-b border-[#285d02]/15 flex flex-col gap-2.5 transition">
+                        <div class="flex flex-wrap items-center justify-between gap-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-[#285d02] flex items-center gap-1.5">
+                                    <i class="fa-solid fa-headphones-simple"></i> Audio gốc BBC 6 Minute English (MP3)
+                                </span>
+                                <span id="audio-status-badge" class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">
+                                    Đang dùng âm thanh YouTube / Chưa nạp MP3
+                                </span>
+                            </div>
+                            <div class="flex items-center gap-1.5 flex-wrap">
+                                <label for="local-mp3-input" class="cursor-pointer px-2.5 py-1 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white font-semibold transition flex items-center gap-1.5 shadow-2xs" title="Chọn file MP3 từ máy tính của bạn để phát trực tiếp">
+                                    <i class="fa-solid fa-file-audio"></i>
+                                    <span>Đính kèm file MP3 vừa tải</span>
+                                </label>
+                                <input type="file" id="local-mp3-input" accept="audio/*,.mp3" class="hidden" onchange="loadUserMp3File(this)">
+                                <button onclick="skipAudio(-5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Lùi 5 giây">-5s</button>
+                                <button onclick="skipAudio(5)" class="px-2 py-1 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 font-semibold transition" title="Tới 5 giây">+5s</button>
+                                <select id="audio-playback-rate" onchange="changeAudioRate(this.value)" class="bg-white border border-slate-200 rounded-lg px-2 py-1 text-[11px] font-bold text-slate-700 focus:outline-none">
+                                    <option value="0.75">0.75x</option>
+                                    <option value="0.9">0.9x</option>
+                                    <option value="1" selected>1.0x</option>
+                                    <option value="1.15">1.15x</option>
+                                </select>
+                            </div>
+                        </div>
+                        <audio id="bbc-native-audio" controls preload="auto" class="w-full h-9 rounded-lg">
+                            <source src="261112_6_minute_english_learning_from_different_generations_download.mp3" type="audio/mpeg">
+                            <source src="261112_6_minute_english_learning_from_different_generations.mp3" type="audio/mpeg">
+                            <source src="https://ichef.bbci.co.uk/images/ic/raw/p0k078z5.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát file MP3.
+                        </audio>
+                        <p id="audio-helper-tip" class="text-[11px] text-slate-500 flex items-center justify-between gap-2">
+                            <span><i class="fa-solid fa-circle-info text-[#285d02] mr-1"></i> Mẹo: Nếu thanh MP3 hiện <strong>0:00 / 0:00</strong> (do giới hạn bảo mật khung Preview), hãy bấm nút xanh <strong>"Đính kèm file MP3 vừa tải"</strong> ở góc phải để nạp file MP3 của bạn vào và nghe mượt 100%!</span>
+                        </p>
+                    </div>
+
+                    <!-- Quiz Box Embedded in Transcript -->
+                    <div class="mx-4 sm:mx-5 mt-4 p-4 bg-slate-50 border border-slate-200/90 rounded-xl">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]"><i class="fa-solid fa-circle-question mr-1"></i> Quiz trong bài</span>
+                            <span id="quiz-feedback" class="text-xs font-semibold"></span>
+                        </div>
+                        <p class="text-sm font-semibold text-slate-800 mb-3">What generation would someone born in 1982 be in?</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkQuiz('a')" id="quiz-a" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">a) Generation X</button>
+                            <button onclick="checkQuiz('b')" id="quiz-b" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">b) Millennial</button>
+                            <button onclick="checkQuiz('c')" id="quiz-c" class="quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] transition">c) Gen Z</button>
+                        </div>
+                    </div>
+
+                    <!-- Dialogue Container (Natural page scroll on mobile, inner scroll on desktop) -->
+                    <div id="transcript-container" class="p-3.5 sm:p-6 space-y-3.5 sm:space-y-4 lg:max-h-[750px] lg:overflow-y-auto">
+                        <!-- Rendered dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Right Column: Sticky Interactive Flashcard Panel (5 cols) -->
+                <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                        <div class="px-5 py-3.5 bg-white border-b border-slate-100 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                                <span class="font-bold text-sm text-slate-900">Vocabulary Flashcard</span>
+                            </div>
+                            <span id="card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2.5 py-0.5 rounded-full font-bold">1 / 10</span>
+                        </div>
+
+                        <!-- Flashcard Body -->
+                        <div id="flashcard-display" class="p-5 sm:p-6">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+
+                        <!-- Card Navigation Footer -->
+                        <div class="px-5 py-3.5 bg-slate-50/80 border-t border-slate-100 flex items-center justify-between">
+                            <button onclick="prevVocab()" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:bg-slate-100 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-solid fa-arrow-left"></i> Từ trước
+                            </button>
+                            <button onclick="markLearned()" id="btn-mark-learned" class="px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition">
+                                <i class="fa-regular fa-circle-check"></i> Đã thuộc từ này
+                            </button>
+                            <button onclick="nextVocab()" class="px-3.5 py-2 rounded-lg bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                Từ tiếp <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quick Vocab Pills Selector -->
+                    <div class="bg-white rounded-2xl shadow-xs border border-slate-200 p-4">
+                        <div class="flex items-center justify-between mb-2.5">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Danh sách từ vựng trong bài</span>
+                            <span id="learned-progress" class="text-xs font-bold text-[#285d02]">Đã thuộc: 0/10</span>
+                        </div>
+                        <div id="vocab-pills" class="flex flex-wrap gap-1.5">
+                            <!-- Rendered dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TAB 2: SPEAKING STRUCTURES (CẤU TRÚC NÓI HAY) -->
+        <section id="section-speaking-structures" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Spoken English & Idioms</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Cấu trúc giao tiếp tự nhiên trong bài</h2>
+                    <p class="text-sm text-slate-600 mt-1">Những cụm từ và cách diễn đạt đắt giá giúp bạn nói tiếng Anh tự nhiên như người bản xứ (trích từ hội thoại của Phil, Georgie, Ian và Liz).</p>
+                </div>
+
+                <div id="speaking-structures-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: GRAMMAR STRUCTURES (CẤU TRÚC NGỮ PHÁP) -->
+        <section id="section-grammar" class="tab-section hidden space-y-6">
+            <div class="bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                <div class="max-w-3xl">
+                    <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Grammar in Context</span>
+                    <h2 class="text-2xl font-bold text-slate-900 mt-2">Điểm ngữ pháp trọng tâm từ Transcript</h2>
+                    <p class="text-sm text-slate-600 mt-1">Phân tích cách dùng thì, cấu trúc đảo ngữ đồng tình và mệnh đề quan hệ xuất hiện thực tế trong bài.</p>
+                </div>
+
+                <div id="grammar-list" class="space-y-5 mt-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: SHADOWING PRACTICE -->
+        <section id="section-shadowing" class="tab-section hidden">
+            <div class="bg-white rounded-2xl shadow-xs border border-slate-200 overflow-hidden">
+                <div class="p-6 bg-white border-b border-slate-200">
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Pronunciation & Intonation</span>
+                            <h2 class="text-2xl font-bold text-slate-900 mt-2">Luyện kỹ thuật Shadowing (Nhại giọng)</h2>
+                            <p class="text-sm text-slate-600 mt-1">Nghe câu mẫu chuẩn, chú ý các từ nhấn trọng âm (in đậm) và dấu ngắt nhịp (/), sau đó thu âm giọng của bạn để so sánh.</p>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-50 px-4 py-2.5 rounded-xl border border-slate-200">
+                            <span class="text-xs font-medium text-slate-600">Tốc độ đọc mẫu:</span>
+                            <select id="shadowing-speed" class="bg-white text-slate-800 text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-300 focus:outline-none focus:border-[#285d02]">
+                                <option value="0.75">0.75x (Chậm - Dễ bắt nhịp)</option>
+                                <option value="0.95" selected>0.95x (Tự nhiên)</option>
+                                <option value="1.1">1.1x (Nhanh - Thử thách)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="shadowing-list" class="p-6 divide-y divide-slate-200 space-y-6">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: SPEAKING PRACTICE (ROLEPLAY & Q&A) -->
+        <section id="section-speaking-practice" class="tab-section hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <!-- Left: Speaking Prompts -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
+                        <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-fire text-[#285d02]"></i>
+                            <span>Chủ đề luyện nói (IELTS / Giao tiếp)</span>
+                        </h2>
+                        <p class="text-xs text-slate-500 mt-1 mb-4">Chọn một câu hỏi thảo luận lấy cảm hứng từ bài học để luyện trả lời.</p>
+                        <div id="speaking-prompts-list" class="space-y-2.5">
+                            <!-- Rendered via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Speaking Studio -->
+                <div class="lg:col-span-7 bg-white rounded-2xl p-6 shadow-xs border border-slate-200">
+                    <div id="speaking-studio">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-4 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+            <p>Nội dung gốc: <strong>BBC Learning English - 6 Minute English</strong> (Are you drinking enough water?).</p>
+            <p class="font-medium text-slate-700">Đây là thư viện học tập của Minh Fam.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 left-5 sm:left-auto bg-slate-900 text-white text-xs font-medium px-4 py-3 rounded-xl shadow-lg transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-lime-400 shrink-0"></i>
+        <span id="toast-msg">Thông báo</span>
+    </div>
+
+    <!-- Mobile Bottom Sheet Flashcard Modal (Visible only on screens < 1024px when a word is tapped) -->
+    <div id="mobile-flashcard-drawer" class="fixed inset-0 z-50 hidden lg:hidden flex-col justify-end bg-slate-900/60 backdrop-blur-xs transition-opacity">
+        <div onclick="closeMobileFlashcard()" class="flex-1 w-full"></div>
+        <div class="bg-white rounded-t-3xl shadow-2xl border-t border-slate-200 max-h-[85vh] flex flex-col overflow-hidden animate-[slideUp_0.25s_ease-out]">
+            <div class="px-5 py-3.5 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#285d02]"></span>
+                    <span class="font-bold text-sm text-slate-900">Flashcard Từ Vựng</span>
+                    <span id="mobile-card-counter" class="text-xs bg-[#285d02]/10 text-[#285d02] px-2 py-0.5 rounded-full font-bold">1 / 10</span>
+                </div>
+                <button onclick="closeMobileFlashcard()" class="w-8 h-8 rounded-full bg-slate-200/80 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="mobile-flashcard-body" class="p-5 overflow-y-auto space-y-4">
+                <!-- Populated dynamically when user taps a word on mobile -->
+            </div>
+            <div class="px-4 py-3 bg-slate-50 border-t border-slate-200 grid grid-cols-3 gap-2">
+                <button onclick="prevVocab()" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-arrow-left"></i> Trước
+                </button>
+                <button onclick="markLearned()" id="mobile-btn-mark-learned" class="py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1">
+                    <i class="fa-regular fa-circle-check"></i> Đã thuộc
+                </button>
+                <button onclick="nextVocab()" class="py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1">
+                    Tiếp <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // 1. VOCABULARY DATA (10 KEY ITEMS)
+        // ==========================================
+        const vocabData = [
+    {
+        "id": "arrive-at",
+        "word": "arrive at (a number)",
+        "ipa": "/əˈraɪv æt/",
+        "pos": "phrasal verb",
+        "meaningVi": "Đi đến (một con số, kết luận) sau khi tính toán hoặc cân nhắc",
+        "meaningEn": "Calculate or decide on a number, decision, or conclusion after thinking or doing calculations.",
+        "example": "I'm not sure how it was arrived at, but it seems to be a widely accepted rule.",
+        "exampleVi": "Tôi không chắc con số đó được tính toán ra sao, nhưng nó có vẻ là một quy tắc được chấp nhận rộng rãi.",
+        "speakingNote": "Nối âm /əˈraɪv‿æt/. Trong IELTS Speaking Part 3, dùng \"arrive at a conclusion / a figure\" nghe trang trọng và tự nhiên hơn \"get a number\"."
+    },
+    {
+        "id": "take-grip-on",
+        "word": "take grip on",
+        "ipa": "/teɪk ɡrɪp ɒn/",
+        "pos": "idiom / collocation",
+        "meaningVi": "Chiếm lĩnh, kiểm soát hoàn toàn (một ý tưởng, cảm xúc, nơi nào đó)",
+        "meaningEn": "Take control of something or become strongly established in a place or group.",
+        "example": "The idea of drinking two litres a day has taken grip on many governments around the world.",
+        "exampleVi": "Ý tưởng uống hai lít nước mỗi ngày đã ăn sâu và chi phối nhiều chính phủ trên khắp thế giới.",
+        "speakingNote": "Lưu ý chia động từ: take / took / taken grip on. Có thể dùng biến thể \"take a grip on yourself\" (lấy lại bình tĩnh)."
+    },
+    {
+        "id": "pretty-much",
+        "word": "pretty much",
+        "ipa": "/ˈprɪti mʌtʃ/",
+        "pos": "adverbial phrase",
+        "meaningVi": "Hầu như, gần như hoàn toàn",
+        "meaningEn": "Almost; almost completely.",
+        "example": "If you look at government recommendations around the world, they're pretty much all the same.",
+        "exampleVi": "Nếu bạn xem các khuyến nghị của chính phủ trên toàn thế giới, chúng hầu như giống hệt nhau.",
+        "speakingNote": "Cụm cực kỳ tự nhiên trong văn nói (spoken English) giúp bạn tránh lặp từ \"almost\" trong IELTS Speaking."
+    },
+    {
+        "id": "ballpark-figure",
+        "word": "ballpark figure",
+        "ipa": "/ˈbɔːlpɑːk ˈfɪɡə(r)/",
+        "pos": "noun phrase / idiom",
+        "meaningVi": "Con số ước lượng đại khái, xấp xỉ",
+        "meaningEn": "A number which is a rough guess, but which you believe is acceptably accurate.",
+        "example": "The number of exactly two litres isn't based on scientific fact; it's more of a ballpark figure.",
+        "exampleVi": "Con số chính xác hai lít không dựa trên cơ sở khoa học, nó giống một con số ước lượng đại khái hơn.",
+        "speakingNote": "Trọng âm rơi vào âm tiết đầu của \"BALLpark\" và \"FIgure\". Rất hay dùng khi không nhớ chính xác số liệu trong Speaking."
+    },
+    {
+        "id": "dehydration",
+        "word": "dehydration",
+        "ipa": "/ˌdiːhaɪˈdreɪʃn/",
+        "pos": "noun (U)",
+        "meaningVi": "Tình trạng mất nước (trong cơ thể)",
+        "meaningEn": "The condition of not having enough water in your body so that you feel ill or weak.",
+        "example": "Many times we start getting dehydrated and show symptoms of dehydration without realising it.",
+        "exampleVi": "Nhiều lúc chúng ta bắt đầu bị mất nước và có triệu chứng mất nước mà không hề nhận ra.",
+        "speakingNote": "Tính từ đi kèm là \"dehydrated\" (/ˌdiːhaɪˈdreɪtɪd/), hay đi với động từ \"get dehydrated\" hoặc \"suffer from dehydration\"."
+    },
+    {
+        "id": "symptom",
+        "word": "symptom",
+        "ipa": "/ˈsɪmptəm/",
+        "pos": "noun (C)",
+        "meaningVi": "Triệu chứng, dấu hiệu (của bệnh hoặc tình trạng sức khỏe)",
+        "meaningEn": "A sign or feeling in the body showing the presence of an illness or condition.",
+        "example": "Feeling tired, having a headache or a dry mouth are common symptoms of dehydration.",
+        "exampleVi": "Cảm thấy mệt mỏi, đau đầu hoặc khô miệng là những triệu chứng phổ biến của tình trạng mất nước.",
+        "speakingNote": "Đừng nhầm với \"cause\" (nguyên nhân). Collocations hay gặp: \"show symptoms of\", \"relieve symptoms\"."
+    },
+    {
+        "id": "consist-of",
+        "word": "consist of",
+        "ipa": "/kənˈsɪst əv/",
+        "pos": "phrasal verb",
+        "meaningVi": "Bao gồm, được cấu thành từ",
+        "meaningEn": "To be formed or made up of the things or people mentioned.",
+        "example": "Over half the human body consists of water, and our blood consists of around 90% water.",
+        "exampleVi": "Hơn một nửa cơ thể người cấu thành từ nước, và máu của chúng ta gồm khoảng 90% là nước.",
+        "speakingNote": "Không dùng dạng bị động (*is consisted of* là sai). Nếu muốn dùng bị động, hãy dùng \"be made up of\" hoặc \"be composed of\"."
+    },
+    {
+        "id": "recommendation",
+        "word": "recommendation",
+        "ipa": "/ˌrekəmenˈdeɪʃn/",
+        "pos": "noun (C)",
+        "meaningVi": "Lời khuyên, sự khuyến nghị chính thức",
+        "meaningEn": "Official advice about what should be done.",
+        "example": "Government recommendations around the world pretty much all say to drink two litres of water.",
+        "exampleVi": "Các khuyến nghị của chính phủ trên khắp thế giới hầu như đều khuyên uống hai lít nước.",
+        "speakingNote": "Trọng âm rơi vào âm tiết thứ 4: /ˌrekəmenˈDEɪʃn/. Động từ là \"recommend\" (/ˌrekəˈmend/)."
+    },
+    {
+        "id": "replace",
+        "word": "replace",
+        "ipa": "/rɪˈpleɪs/",
+        "pos": "verb",
+        "meaningVi": "Bù đắp lại, thay thế",
+        "meaningEn": "To put back or provide something new in place of what was lost or used.",
+        "example": "Exactly how much you need to drink depends on how much water your body needs to replace.",
+        "exampleVi": "Chính xác bạn cần uống bao nhiêu phụ thuộc vào lượng nước cơ thể bạn cần bù đắp lại.",
+        "speakingNote": "Cấu trúc: \"replace A with B\". Trong chủ đề sức khỏe, \"replace lost fluids\" = bù lại lượng nước đã mất."
+    },
+    {
+        "id": "sweat",
+        "word": "sweat",
+        "ipa": "/swet/",
+        "pos": "verb / noun",
+        "meaningVi": "Đổ mồ hôi / mồ hôi",
+        "meaningEn": "To produce liquid through your skin when you are hot, ill, or nervous.",
+        "example": "Your body loses water all the time, when you breathe, sweat, or go to the toilet.",
+        "exampleVi": "Cơ thể bạn mất nước liên tục khi bạn thở, đổ mồ hôi hoặc đi vệ sinh.",
+        "speakingNote": "Phát âm là /swet/ (giống \"wet\"), KHÔNG đọc là /swiːt/ (sweet)!"
+    }
+];
+
+        // ==========================================
+        // 2. FULL 100% TRANSCRIPT DATA WITH AUDIO TIMESTAMPS
+        // ==========================================
+        const transcriptData = [
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 0,
+        "end": 6,
+        "en": "Hello. This is 6 Minute English from BBC Learning English. I'm Phil.",
+        "vi": "Xin chào. Đây là chương trình 6 Minute English từ BBC Learning English. Tôi là Phil."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 6,
+        "end": 18,
+        "en": "And I'm Beth. Nowadays, I often see people carrying water bottles with them to make sure they drink enough. How much water do you drink a day, Phil?",
+        "vi": "Và tôi là Beth. Ngày nay, tôi thường thấy mọi người mang theo bình nước để đảm bảo mình uống đủ. Một ngày bạn uống bao nhiêu nước vậy, Phil?"
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 18,
+        "end": 23,
+        "en": "Oh, I don't know. Maybe about a litre?",
+        "vi": "Ồ, tôi không biết nữa. Chắc khoảng một lít chăng?"
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 23,
+        "end": 29,
+        "en": "OK. And do you know how much water you should drink a day?",
+        "vi": "Ừ. Thế bạn có biết mình nên uống bao nhiêu nước mỗi ngày không?"
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 29,
+        "end": 34,
+        "en": "I think it's probably about two litres.",
+        "vi": "Tôi nghĩ có lẽ là khoảng hai lít."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 34,
+        "end": 55,
+        "en": "Ah, well, the number many people have heard is two litres a day. Of course, everyone needs to drink some water - over half the human body is made up of it. But exactly how much water do we need to stay healthy? That's what we'll be discussing in this programme, along with some useful new vocabulary as well.",
+        "vi": "À, con số mà nhiều người từng nghe là hai lít mỗi ngày. Tất nhiên, ai cũng cần uống nước – hơn một nửa cơ thể con người được tạo thành từ nước. Nhưng chính xác chúng ta cần bao nhiêu nước để khỏe mạnh? Đó là điều chúng ta sẽ thảo luận trong chương trình hôm nay, cùng với một số từ vựng mới hữu ích nữa."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 55,
+        "end": 70,
+        "en": "And speaking of vocabulary, remember you can download all the new words and phrases from this programme, plus worksheet exercises to help you learn them, on our website, bbclearningenglish.com.",
+        "vi": "Và nhắc đến từ vựng, hãy nhớ rằng bạn có thể tải về toàn bộ từ và cụm từ mới trong chương trình này, cùng với bài tập thực hành để ghi nhớ chúng, trên trang web bbclearningenglish.com của chúng tôi."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 70,
+        "end": 92,
+        "en": "Great! But first I have a question for you, Phil. I mentioned that over half the human body <span onclick=\"selectVocab('consist-of')\" class=\"vocab-highlight\" data-vocab=\"consist-of\">consists of</span> water, but there's an even higher percentage of water in our blood. But how much? Is our blood: a) around 80% water? b) around 90% water? or, c) 100% water?",
+        "vi": "Tuyệt! Nhưng trước tiên tôi có một câu hỏi cho bạn, Phil. Tôi vừa nhắc đến việc hơn một nửa cơ thể người cấu thành từ nước, nhưng tỷ lệ nước trong máu của chúng ta còn cao hơn nữa. Vậy là bao nhiêu? Máu của chúng ta: a) khoảng 80% là nước? b) khoảng 90% là nước? hay c) 100% là nước?"
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 92,
+        "end": 97,
+        "en": "I think it's around 80% water.",
+        "vi": "Tôi nghĩ là khoảng 80% nước."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 97,
+        "end": 120,
+        "en": "OK, I will reveal the correct answer later in the programme. Our blood needs water so it can carry nutrients to the body's cells and organs. The amount recommended is often given as two litres a day. But why? Here to discuss this with BBC World Service programme, The Food Chain, is biologist, Professor John Speakman:",
+        "vi": "Được rồi, tôi sẽ tiết lộ đáp án đúng ở phần sau chương trình. Máu của chúng ta cần nước để vận chuyển chất dinh dưỡng đến các tế bào và cơ quan trong cơ thể. Lượng nước khuyến nghị thường được đưa ra là hai lít mỗi ngày. Nhưng tại sao? Để bàn luận điều này với chương trình The Food Chain của BBC World Service, chúng ta có nhà sinh học, Giáo sư John Speakman:"
+    },
+    {
+        "speaker": "Professor John Speakman",
+        "role": "Guest",
+        "start": 120,
+        "end": 143,
+        "en": "So, I'm not sure how it was <span onclick=\"selectVocab('arrive-at')\" class=\"vocab-highlight\" data-vocab=\"arrive-at\">arrived at</span> but it seems to be a number that has <span onclick=\"selectVocab('take-grip-on')\" class=\"vocab-highlight\" data-vocab=\"take-grip-on\">taken grip on</span> a very large number of countries. So, if you look at government <span onclick=\"selectVocab('recommendation')\" class=\"vocab-highlight\" data-vocab=\"recommendation\">recommendations</span> around the world, they're <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> all the same. They <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> all say everybody's got to be drinking two litres of water.",
+        "vi": "Tôi không chắc con số đó được tính toán ra sao nhưng nó dường như là một con số đã chi phối rất nhiều quốc gia. Nếu bạn nhìn vào các khuyến nghị của chính phủ trên khắp thế giới, chúng hầu như giống hệt nhau. Hầu như tất cả đều nói mọi người phải uống hai lít nước."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 143,
+        "end": 166,
+        "en": "Professor Speakman doesn't know how the number of two litres a day was <span onclick=\"selectVocab('arrive-at')\" class=\"vocab-highlight\" data-vocab=\"arrive-at\">arrived at</span> – how it was decided or calculated. Nevertheless, the idea of drinking two litres a day has <span onclick=\"selectVocab('take-grip-on')\" class=\"vocab-highlight\" data-vocab=\"take-grip-on\">taken grip on</span> many governments around the world. When you say an idea has <span onclick=\"selectVocab('take-grip-on')\" class=\"vocab-highlight\" data-vocab=\"take-grip-on\">taken grip on</span> something, you mean it's taken control of it.",
+        "vi": "Giáo sư Speakman không biết con số hai lít một ngày được tính toán ra sao – tức được quyết định hay tính như thế nào. Tuy nhiên, ý tưởng uống hai lít một ngày đã chi phối nhiều chính phủ trên thế giới. Khi bạn nói một ý tưởng \"has taken grip on\" điều gì đó, nghĩa là nó đã kiểm soát, chiếm lĩnh điều đó."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 166,
+        "end": 188,
+        "en": "Yes, Professor Speakman says that <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> all governments are giving <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> the same <span onclick=\"selectVocab('recommendation')\" class=\"vocab-highlight\" data-vocab=\"recommendation\">recommendation</span>. He uses the phrase, <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span>, to mean almost. For example, 'pretty much all governments advise drinking two litres a day' means 'almost all governments advise it'.",
+        "vi": "Đúng vậy, Giáo sư Speakman nói rằng hầu như tất cả các chính phủ đều đưa ra khuyến nghị gần như giống nhau. Ông dùng cụm \"pretty much\" với nghĩa là \"hầu như\". Ví dụ, \"pretty much all governments advise drinking two litres a day\" có nghĩa là \"hầu như tất cả các chính phủ đều khuyên điều đó\"."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 188,
+        "end": 208,
+        "en": "What Professor Speakman doesn't have, however, is any scientific evidence for this advice. The number of exactly two litres isn't based on scientific fact, it's more of a <span onclick=\"selectVocab('ballpark-figure')\" class=\"vocab-highlight\" data-vocab=\"ballpark-figure\">ballpark figure</span> – a number which is a guess, but which you still believe is approximately correct.",
+        "vi": "Tuy nhiên, điều mà Giáo sư Speakman không có là bất kỳ bằng chứng khoa học nào cho lời khuyên này. Con số chính xác hai lít không dựa trên sự thật khoa học, mà giống một con số ước lượng đại khái hơn – một con số mang tính phỏng đoán nhưng bạn vẫn tin là gần đúng."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 208,
+        "end": 235,
+        "en": "Actually, the amount of water in our bodies is changing all the time. Like your bank balance, which goes down when you spend money, your body loses water all the time, when you breathe, <span onclick=\"selectVocab('sweat')\" class=\"vocab-highlight\" data-vocab=\"sweat\">sweat</span>, or go to the toilet. Exactly how much you need to drink depends on how much water your body needs to <span onclick=\"selectVocab('replace')\" class=\"vocab-highlight\" data-vocab=\"replace\">replace</span>, and that mainly depends on your size.",
+        "vi": "Thực ra, lượng nước trong cơ thể chúng ta thay đổi liên tục. Giống như số dư tài khoản ngân hàng giảm xuống khi bạn tiêu tiền, cơ thể bạn mất nước mọi lúc khi bạn thở, đổ mồ hôi hoặc đi vệ sinh. Chính xác bạn cần uống bao nhiêu phụ thuộc vào lượng nước cơ thể cần bù đắp lại, và điều đó chủ yếu phụ thuộc vào kích thước cơ thể bạn."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 235,
+        "end": 250,
+        "en": "But what happens when we drink less than we should? Here's hydration expert, Dr Nidia Rodriguez-Sanchez, describing the effects of <span onclick=\"selectVocab('dehydration')\" class=\"vocab-highlight\" data-vocab=\"dehydration\">dehydration</span> to BBC World Service's, The Food Chain.",
+        "vi": "Nhưng điều gì xảy ra khi chúng ta uống ít nước hơn mức nên uống? Dưới đây là chuyên gia về hydrat hóa, Tiến sĩ Nidia Rodriguez-Sanchez, mô tả tác động của tình trạng mất nước trên chương trình The Food Chain của BBC World Service."
+    },
+    {
+        "speaker": "Dr Nidia Rodriguez-Sanchez",
+        "role": "Guest",
+        "start": 250,
+        "end": 277,
+        "en": "And also, many times we start getting dehydrated and we don't realise we are dehydrated. So it's very common that we feel tired, or we feel, like, with a bit of a headache, or even we think we're hungry, and we go and get some food. And actually what is happening is that we are thirsty, that we are dehydrated, we are starting to show some signs or some <span onclick=\"selectVocab('symptom')\" class=\"vocab-highlight\" data-vocab=\"symptom\">symptoms</span> of <span onclick=\"selectVocab('dehydration')\" class=\"vocab-highlight\" data-vocab=\"dehydration\">dehydration</span>.",
+        "vi": "Và nhiều khi chúng ta bắt đầu bị mất nước mà không hề nhận ra mình đang thiếu nước. Vì vậy rất phổ biến chuyện ta cảm thấy mệt mỏi, hơi đau đầu, hoặc thậm chí nghĩ mình đang đói và đi tìm đồ ăn. Trong khi thực chất điều đang xảy ra là chúng ta đang khát, đang bị mất nước và bắt đầu xuất hiện một số dấu hiệu hay triệu chứng của tình trạng mất nước."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 277,
+        "end": 302,
+        "en": "Dr Sanchez describes the effects of <span onclick=\"selectVocab('dehydration')\" class=\"vocab-highlight\" data-vocab=\"dehydration\">dehydration</span>, the condition of not having enough water in your body so that you feel ill or weak. She mentions feeling tired, having a headache or a dry mouth as <span onclick=\"selectVocab('symptom')\" class=\"vocab-highlight\" data-vocab=\"symptom\">symptoms</span> of <span onclick=\"selectVocab('dehydration')\" class=\"vocab-highlight\" data-vocab=\"dehydration\">dehydration</span>. <span onclick=\"selectVocab('symptom')\" class=\"vocab-highlight\" data-vocab=\"symptom\">Symptoms</span> are signs or feelings in the body showing the presence of some illness or condition.",
+        "vi": "Tiến sĩ Sanchez mô tả tác động của tình trạng mất nước – trạng thái cơ thể không có đủ nước khiến bạn cảm thấy mệt hoặc yếu. Bà nhắc đến cảm giác mệt mỏi, đau đầu hoặc khô miệng như các triệu chứng của mất nước. \"Symptoms\" là những dấu hiệu hoặc cảm giác trong cơ thể cho thấy sự hiện diện của một bệnh lý hay tình trạng nào đó."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 302,
+        "end": 328,
+        "en": "So, whether you drink a little more, or a little less, it seems that around two litres of water a day is a good way to keep your blood and body healthy. Speaking of which, Phil, it's time to reveal the answer to my question, what percentage of our blood is water? You said 80%, and the answer is 90%. Our blood <span onclick=\"selectVocab('consist-of')\" class=\"vocab-highlight\" data-vocab=\"consist-of\">consists of</span> around 90% water. OK, let's recap the vocabulary we've used, starting with the phrase to <span onclick=\"selectVocab('arrive-at')\" class=\"vocab-highlight\" data-vocab=\"arrive-at\">arrive at</span> a number, meaning to decide it by doing calculations.",
+        "vi": "Vậy nên, dù bạn uống nhiều hơn một chút hay ít hơn một chút, có vẻ khoảng hai lít nước mỗi ngày là cách tốt để giữ cho máu và cơ thể khỏe mạnh. Nhân tiện nói về điều này, Phil, đã đến lúc tiết lộ đáp án cho câu hỏi của tôi: bao nhiêu phần trăm máu của chúng ta là nước? Bạn đã nói 80%, và đáp án đúng là 90%. Máu của chúng ta gồm khoảng 90% nước. Được rồi, hãy ôn lại các từ vựng chúng ta đã dùng, bắt đầu với cụm \"to arrive at a number\", nghĩa là quyết định con số đó bằng cách tính toán."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 328,
+        "end": 334,
+        "en": "If an idea <span onclick=\"selectVocab('take-grip-on')\" class=\"vocab-highlight\" data-vocab=\"take-grip-on\">takes grip on</span> something, it takes control of it.",
+        "vi": "Nếu một ý tưởng \"takes grip on\" điều gì đó, nghĩa là nó kiểm soát, chi phối điều đó."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 334,
+        "end": 342,
+        "en": "The phrase <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> means almost; for example, <span onclick=\"selectVocab('pretty-much')\" class=\"vocab-highlight\" data-vocab=\"pretty-much\">pretty much</span> everyone likes chocolate, which means almost everyone likes chocolate.",
+        "vi": "Cụm \"pretty much\" nghĩa là hầu như; ví dụ \"pretty much everyone likes chocolate\" nghĩa là hầu như ai cũng thích sô-cô-la."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 342,
+        "end": 349,
+        "en": "A <span onclick=\"selectVocab('ballpark-figure')\" class=\"vocab-highlight\" data-vocab=\"ballpark-figure\">ballpark figure</span> is a phrase meaning a number which is an acceptably accurate approximation.",
+        "vi": "\"Ballpark figure\" là cụm từ chỉ một con số ước lượng gần đúng có thể chấp nhận được."
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 349,
+        "end": 355,
+        "en": "<span onclick=\"selectVocab('dehydration')\" class=\"vocab-highlight\" data-vocab=\"dehydration\">Dehydration</span> is the condition of not having enough water in your body so that you feel ill or weak.",
+        "vi": "\"Dehydration\" là tình trạng cơ thể không có đủ nước khiến bạn cảm thấy ốm hoặc yếu."
+    },
+    {
+        "speaker": "Phil",
+        "role": "Presenter",
+        "start": 355,
+        "end": 372,
+        "en": "And finally, a <span onclick=\"selectVocab('symptom')\" class=\"vocab-highlight\" data-vocab=\"symptom\">symptom</span> is a sign or feeling in the body showing the presence of an illness or condition. Once again, our six minutes are up. Why not join me now and head over to our website, bbclearningenglish.com, download the worksheet for this programme, and test yourself to see how much you remember? See you there soon!",
+        "vi": "Và cuối cùng, \"symptom\" là dấu hiệu hoặc cảm giác trong cơ thể cho thấy sự xuất hiện của một bệnh lý hay tình trạng sức khỏe. Một lần nữa, sáu phút của chúng ta đã hết. Sao bạn không cùng tôi truy cập trang web bbclearningenglish.com ngay bây giờ, tải bài tập của chương trình và tự kiểm tra xem bạn nhớ được bao nhiêu? Hẹn gặp lại bạn ở đó sớm nhé!"
+    },
+    {
+        "speaker": "Beth",
+        "role": "Co-presenter",
+        "start": 372,
+        "end": 375,
+        "en": "Bye!",
+        "vi": "Tạm biệt!"
+    }
+];
+
+        // ==========================================
+        // 3. SPEAKING STRUCTURES DATA
+        // ==========================================
+        const speakingStructuresData = [
+    {
+        "pattern": "Nowadays, I often see people + V-ing + to make sure...",
+        "func": "Mở đầu câu chuyện về một thói quen phổ biến hiện nay (rất hợp IELTS Speaking Part 1/3)",
+        "contextInLesson": "Beth: \"Nowadays, I often see people carrying water bottles with them to make sure they drink enough.\"",
+        "howToUse": "Dùng khi quan sát một xu hướng đời sống xung quanh và giải thích mục đích của hành động đó.",
+        "yourExample": "Nowadays, I often see young people tracking their daily steps on smartwatches to make sure they stay active."
+    },
+    {
+        "pattern": "And speaking of [topic], remember...",
+        "func": "Chuyển mạch tự nhiên sang chủ đề liên quan trong giao tiếp",
+        "contextInLesson": "Phil: \"And speaking of vocabulary, remember you can download all the new words and phrases...\"",
+        "howToUse": "Rất hữu ích để nối ý mượt mà khi người đối diện (hoặc chính bạn) vừa nhắc tới một từ khóa.",
+        "yourExample": "Speaking of healthy habits, I started drinking a glass of warm water right after waking up."
+    },
+    {
+        "pattern": "I'm not sure how [something] was + V-ed, but it seems to be...",
+        "func": "Thừa nhận không rõ nguồn gốc nhưng vẫn nêu nhận định khách quan",
+        "contextInLesson": "Prof. Speakman: \"So, I'm not sure how it was arrived at but it seems to be a number that has taken grip...\"",
+        "howToUse": "Giúp bạn trả lời các câu hỏi khó trong IELTS Part 3 khi không biết chắc số liệu hay nguồn gốc lịch sử.",
+        "yourExample": "I'm not sure how that rule was originally created, but it seems to work well for most people."
+    },
+    {
+        "pattern": "It's not based on [X], it's more of a [Y]",
+        "func": "Đính chính hoặc làm mềm nhận định (nó nghiêng về Y hơn là X)",
+        "contextInLesson": "Phil: \"The number of exactly two litres isn't based on scientific fact, it's more of a ballpark figure.\"",
+        "howToUse": "Cụm \"more of a...\" giúp diễn đạt tinh tế, tránh khẳng định cực đoan.",
+        "yourExample": "For me, running isn't a strict workout routine; it's more of a way to clear my mind after work."
+    },
+    {
+        "pattern": "Exactly how much/many ... depends on ...",
+        "func": "Giải thích một vấn đề phụ thuộc vào yếu tố nào đó (tránh trả lời chung chung)",
+        "contextInLesson": "Beth: \"Exactly how much you need to drink depends on how much water your body needs to replace...\"",
+        "howToUse": "Cấu trúc vàng cho IELTS Speaking Part 3 khi câu trả lời là \"It depends\".",
+        "yourExample": "Exactly how much sleep a person needs depends on their age and daily activity level."
+    },
+    {
+        "pattern": "Speaking of which, ...",
+        "func": "Nhân tiện nhắc đến điều vừa nói...",
+        "contextInLesson": "Beth: \"Speaking of which, Phil, it's time to reveal the answer to my question...\"",
+        "howToUse": "Dùng để quay lại một điểm đã đề cập trước đó một cách tự nhiên.",
+        "yourExample": "We need to buy groceries tonight. Speaking of which, did you finish the milk this morning?"
+    }
+];
+
+        // ==========================================
+        // 4. GRAMMAR STRUCTURES DATA
+        // ==========================================
+        const grammarData = [
+    {
+        "title": "1. Mệnh đề danh ngữ làm chủ ngữ (Wh-clause as Subject)",
+        "quote": "Phil: \"<strong>What Professor Speakman doesn't have</strong>, however, is any scientific evidence for this advice.\"",
+        "formula": "What + S + V (làm chủ ngữ số ít) + is + Noun / Clause",
+        "explanation": "Dùng \"What + mệnh đề\" làm chủ ngữ giúp nhấn mạnh thông tin bạn muốn làm nổi bật ở vế sau (câu chẻ giả - Pseudo-cleft sentence), tạo giọng văn học thuật và mạch lạc.",
+        "examples": [
+            "<strong>What most people forget</strong> is that we also get water from fruit and vegetables.",
+            "<strong>What really matters</strong> is listening to your body rather than forcing yourself to drink."
+        ]
+    },
+    {
+        "title": "2. Câu hỏi gián tiếp & mệnh đề danh ngữ với \"How\"",
+        "quote": "Beth: \"Exactly <strong>how much you need to drink</strong> depends on <strong>how much water your body needs to replace</strong>.\"",
+        "formula": "How much/many + S + V (trật tự câu khẳng định, không đảo trợ động từ)",
+        "explanation": "Khi \"how much...\" đóng vai trò làm chủ ngữ hoặc tân ngữ trong câu, ta giữ nguyên trật tự S + V bình thường chứ không đảo \"do/does\" lên trước.",
+        "examples": [
+            "I have no idea <strong>how the two-litre rule was arrived at</strong>.",
+            "<strong>How much water you lose</strong> depends largely on the weather and your exercise intensity."
+        ]
+    },
+    {
+        "title": "3. Mệnh đề nhượng bộ với \"Whether ... or ...\"",
+        "quote": "Beth: \"So, <strong>whether you drink a little more, or a little less</strong>, it seems that around two litres of water a day is a good way...\"",
+        "formula": "Whether + S + V + (or + ...), S + V",
+        "explanation": "Diễn đạt ý \"dù A hay B thì kết quả vẫn là...\", rất hiệu quả để tổng kết vấn đề một cách cân bằng ở cuối bài nói.",
+        "examples": [
+            "<strong>Whether you prefer plain water or herbal tea</strong>, staying hydrated is essential.",
+            "<strong>Whether you work indoors or outdoors</strong>, you should always keep a water bottle nearby."
+        ]
+    },
+    {
+        "title": "4. Thì Hiện tại hoàn thành nhấn mạnh ảnh hưởng kéo dài đến hiện tại",
+        "quote": "Prof. Speakman: \"It seems to be a number that <strong>has taken grip on</strong> a very large number of countries.\"",
+        "formula": "S + has/have + V3/ed",
+        "explanation": "Dùng thì Hiện tại hoàn thành để nói về một xu hướng hoặc quan niệm hình thành từ quá khứ và vẫn đang chi phối ở hiện tại.",
+        "examples": [
+            "Carrying reusable water bottles <strong>has become</strong> a global habit over the last decade.",
+            "Many health myths <strong>have taken grip on</strong> popular culture without strong evidence."
+        ]
+    }
+];
+
+        // ==========================================
+        // 5. SHADOWING DATA (WITH NATIVE MP3 TIMESTAMPS)
+        // ==========================================
+        const shadowingData = [
+    {
+        "id": 1,
+        "speaker": "Beth",
+        "start": 6,
+        "end": 18,
+        "text": "Nowadays, I often see people carrying water bottles with them to make sure they drink enough.",
+        "guide": "<strong>NOW</strong>adays, / I <strong>OF</strong>ten see people <strong>CAR</strong>rying <strong>WA</strong>ter bottles with them / to make <strong>SURE</strong> they drink e<strong>NOUGH</strong>.",
+        "tip": "Ngắt nhẹ sau \"Nowadays\". Nhấn rõ vào \"carrying\", \"water\", \"sure\" và \"enough\"; nối nhẹ \"drink enough\" (/drɪŋk‿ɪˈnʌf/)."
+    },
+    {
+        "id": 2,
+        "speaker": "Professor John Speakman",
+        "start": 120,
+        "end": 135,
+        "text": "So, if you look at government recommendations around the world, they're pretty much all the same.",
+        "guide": "So, / if you <strong>LOOK</strong> at <strong>GO</strong>vernment recommen<strong>DA</strong>tions a<strong>ROUND</strong> the <strong>WORLD</strong>, / they're <strong>PRE</strong>tty much <strong>ALL</strong> the <strong>SAME</strong>.",
+        "tip": "Giữ nhịp đều ở từ dài \"recommenDAtions\", nối âm \"look at\" (/lʊk‿æt/), và hạ giọng dứt khoát ở \"same\"."
+    },
+    {
+        "id": 3,
+        "speaker": "Phil",
+        "start": 193,
+        "end": 208,
+        "text": "The number of exactly two litres isn't based on scientific fact, it's more of a ballpark figure.",
+        "guide": "The <strong>NUM</strong>ber of ex<strong>ACT</strong>ly <strong>TWO</strong> litres / <strong>IS</strong>n't based on scien<strong>TI</strong>fic <strong>FACT</strong>, / it's <strong>MORE</strong> of a <strong>BALL</strong>park <strong>FI</strong>gure.",
+        "tip": "Nhấn mạnh \"isn't\" và \"fact\" để tạo tương phản với \"more of a ballpark figure\" ở vế sau."
+    },
+    {
+        "id": 4,
+        "speaker": "Beth",
+        "start": 220,
+        "end": 235,
+        "text": "Exactly how much you need to drink depends on how much water your body needs to replace.",
+        "guide": "Ex<strong>ACT</strong>ly how <strong>MUCH</strong> you need to <strong>DRINK</strong> / de<strong>PENDS</strong> on how much <strong>WA</strong>ter your <strong>BO</strong>dy needs to re<strong>PLACE</strong>.",
+        "tip": "Lên giọng nhẹ ở \"drink\" để báo hiệu mệnh đề chủ ngữ chưa hết, rồi nhấn rõ \"depends\" và \"replace\"."
+    },
+    {
+        "id": 5,
+        "speaker": "Dr Nidia Rodriguez-Sanchez",
+        "start": 250,
+        "end": 263,
+        "text": "Many times we start getting dehydrated and we don't realise we are dehydrated.",
+        "guide": "<strong>MA</strong>ny <strong>TIMES</strong> / we start getting de<strong>HY</strong>drated / and we <strong>DON'T</strong> <strong>RE</strong>alise we are de<strong>HY</strong>drated.",
+        "tip": "Đọc rõ trọng âm của \"deHYdrated\" (/ˌdiːhaɪˈdreɪtɪd/) và nhấn vào \"don't realise\" để thể hiện sự ngạc nhiên."
+    }
+];
+
+        // ==========================================
+        // 6. SPEAKING PRACTICE PROMPTS
+        // ==========================================
+        const speakingPrompts = [
+    {
+        "id": 1,
+        "question": "1. Do you think you drink enough water every day? Why or why not?",
+        "targetVocab": [
+            "pretty much",
+            "ballpark figure",
+            "dehydration"
+        ],
+        "sampleAnswer": "To be honest, I try to stay hydrated, though I don't measure every glass. I use two litres as a rough ballpark figure, so I keep a bottle on my desk and pretty much finish it by the end of the workday. Whenever I forget to drink during busy afternoons, I quickly notice mild signs of dehydration like feeling sluggish or having a slight headache.",
+        "tips": "Dùng \"ballpark figure\" cho con số ước lượng bạn nhắm tới, kết hợp \"pretty much\" và kể một dấu hiệu \"dehydration\" thực tế của bản thân."
+    },
+    {
+        "id": 2,
+        "question": "2. Why do health recommendations like \"drink two litres a day\" become so popular?",
+        "targetVocab": [
+            "arrive at",
+            "take grip on",
+            "recommendation"
+        ],
+        "sampleAnswer": "I think simple rules easily take grip on people's minds because they are effortless to remember. Even if most people have no idea how experts originally arrived at the two-litre recommendation, having one clear target makes healthy living feel more manageable than calculating exact fluid needs based on body size.",
+        "tips": "Giải thích yếu tố tâm lý: con số đơn giản dễ \"take grip on\" công chúng, dù ít ai biết người ta \"arrived at\" con số đó bằng cách nào."
+    },
+    {
+        "id": 3,
+        "question": "3. What happens to people when they ignore early symptoms of dehydration or fatigue?",
+        "targetVocab": [
+            "symptom",
+            "consist of",
+            "replace"
+        ],
+        "sampleAnswer": "Because our bodies consist of more than half water, ignoring early symptoms like tiredness or a dry mouth can quickly affect concentration and mood. Some people even mistake thirst for hunger and reach for snacks instead of replacing the water they lost through sweating or daily activities.",
+        "tips": "Mượn ý từ Dr Sanchez trong bài: nhầm cơn khát với cơn đói, đồng thời nhắc lại tỷ lệ nước cơ thể (\"consist of\") và việc bù nước (\"replace\")."
+    }
+];
+
+        // ==========================================
+        // 7. STATE & INITIALIZATION
+        // ==========================================
+        let currentVocabIndex = 0;
+        let showVietnamese = false;
+        let learnedWords = new Set();
+        let currentPromptIndex = 0;
+        let recognition = null;
+        let isRecording = false;
+        let segmentStopTimeout = null;
+        let isLocalMp3Loaded = false;
+
+        // ==========================================
+        // 8. RENDER FUNCTIONS
+        // ==========================================
+        function formatTime(sec) {
+            const m = Math.floor(sec / 60);
+            const s = Math.floor(sec % 60);
+            return `${m}:${s < 10 ? '0' : ''}${s}`;
+        }
+
+        function renderTranscript() {
+            const container = document.getElementById('transcript-container');
+            if (!container) return;
+            container.innerHTML = transcriptData.map((item, idx) => {
+                const isPhil = item.speaker === 'Phil';
+                const isGeorgie = item.speaker === 'Georgie';
+                const badgeColor = isPhil ? 'bg-[#285d02] text-white' : 
+                                   isGeorgie ? 'bg-amber-600 text-white' : 'bg-slate-700 text-white';
+                
+                return `
+                    <div id="dialogue-row-${idx}" class="dialogue-row p-3.5 sm:p-4 rounded-xl border border-slate-100 hover:border-slate-200 bg-slate-50/60 transition group">
+                        <div class="flex items-center justify-between mb-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-xs font-bold px-2.5 py-0.5 rounded-md ${badgeColor}">${item.speaker}</span>
+                                <span class="text-[11px] text-slate-400 font-medium">${item.role} • ${formatTime(item.start)}</span>
+                            </div>
+                            <button onclick="playAudioSegment(${item.start}, ${item.end}, ${idx})" class="text-xs font-semibold text-[#285d02] bg-[#285d02]/10 hover:bg-[#285d02] hover:text-white px-2.5 py-1 rounded-lg transition flex items-center gap-1" title="Nghe giọng gốc BBC đoạn này">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe gốc
+                            </button>
+                        </div>
+                        <p class="text-sm sm:text-[15px] text-slate-800 leading-relaxed">${item.en}</p>
+                        <p class="vi-translation ${showVietnamese ? 'block' : 'hidden'} text-xs sm:text-sm text-slate-600 italic mt-2 pt-2 border-t border-slate-200/70 bg-white/70 p-2.5 rounded-lg">
+                            <i class="fa-solid fa-language text-[#285d02] mr-1"></i> ${item.vi}
+                        </p>
+                    </div>
+                `;
+            }).join('');
+
+            updateActiveHighlightInTranscript();
+        }
+
+        function renderFlashcard() {
+            const v = vocabData[currentVocabIndex];
+            const counter = document.getElementById('card-counter');
+            if (counter) counter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            
+            const isLearned = learnedWords.has(v.id);
+            const btnMark = document.getElementById('btn-mark-learned');
+            if (btnMark) {
+                if (isLearned) {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-[#285d02] text-white text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc từ này`;
+                } else {
+                    btnMark.className = "px-3.5 py-2 rounded-lg bg-white border border-slate-200 hover:border-[#285d02] text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition";
+                    btnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đánh dấu đã thuộc`;
+                }
+            }
+
+            const display = document.getElementById('flashcard-display');
+            if (!display) return;
+            display.innerHTML = `
+                <div class="space-y-4">
+                    <div class="flex items-start justify-between gap-2">
+                        <div>
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 mb-1">${v.pos}</span>
+                            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${v.word}</h3>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-sm font-mono text-[#285d02] font-semibold bg-[#285d02]/10 px-2.5 py-0.5 rounded">${v.ipa}</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.9)" class="w-10 h-10 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white flex items-center justify-center shadow-sm transition" title="Nghe phát âm chuẩn">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                            <button onclick="speakText('${v.word.replace(/'/g, "\\'")}', 0.65)" class="px-2.5 h-10 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold flex items-center justify-center transition" title="Nghe phát âm chậm">
+                                🐢 Chậm
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                        <div class="text-xs font-bold uppercase tracking-wider text-[#285d02] mb-0.5">Nghĩa tiếng Việt & Giải thích</div>
+                        <p class="text-base font-bold text-slate-900">${v.meaningVi}</p>
+                        <p class="text-xs text-slate-600 mt-1">${v.meaningEn}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-white border border-slate-200">
+                        <div class="flex items-center justify-between mb-1">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-500"><i class="fa-solid fa-quote-left mr-1 text-[#285d02]"></i> Ví dụ trong bài</span>
+                            <button onclick="speakText('${v.example.replace(/'/g, "\\'")}', 0.95)" class="text-xs text-[#285d02] hover:underline font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-play text-[10px]"></i> Nghe câu
+                            </button>
+                        </div>
+                        <p class="text-sm font-medium text-slate-800">"${v.example}"</p>
+                        <p class="text-xs text-slate-500 italic mt-1">${v.exampleVi}</p>
+                    </div>
+
+                    <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/80">
+                        <div class="text-[11px] font-bold uppercase tracking-wider text-amber-900 flex items-center gap-1.5 mb-1">
+                            <i class="fa-solid fa-microphone-lines text-amber-600"></i> Speaking & Pronunciation Note
+                        </div>
+                        <p class="text-xs text-amber-950 leading-relaxed">${v.speakingNote}</p>
+                    </div>
+                </div>
+            `;
+
+            const mobileBody = document.getElementById('mobile-flashcard-body');
+            const mobileCounter = document.getElementById('mobile-card-counter');
+            const mobileBtnMark = document.getElementById('mobile-btn-mark-learned');
+            if (mobileBody) mobileBody.innerHTML = display.innerHTML;
+            if (mobileCounter) mobileCounter.textContent = `${currentVocabIndex + 1} / ${vocabData.length}`;
+            if (mobileBtnMark) {
+                if (isLearned) {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-[#285d02] text-white text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-solid fa-circle-check"></i> Đã thuộc`;
+                } else {
+                    mobileBtnMark.className = "py-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 text-xs font-semibold flex items-center justify-center gap-1";
+                    mobileBtnMark.innerHTML = `<i class="fa-regular fa-circle-check"></i> Đã thuộc`;
+                }
+            }
+        }
+
+        function renderVocabPills() {
+            const container = document.getElementById('vocab-pills');
+            if (!container) return;
+            container.innerHTML = vocabData.map((v, idx) => {
+                const isCurrent = idx === currentVocabIndex;
+                const isLearned = learnedWords.has(v.id);
+                let classes = "text-xs px-2.5 py-1.5 rounded-lg font-medium transition flex items-center gap-1 ";
+                if (isCurrent) {
+                    classes += "bg-[#285d02] text-white font-bold shadow-xs";
+                } else if (isLearned) {
+                    classes += "bg-[#285d02]/10 text-[#285d02] border border-[#285d02]/30";
+                } else {
+                    classes += "bg-slate-100 hover:bg-slate-200 text-slate-700";
+                }
+                return `
+                    <button onclick="selectVocab('${v.id}')" class="${classes}">
+                        ${isLearned ? '<i class="fa-solid fa-check text-[10px]"></i>' : ''}
+                        <span>${v.word}</span>
+                    </button>
+                `;
+            }).join('');
+
+            const prog = document.getElementById('learned-progress');
+            if (prog) prog.textContent = `Đã thuộc: ${learnedWords.size}/${vocabData.length}`;
+            updateActiveHighlightInTranscript();
+        }
+
+        function updateActiveHighlightInTranscript() {
+            const currentId = vocabData[currentVocabIndex].id;
+            document.querySelectorAll('.vocab-highlight').forEach(el => {
+                if (el.getAttribute('data-vocab') === currentId) {
+                    el.classList.add('active', 'ring-2', 'ring-[#285d02]');
+                } else {
+                    el.classList.remove('active', 'ring-2', 'ring-[#285d02]');
+                }
+            });
+        }
+
+        function selectVocab(id) {
+            currentVocabIndex = vocabData.findIndex(v => v.id === id);
+            if (currentVocabIndex === -1) currentVocabIndex = 0;
+            renderFlashcard();
+            renderVocabPills();
+
+            if (window.innerWidth < 1024) {
+                openMobileFlashcard();
+            }
+        }
+
+        function openMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.remove('hidden');
+            drawer.classList.add('flex');
+        }
+
+        function closeMobileFlashcard() {
+            const drawer = document.getElementById('mobile-flashcard-drawer');
+            if (!drawer) return;
+            drawer.classList.add('hidden');
+            drawer.classList.remove('flex');
+        }
+
+        function prevVocab() {
+            currentVocabIndex = (currentVocabIndex - 1 + vocabData.length) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function nextVocab() {
+            currentVocabIndex = (currentVocabIndex + 1) % vocabData.length;
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function markLearned() {
+            const id = vocabData[currentVocabIndex].id;
+            if (learnedWords.has(id)) {
+                learnedWords.delete(id);
+                showToast(`Đã bỏ đánh dấu "${vocabData[currentVocabIndex].word}"`);
+            } else {
+                learnedWords.add(id);
+                showToast(`Tuyệt vời! Bạn đã thuộc từ "${vocabData[currentVocabIndex].word}"`);
+            }
+            renderFlashcard();
+            renderVocabPills();
+        }
+
+        function toggleTranslation() {
+            showVietnamese = !showVietnamese;
+            const btn = document.getElementById('btn-toggle-trans');
+            if (btn) {
+                if (showVietnamese) {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg bg-[#285d02] text-white transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language"></i> <span>Ẩn dịch tiếng Việt</span>`;
+                } else {
+                    btn.className = "text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 transition flex items-center gap-1.5";
+                    btn.innerHTML = `<i class="fa-solid fa-language text-[#285d02]"></i> <span>Hiện dịch tiếng Việt</span>`;
+                }
+            }
+            document.querySelectorAll('.vi-translation').forEach(el => {
+                el.classList.toggle('hidden', !showVietnamese);
+                el.classList.toggle('block', showVietnamese);
+            });
+        }
+
+        function renderSpeakingStructures() {
+            const grid = document.getElementById('speaking-structures-grid');
+            if (!grid) return;
+            grid.innerHTML = speakingStructuresData.map((s) => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-3 hover:shadow-sm transition">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between gap-2">
+                            <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-[#285d02]/10 text-[#285d02]">${s.func}</span>
+                            <button onclick="speakText('${s.pattern.replace(/\[.*?\]/g, '').replace(/'/g, "\\'")}', 0.95)" class="text-xs text-slate-500 hover:text-[#285d02] font-semibold flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe
+                            </button>
+                        </div>
+                        <h3 class="text-lg font-extrabold text-slate-900">${s.pattern}</h3>
+                        <div class="p-3 rounded-xl bg-white border border-slate-200/80 text-xs text-slate-700 italic">
+                            <span class="font-bold not-italic text-slate-900 block mb-0.5">Trong bài:</span>
+                            ${s.contextInLesson}
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed"><strong class="text-slate-800">Cách dùng:</strong> ${s.howToUse}</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-[#285d02]/5 border border-[#285d02]/15 text-xs text-slate-800">
+                        <span class="font-bold text-[#285d02] block mb-0.5"><i class="fa-solid fa-check mr-1"></i> Ví dụ áp dụng:</span>
+                        <p class="whitespace-pre-line">${s.yourExample}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderGrammar() {
+            const list = document.getElementById('grammar-list');
+            if (!list) return;
+            list.innerHTML = grammarData.map(g => `
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <h3 class="text-lg font-bold text-slate-900">${g.title}</h3>
+                        <span class="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-[#285d02] text-white">${g.formula}</span>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-white border-l-4 border-[#285d02] text-sm text-slate-700">
+                        ${g.quote}
+                    </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">${g.explanation}</p>
+                    <div class="pt-1">
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-1.5">Ví dụ mở rộng:</span>
+                        <ul class="space-y-1.5">
+                            ${g.examples.map(ex => `<li class="text-xs sm:text-sm text-slate-800 flex items-start gap-2"><i class="fa-solid fa-circle-check text-[#285d02] mt-1 text-xs"></i><span>${ex}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderShadowing() {
+            const list = document.getElementById('shadowing-list');
+            if (!list) return;
+            list.innerHTML = shadowingData.map(item => `
+                <div class="pt-6 first:pt-0 space-y-3">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-[#285d02]/10 text-[#285d02]">Câu #${item.id} • ${item.speaker}</span>
+                            <span class="text-xs text-slate-400">(${formatTime(item.start)} – ${formatTime(item.end)})</span>
+                        </div>
+                        <div class="grid grid-cols-3 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
+                            <button onclick="playShadowingModel(${item.id})" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-play"></i> <span>Mẫu gốc</span>
+                            </button>
+                            <button onclick="speakText('${item.text.replace(/'/g, "\\'")}', parseFloat(document.getElementById('shadowing-speed')?.value || 0.95))" class="px-2.5 sm:px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-robot text-[#285d02]"></i> <span>Đọc chậm</span>
+                            </button>
+                            <button onclick="recordShadowing(${item.id})" id="btn-shadow-rec-${item.id}" class="px-2.5 sm:px-3.5 py-2 rounded-xl bg-white border border-slate-300 hover:border-rose-500 text-slate-800 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                                <i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                        <div class="text-xs text-slate-400 uppercase font-bold mb-1">Bản đánh dấu trọng âm & ngắt nhịp:</div>
+                        <p class="text-base sm:text-lg text-slate-900 leading-relaxed">${item.guide}</p>
+                        <p class="text-xs text-[#285d02] font-medium mt-2"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Mẹo: ${item.tip}</p>
+                    </div>
+
+                    <div id="shadow-result-${item.id}" class="hidden p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs"></div>
+                </div>
+            `).join('');
+        }
+
+        function playShadowingModel(id) {
+            const item = shadowingData.find(s => s.id === id);
+            if (!item) return;
+            const speed = parseFloat(document.getElementById('shadowing-speed')?.value || 0.95);
+            playAudioSegment(item.start, item.end, null, speed);
+        }
+
+        function renderSpeakingPrompts() {
+            const list = document.getElementById('speaking-prompts-list');
+            if (!list) return;
+            list.innerHTML = speakingPrompts.map((p, idx) => {
+                const active = idx === currentPromptIndex;
+                return `
+                    <button onclick="selectPrompt(${idx})" class="w-full text-left p-3.5 rounded-xl border transition ${active ? 'bg-[#285d02] text-white border-[#285d02] shadow-xs' : 'bg-slate-50 hover:bg-slate-100 text-slate-800 border-slate-200'}">
+                        <p class="text-xs sm:text-sm font-bold leading-snug">${p.question}</p>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function selectPrompt(idx) {
+            currentPromptIndex = idx;
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+        }
+
+        function renderSpeakingStudio() {
+            const studio = document.getElementById('speaking-studio');
+            if (!studio) return;
+            const p = speakingPrompts[currentPromptIndex];
+
+            studio.innerHTML = `
+                <div class="space-y-5">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#285d02] bg-[#285d02]/10 px-2.5 py-1 rounded-md">Câu hỏi đang chọn</span>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-900 mt-2">${p.question}</h3>
+                        <p class="text-xs text-slate-500 mt-1"><i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i> ${p.tips}</p>
+                    </div>
+
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Từ vựng / Cấu trúc gợi ý nên dùng:</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${p.targetVocab.map(w => `<span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 border border-amber-300">${w}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex items-center justify-between">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-600">Câu trả lời của bạn (Gõ hoặc Bấm Mic để nói):</label>
+                            <button onclick="toggleStudioRecording()" id="btn-studio-mic" class="px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-2xs">
+                                <i class="fa-solid fa-microphone"></i> Bắt đầu nói
+                            </button>
+                        </div>
+                        <textarea id="speaking-user-input" rows="4" 
+                                  placeholder="Nhấn 'Bắt đầu nói' để thu âm bằng giọng nói hoặc tự gõ câu trả lời của bạn vào đây..."
+                                  class="w-full p-3.5 rounded-xl border border-slate-200 focus:border-[#285d02] focus:outline-none text-sm text-slate-800 bg-slate-50"></textarea>
+                        <div class="flex items-center justify-between">
+                            <button onclick="evaluateSpeakingAnswer()" class="px-4 py-2 rounded-xl bg-[#285d02] hover:bg-[#1f4802] text-white text-xs font-semibold transition">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Kiểm tra từ vựng đã dùng
+                            </button>
+                            <button onclick="document.getElementById('sample-answer-box').classList.toggle('hidden')" class="text-xs font-semibold text-[#285d02] hover:underline">
+                                Xem / Ẩn câu trả lời mẫu Band 7.5+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="speaking-eval-feedback" class="hidden p-3.5 rounded-xl bg-[#285d02]/5 border border-[#285d02]/20 text-xs text-slate-800"></div>
+
+                    <div id="sample-answer-box" class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold uppercase tracking-wider text-[#285d02]">Sample Answer (Gợi ý trả lời mẫu)</span>
+                            <button onclick="speakText('${p.sampleAnswer.replace(/'/g, "\\'")}', 0.95)" class="text-xs font-semibold text-[#285d02] hover:underline flex items-center gap-1">
+                                <i class="fa-solid fa-volume-high"></i> Nghe mẫu
+                            </button>
+                        </div>
+                        <p class="text-sm text-slate-700 leading-relaxed italic">"${p.sampleAnswer}"</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function evaluateSpeakingAnswer() {
+            const input = document.getElementById('speaking-user-input')?.value || '';
+            const fb = document.getElementById('speaking-eval-feedback');
+            if (!fb) return;
+
+            if (!input.trim()) {
+                showToast("Hãy nhập hoặc thu âm câu trả lời của bạn trước nhé!");
+                return;
+            }
+
+            const p = speakingPrompts[currentPromptIndex];
+            const used = p.targetVocab.filter(v => input.toLowerCase().includes(v.toLowerCase().split('...')[0].trim()));
+
+            fb.classList.remove('hidden');
+            fb.innerHTML = `
+                <p class="font-bold text-[#285d02] mb-1">Đánh giá nhanh câu trả lời (${input.trim().split(/\s+/).length} từ):</p>
+                <p>Bạn đã sử dụng <strong>${used.length}/${p.targetVocab.length}</strong> cụm từ mục tiêu: 
+                ${used.length > 0 ? used.map(u => `<span class="underline font-semibold">${u}</span>`).join(', ') : 'Chưa có cụm từ mục tiêu nào được phát hiện. Hãy thử chèn thêm các từ gợi ý màu vàng ở trên nhé!'}</p>
+            `;
+        }
+
+        // ==========================================
+        // 9. TAB NAVIGATION, VIDEO & QUIZ CONTROLS
+        // ==========================================
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
+            const activeSec = document.getElementById(`section-${tabName}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+                btn.classList.add('border-transparent', 'text-slate-600', 'font-medium');
+            });
+
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-600', 'font-medium');
+                activeBtn.classList.add('border-[#285d02]', 'text-[#285d02]', 'font-semibold');
+            }
+        }
+
+        function toggleVideo() {
+            const wrapper = document.getElementById('video-wrapper');
+            const icon = document.getElementById('toggle-video-icon');
+            const text = document.getElementById('toggle-video-text');
+            if (!wrapper) return;
+
+            const isHidden = wrapper.classList.toggle('hidden');
+            if (icon) icon.className = isHidden ? 'fa-solid fa-chevron-down' : 'fa-solid fa-chevron-up';
+            if (text) text.textContent = isHidden ? 'Mở rộng Video' : 'Thu gọn Video';
+        }
+
+        function checkQuiz(choice) {
+            const fb = document.getElementById('quiz-feedback');
+            document.querySelectorAll('.quiz-opt').forEach(btn => {
+                btn.className = "quiz-opt text-left text-xs font-medium px-3 py-2.5 rounded-lg bg-white border border-slate-200 transition";
+            });
+
+            const selectedBtn = document.getElementById(`quiz-${choice}`);
+            if (choice === 'b') {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-[#285d02] text-white border border-[#285d02] transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-[#285d02]";
+                    fb.textContent = "Chính xác! Sinh năm 1982 thuộc thế hệ Millennial (Gen Y).";
+                }
+            } else {
+                if (selectedBtn) selectedBtn.className = "quiz-opt text-left text-xs font-bold px-3 py-2.5 rounded-lg bg-rose-50 text-rose-800 border border-rose-300 transition";
+                if (fb) {
+                    fb.className = "text-xs font-bold text-rose-600";
+                    fb.textContent = "Chưa đúng! Georgie cũng đoán nhầm giống bạn, đáp án đúng là b) Millennial.";
+                }
+            }
+        }
+
+        // ==========================================
+        // 10. NATIVE MP3 AUDIO PLAYER & YOUTUBE SYNC
+        // ==========================================
+        function getNativeAudio() {
+            return document.getElementById('bbc-native-audio');
+        }
+
+        function loadUserMp3File(inputEl) {
+            const file = inputEl.files && inputEl.files[0];
+            if (!file) return;
+            attachBlobToAudio(file);
+        }
+
+        function attachBlobToAudio(file) {
+            const audio = getNativeAudio();
+            if (!audio) return;
+            const objectUrl = URL.createObjectURL(file);
+            audio.src = objectUrl;
+            audio.load();
+            isLocalMp3Loaded = true;
+
+            const badge = document.getElementById('audio-status-badge');
+            if (badge) {
+                badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> Đã kết nối: ${file.name}`;
+            }
+
+            const tip = document.getElementById('audio-helper-tip');
+            if (tip) {
+                tip.innerHTML = `<span class="text-[#285d02] font-semibold"><i class="fa-solid fa-circle-check mr-1"></i> Đã nạp file MP3 thành công! Bây giờ bạn có thể bấm Play hoặc bấm "Nghe gốc" ở từng câu thoại bên dưới.</span>`;
+            }
+
+            audio.play().then(() => {
+                showToast("Đã nạp và phát file MP3 gốc thành công!");
+            }).catch(() => {
+                showToast("Đã nạp file MP3! Hãy bấm nút Play để nghe.");
+            });
+        }
+
+        function bindNativeAudioEvents() {
+            const audio = getNativeAudio();
+            if (!audio) return;
+
+            audio.addEventListener('loadedmetadata', () => {
+                if (audio.duration && audio.duration > 0) {
+                    isLocalMp3Loaded = true;
+                    const badge = document.getElementById('audio-status-badge');
+                    if (badge) {
+                        badge.className = "text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800";
+                        badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1"></i> MP3 Sẵn sàng (${formatTime(audio.duration)})`;
+                    }
+                }
+            });
+
+            audio.addEventListener('play', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-pause';
+                if (text) text.textContent = 'Tạm dừng MP3';
+            });
+
+            audio.addEventListener('pause', () => {
+                const icon = document.getElementById('master-audio-icon');
+                const text = document.getElementById('master-audio-text');
+                if (icon) icon.className = 'fa-solid fa-play';
+                if (text) text.textContent = 'Nghe file gốc BBC';
+            });
+
+            const dropzone = document.getElementById('audio-dropzone');
+            if (dropzone) {
+                dropzone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.add('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('dragleave', () => {
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                });
+                dropzone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dropzone.classList.remove('ring-2', 'ring-[#285d02]', 'bg-[#285d02]/10');
+                    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                        attachBlobToAudio(e.dataTransfer.files[0]);
+                    }
+                });
+            }
+        }
+
+        function controlYouTubePlayer(command, args = []) {
+            const iframe = document.getElementById('yt-player');
+            if (iframe && iframe.contentWindow) {
+                iframe.contentWindow.postMessage(JSON.stringify({
+                    event: 'command',
+                    func: command,
+                    args: args
+                }), '*');
+            }
+        }
+
+        function toggleMasterAudio() {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            } else {
+                const input = document.getElementById('local-mp3-input');
+                if (input) input.click();
+                showToast("Hãy chọn file MP3 từ máy tính của bạn để phát trực tiếp!");
+            }
+        }
+
+        function skipAudio(seconds) {
+            const audio = getNativeAudio();
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                audio.currentTime = Math.max(0, Math.min(audio.duration, audio.currentTime + seconds));
+            } else {
+                showToast("Hãy đính kèm file MP3 bằng nút 'Đính kèm file MP3 vừa tải' trước nhé!");
+            }
+        }
+
+        function changeAudioRate(rate) {
+            const audio = getNativeAudio();
+            if (audio) audio.playbackRate = parseFloat(rate);
+            controlYouTubePlayer('setPlaybackRate', [parseFloat(rate)]);
+        }
+
+        function playAudioSegment(startSec, endSec, rowIdx = null, customRate = null) {
+            const audio = getNativeAudio();
+            clearTimeout(segmentStopTimeout);
+
+            document.querySelectorAll('.dialogue-row').forEach(el => {
+                el.classList.remove('bg-[#285d02]/5', 'border-[#285d02]/30');
+            });
+            if (rowIdx !== null) {
+                const activeRow = document.getElementById(`dialogue-row-${rowIdx}`);
+                if (activeRow) activeRow.classList.add('bg-[#285d02]/5', 'border-[#285d02]/30');
+            }
+
+            const rate = customRate || parseFloat(document.getElementById('audio-playback-rate')?.value || 1);
+
+            if (audio && audio.readyState >= 1 && audio.duration > 0) {
+                controlYouTubePlayer('pauseVideo');
+                audio.playbackRate = rate;
+                audio.currentTime = startSec;
+                audio.play().then(() => {
+                    const durationMs = ((endSec - startSec) / rate) * 1000;
+                    segmentStopTimeout = setTimeout(() => {
+                        audio.pause();
+                    }, durationMs);
+                }).catch(() => {
+                    showToast("Hãy bấm Play trên thanh Audio để bắt đầu nghe.");
+                });
+                return;
+            }
+
+            const wrapper = document.getElementById('video-wrapper');
+            if (wrapper && wrapper.classList.contains('hidden')) {
+                toggleVideo();
+            }
+            controlYouTubePlayer('setPlaybackRate', [rate]);
+            controlYouTubePlayer('seekTo', [startSec, true]);
+            controlYouTubePlayer('playVideo');
+            showToast(`Đang phát đoạn ${formatTime(startSec)} - ${formatTime(endSec)} qua YouTube (Hoặc đính kèm MP3 để nghe trực tiếp)`);
+
+            const durationMs = ((endSec - startSec) / rate) * 1000;
+            segmentStopTimeout = setTimeout(() => {
+                controlYouTubePlayer('pauseVideo');
+            }, durationMs);
+        }
+
+        // ==========================================
+        // 11. SPEECH SYNTHESIS & RECOGNITION
+        // ==========================================
+        function speakText(text, rate = 0.95) {
+            if (!('speechSynthesis' in window)) {
+                showToast("Trình duyệt của bạn không hỗ trợ đọc văn bản tự động.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-GB';
+            utterance.rate = rate;
+
+            const voices = window.speechSynthesis.getVoices();
+            const ukVoice = voices.find(v => v.lang.includes('en-GB')) || voices.find(v => v.lang.includes('en'));
+            if (ukVoice) utterance.voice = ukVoice;
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function initSpeechRecognition() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (SpeechRecognition) {
+                recognition = new SpeechRecognition();
+                recognition.lang = 'en-GB';
+                recognition.interimResults = false;
+                recognition.maxAlternatives = 1;
+            }
+        }
+
+        function recordShadowing(id) {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById(`btn-shadow-rec-${id}`);
+            const resBox = document.getElementById(`shadow-result-${id}`);
+            const targetObj = shadowingData.find(s => s.id === id);
+
+            btn.classList.add('pulse-ring', 'bg-rose-600', 'text-white');
+            btn.innerHTML = `<i class="fa-solid fa-ear-listen"></i> <span>Đang nghe...</span>`;
+
+            recognition.onresult = (event) => {
+                const spoken = event.results[0][0].transcript;
+                const similarity = calculateSimilarity(targetObj.text, spoken);
+                resBox.classList.remove('hidden');
+                resBox.innerHTML = `
+                    <div class="flex items-center justify-between mb-1">
+                        <span class="font-bold text-[#285d02]">Kết quả nhận diện giọng nói:</span>
+                        <span class="font-bold px-2 py-0.5 rounded ${similarity >= 75 ? 'bg-[#285d02]/15 text-[#285d02]' : 'bg-amber-200 text-amber-900'}">Độ khớp: ${similarity}%</span>
+                    </div>
+                    <p class="text-slate-700 italic">"${spoken}"</p>
+                `;
+            };
+
+            recognition.onerror = () => {
+                showToast("Không nghe rõ giọng nói. Vui lòng thử lại và cấp quyền Micro.");
+            };
+
+            recognition.onend = () => {
+                btn.classList.remove('pulse-ring', 'bg-rose-600', 'text-white');
+                btn.innerHTML = `<i class="fa-solid fa-microphone text-rose-500"></i> <span>Thu âm</span>`;
+            };
+
+            recognition.start();
+        }
+
+        function toggleStudioRecording() {
+            if (!recognition) {
+                showToast("Trình duyệt chưa hỗ trợ nhận diện giọng nói (Hãy dùng Chrome/Edge).");
+                return;
+            }
+            const btn = document.getElementById('btn-studio-mic');
+            const input = document.getElementById('speaking-user-input');
+
+            if (isRecording) {
+                recognition.stop();
+                isRecording = false;
+                return;
+            }
+
+            isRecording = true;
+            btn.classList.add('pulse-ring');
+            btn.innerHTML = `<i class="fa-solid fa-stop"></i> Dừng thu âm`;
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                input.value = (input.value ? input.value + ' ' : '') + transcript;
+            };
+
+            recognition.onend = () => {
+                isRecording = false;
+                btn.classList.remove('pulse-ring');
+                btn.innerHTML = `<i class="fa-solid fa-microphone"></i> Bắt đầu nói`;
+            };
+
+            recognition.start();
+        }
+
+        function calculateSimilarity(str1, str2) {
+            const clean1 = str1.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const clean2 = str2.toLowerCase().replace(/[^\w\s]/g, '').split(/\s+/);
+            const matches = clean1.filter(word => clean2.includes(word));
+            return Math.min(100, Math.round((matches.length / clean1.length) * 100));
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-msg').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // ==========================================
+        // 12. INITIALIZE APP ON WINDOW LOAD
+        // ==========================================
+        window.onload = function () {
+            renderTranscript();
+            renderFlashcard();
+            renderVocabPills();
+            renderSpeakingStructures();
+            renderGrammar();
+            renderShadowing();
+            renderSpeakingPrompts();
+            renderSpeakingStudio();
+            initSpeechRecognition();
+            bindNativeAudioEvents();
+        };
+    </script>
+</body>
+</html>

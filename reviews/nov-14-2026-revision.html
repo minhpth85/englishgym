@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly English Revision - Nov 14, 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        /* Custom scrollbar for smooth tab navigation on mobile */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* 3D Flip Card Utilities */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        .transform-style-3d {
+            transform-style: preserve-3d;
+        }
+        .backface-hidden {
+            backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-slate-50 text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+
+    <!-- Top Navigation Header -->
+    <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <div>
+                    <div class="flex flex-wrap items-center gap-2">
+                        <a href="../index.html" class="inline-flex items-center gap-1 px-2.5 py-0.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-full transition-colors">
+                            ← Thư viện
+                        </a>
+                        <span class="px-2.5 py-0.5 text-xs font-semibold bg-indigo-100 text-indigo-700 rounded-full">Nov 14, 2026</span>
+                        <span class="text-xs font-medium text-slate-500">8 Tricky Chunks</span>
+                    </div>
+                    <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight mt-1">Weekly English Revision</h1>
+                </div>
+                
+                <!-- Progress Pill -->
+                <div class="flex items-center gap-3 bg-slate-100 px-3.5 py-2 rounded-xl border border-slate-200/80 self-start sm:self-auto">
+                    <div class="text-xs font-semibold text-slate-600">Progress:</div>
+                    <div class="w-24 sm:w-32 h-2.5 bg-slate-200 rounded-full overflow-hidden">
+                        <div id="global-progress-bar" class="h-full bg-indigo-600 rounded-full transition-all duration-500" style="width: 0%"></div>
+                    </div>
+                    <span id="global-progress-text" class="text-xs font-bold text-indigo-700">0%</span>
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <nav class="flex gap-2 overflow-x-auto no-scrollbar pt-4 pb-1" aria-label="Tabs">
+                <button onclick="switchTab('hooks')" id="tab-hooks" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-indigo-600 text-white shadow-sm">
+                    0. Memory Hooks
+                </button>
+                <button onclick="switchTab('ex1')" id="tab-ex1" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                    1. Spot & Fix
+                </button>
+                <button onclick="switchTab('ex2')" id="tab-ex2" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                    2. Context Gap-Fill
+                </button>
+                <button onclick="switchTab('ex3')" id="tab-ex3" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                    3. 3-Sec Quick-Swap
+                </button>
+                <button onclick="switchTab('ladder')" id="tab-ladder" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200 flex items-center gap-1.5">
+                    <span>4. 3-Step Ladder</span>
+                    <span class="px-1.5 py-0.5 text-[10px] font-bold uppercase bg-amber-100 text-amber-800 rounded-md">New</span>
+                </button>
+                <button onclick="switchTab('ex4')" id="tab-ex4" class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all bg-white text-slate-600 hover:bg-slate-100 border border-slate-200">
+                    5. Your Turn
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+
+        <!-- SECTION 0: Quick Memory Hooks -->
+        <section id="section-hooks" class="tab-section space-y-6">
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">Quick Memory Hooks (8 Tricky Chunks)</h2>
+                    <p class="text-sm text-slate-600 mt-1">Click any card to flip between the English chunk and its Vietnamese meaning + memory hook. Use the speaker icon to hear pronunciation.</p>
+                </div>
+                <button onclick="flipAllCards()" class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-semibold rounded-xl transition-colors self-start sm:self-auto shrink-0">
+                    Flip All Cards
+                </button>
+            </div>
+
+            <div id="flashcards-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Cards injected by JS -->
+            </div>
+
+            <div class="flex justify-end pt-2">
+                <button onclick="switchTab('ex1')" class="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-sm transition-all flex items-center gap-2">
+                    <span>Start Exercise 1</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 1: Exercise 1 - Spot & Fix the Mistake -->
+        <section id="section-ex1" class="tab-section hidden space-y-6">
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Exercise 1</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-1">Spot & Fix the Mistake</h2>
+                <p class="text-sm text-slate-600 mt-1">Each sentence below contains <strong class="text-slate-800">one wrong word or preposition</strong>. Type the corrected full sentence or just the corrected word, then check your answer.</p>
+            </div>
+
+            <div id="ex1-container" class="space-y-4">
+                <!-- Questions injected by JS -->
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <button onclick="checkExercise1()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-sm transition-all">
+                    Check Answers
+                </button>
+                <button onclick="switchTab('ex2')" class="px-5 py-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold rounded-xl transition-all flex items-center gap-2">
+                    <span>Next: Context Gap-Fill</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Exercise 2 - Everyday Context Gap-Fill -->
+        <section id="section-ex2" class="tab-section hidden space-y-6">
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Exercise 2</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-1">Everyday Context Gap-Fill</h2>
+                <p class="text-sm text-slate-600 mt-1">Complete the short reflection below using the 5 chunks from the word bank. Tap a chunk in the bank to fill the next empty blank, or select from the dropdowns.</p>
+                
+                <!-- Interactive Word Bank -->
+                <div class="mt-4 p-4 bg-slate-50 rounded-xl border border-slate-200">
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-2.5">Word Bank (Click to fill next blank)</div>
+                    <div id="word-bank" class="flex flex-wrap gap-2">
+                        <!-- Chips injected by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm leading-relaxed text-base sm:text-lg text-slate-800 space-y-5">
+                <p>
+                    On busy days, I used to skip my English shadowing because I felt too tired. Then I learned the idea of 
+                    <span class="inline-flex items-center align-baseline mx-1">
+                        <span class="text-xs font-bold text-indigo-600 mr-1">(1)</span>
+                        <select id="gap-1" onchange="updateGapProgress()" class="gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">-- select chunk --</option>
+                            <option value="such and such">such and such</option>
+                            <option value="micro-commitment floor">micro-commitment floor</option>
+                            <option value="borrowing control">borrowing control</option>
+                            <option value="hear on the grapevine">hear on the grapevine</option>
+                            <option value="foster a sense of belonging">foster a sense of belonging</option>
+                        </select>
+                    </span>
+                    from my disciplined client design work and applying it to my study routine. Now I set a 
+                    <span class="inline-flex items-center align-baseline mx-1">
+                        <span class="text-xs font-bold text-indigo-600 mr-1">(2)</span>
+                        <select id="gap-2" onchange="updateGapProgress()" class="gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">-- select chunk --</option>
+                            <option value="such and such">such and such</option>
+                            <option value="micro-commitment floor">micro-commitment floor</option>
+                            <option value="borrowing control">borrowing control</option>
+                            <option value="hear on the grapevine">hear on the grapevine</option>
+                            <option value="foster a sense of belonging">foster a sense of belonging</option>
+                        </select>
+                    </span>
+                    of practicing just one sentence every morning before opening my laptop.
+                </p>
+                <p>
+                    Yesterday, I happened to 
+                    <span class="inline-flex items-center align-baseline mx-1">
+                        <span class="text-xs font-bold text-indigo-600 mr-1">(3)</span>
+                        <select id="gap-3" onchange="updateGapProgress()" class="gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">-- select chunk --</option>
+                            <option value="such and such">such and such</option>
+                            <option value="micro-commitment floor">micro-commitment floor</option>
+                            <option value="borrowing control">borrowing control</option>
+                            <option value="hear on the grapevine">hear on the grapevine</option>
+                            <option value="foster a sense of belonging">foster a sense of belonging</option>
+                        </select>
+                    </span>
+                    that a few friends are starting a weekly speaking club. Instead of saying we have to cover 
+                    <span class="inline-flex items-center align-baseline mx-1">
+                        <span class="text-xs font-bold text-indigo-600 mr-1">(4)</span>
+                        <select id="gap-4" onchange="updateGapProgress()" class="gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">-- select chunk --</option>
+                            <option value="such and such">such and such</option>
+                            <option value="micro-commitment floor">micro-commitment floor</option>
+                            <option value="borrowing control">borrowing control</option>
+                            <option value="hear on the grapevine">hear on the grapevine</option>
+                            <option value="foster a sense of belonging">foster a sense of belonging</option>
+                        </select>
+                    </span>
+                    a grammar rule, we just want a relaxed space to chat and 
+                    <span class="inline-flex items-center align-baseline mx-1">
+                        <span class="text-xs font-bold text-indigo-600 mr-1">(5)</span>
+                        <select id="gap-5" onchange="updateGapProgress()" class="gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer">
+                            <option value="">-- select chunk --</option>
+                            <option value="such and such">such and such</option>
+                            <option value="micro-commitment floor">micro-commitment floor</option>
+                            <option value="borrowing control">borrowing control</option>
+                            <option value="hear on the grapevine">hear on the grapevine</option>
+                            <option value="foster a sense of belonging">foster a sense of belonging</option>
+                        </select>
+                    </span>
+                    among people with the same learning goal.
+                </p>
+
+                <div id="ex2-feedback" class="hidden p-4 rounded-xl text-sm font-medium"></div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <div class="flex gap-3">
+                    <button onclick="checkExercise2()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-sm transition-all">
+                        Check Paragraph
+                    </button>
+                    <button onclick="resetExercise2()" class="px-4 py-3 bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold rounded-xl transition-all">
+                        Reset
+                    </button>
+                </div>
+                <button onclick="switchTab('ex3')" class="px-5 py-3 bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 font-semibold rounded-xl transition-all flex items-center gap-2">
+                    <span>Next: 3-Sec Quick-Swap</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Exercise 3 - 3-Second Quick-Swap -->
+        <section id="section-ex3" class="tab-section hidden space-y-6">
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Exercise 3</span>
+                    <h2 class="text-xl font-bold text-slate-900 mt-1">3-Second Quick-Swap (English-to-English)</h2>
+                    <p class="text-sm text-slate-600 mt-1">Replace the <strong class="text-indigo-700">highlighted simple phrase</strong> with one of the 8 target chunks. Watch grammar forms (e.g., third-person <em>-s</em>).</p>
+                </div>
+                
+                <!-- Reflex Timer Toggle -->
+                <div class="flex items-center gap-2 bg-amber-50 border border-amber-200 px-3.5 py-2 rounded-xl shrink-0">
+                    <span class="text-xs font-bold text-amber-800">Reflex Mode:</span>
+                    <button id="timer-btn" onclick="startReflexTimer()" class="px-3 py-1 bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold rounded-lg transition-colors">
+                        Start 3s Drill
+                    </button>
+                    <span id="timer-display" class="text-sm font-mono font-extrabold text-amber-900 w-8 text-center">3.0s</span>
+                </div>
+            </div>
+
+            <div id="ex3-container" class="space-y-4">
+                <!-- Items injected by JS -->
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <button onclick="checkExercise3()" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-sm transition-all">
+                    Check Swaps
+                </button>
+                <button onclick="switchTab('ladder')" class="px-5 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 font-semibold rounded-xl transition-all flex items-center gap-2">
+                    <span>Next: 3-Step Expansion Ladder</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 4: 3-Step Sentence Expansion Ladder (NEW) -->
+        <section id="section-ladder" class="tab-section hidden space-y-6">
+            <div class="bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white p-6 sm:p-7 rounded-2xl shadow-md">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span class="px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950 rounded-full">Bonus Fluency Drill</span>
+                    <span class="text-xs text-indigo-200 font-medium">From Simple Idea → Natural C1 Expression</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-extrabold mt-2">3-Step Sentence Expansion Ladder</h2>
+                <p class="text-sm text-indigo-100 mt-1.5 max-w-3xl">
+                    Climb each ladder rung by rung! Start with a basic core idea, upgrade it using the target chunk, and expand it with vivid context, contrast, or nuance. Practice speaking each step aloud before revealing the model sentence.
+                </p>
+            </div>
+
+            <!-- Ladder Selector Pills -->
+            <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Choose a Target Chunk Ladder (8 Available):</div>
+                <div id="ladder-selector" class="flex flex-wrap gap-2">
+                    <!-- Buttons injected by JS -->
+                </div>
+            </div>
+
+            <!-- Active Ladder Workspace -->
+            <div id="ladder-workspace" class="bg-white p-5 sm:p-7 rounded-2xl border border-slate-200 shadow-sm space-y-6">
+                <!-- Dynamic Ladder Content injected by JS -->
+            </div>
+
+            <div class="flex justify-end pt-2">
+                <button onclick="switchTab('ex4')" class="px-5 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl shadow-sm transition-all flex items-center gap-2">
+                    <span>Next: Your Turn (Personalization)</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Exercise 4 - Your Turn (Personalization Practice) -->
+        <section id="section-ex4" class="tab-section hidden space-y-6">
+            <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+                <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Exercise 4</span>
+                <h2 class="text-xl font-bold text-slate-900 mt-1">Your Turn (Personalization Practice)</h2>
+                <p class="text-sm text-slate-600 mt-1">Pick <strong class="text-slate-800">2 of the 3 prompts</strong> below and write 1–2 sentences in English using the suggested chunk. The app will automatically verify if you included the target chunk accurately, and you can copy your answers to paste into our chat for feedback!</p>
+            </div>
+
+            <div id="ex4-container" class="space-y-5">
+                <!-- Prompts injected by JS -->
+            </div>
+
+            <!-- Copy Ready Summary Box -->
+            <div class="bg-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-md space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                        <h3 class="text-base font-bold text-white">Ready for Feedback?</h3>
+                        <p class="text-xs text-slate-300 mt-0.5">Copy your responses below and paste them directly into our chat so I can review and suggest even more natural phrasing.</p>
+                    </div>
+                    <button onclick="copyPersonalResponses()" class="px-4 py-2.5 bg-indigo-500 hover:bg-indigo-400 text-white text-sm font-bold rounded-xl transition-all flex items-center gap-2 self-start sm:self-auto shrink-0">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                        <span>Copy My Answers</span>
+                    </button>
+                </div>
+                <pre id="compiled-output" class="p-3.5 bg-slate-800/90 border border-slate-700 rounded-xl text-xs sm:text-sm text-slate-200 whitespace-pre-wrap font-sans leading-relaxed">Your written answers will appear here automatically as you type...</pre>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="mt-auto bg-white border-t border-slate-200 py-4">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-slate-600">
+            Đây là thư viện học tập của Minh Fam.
+        </div>
+    </footer>
+
+    <!-- Toast Notification Banner (No alert() used) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-lg border border-slate-700 flex items-center gap-2.5 text-sm font-medium">
+            <span id="toast-icon" class="text-emerald-400">✓</span>
+            <span id="toast-message">Action completed</span>
+        </div>
+    </div>
+
+    <script>
+        // ==========================================
+        // DATA STORE
+        // ==========================================
+        const chunksData = [
+            {
+                id: 'fill-void',
+                chunk: 'fill a void',
+                vi: 'Lấp đầy khoảng trống tinh thần',
+                hook: 'void = empty space inside after losing someone/something',
+                example: 'Volunteering helped him fill a void after his kids moved out.'
+            },
+            {
+                id: 'grapevine',
+                chunk: 'hear on / from the grapevine',
+                vi: 'Nghe phong phanh, nghe đồn',
+                hook: 'News travels from person to person like vines spreading',
+                example: 'I heard on the grapevine that they are opening a new studio.'
+            },
+            {
+                id: 'such-such',
+                chunk: 'such and such',
+                vi: 'Cái này cái kia (nói chung chung)',
+                hook: 'Placeholder when details don\'t matter ("doing such and such")',
+                example: 'Instead of listing every detail, she just said she had to do such and such.'
+            },
+            {
+                id: 'stereotypes',
+                chunk: 'break down stereotypes',
+                vi: 'Phá vỡ định kiến xã hội',
+                hook: 'break down = smash a wall of fixed, unfair ideas',
+                example: 'The documentary helps break down stereotypes about older gamers.'
+            },
+            {
+                id: 'belonging',
+                chunk: 'foster a sense of belonging',
+                vi: 'Nuôi dưỡng cảm giác thuộc về',
+                hook: 'foster = gently grow/nurture a warm feeling of fitting in',
+                example: 'Weekly team lunches help foster a sense of belonging.'
+            },
+            {
+                id: 'attachment',
+                chunk: 'develop a close attachment to',
+                vi: 'Gắn kết khăng khít với ai / điều gì',
+                hook: 'Always pair attachment + to (never with)',
+                example: 'Over time, I developed a close attachment to my morning routine.'
+            },
+            {
+                id: 'micro-floor',
+                chunk: 'micro-commitment floor',
+                vi: 'Mức sàn cam kết tối thiểu',
+                hook: 'floor = the lowest daily step you never drop below',
+                example: 'My micro-commitment floor is reading just one page before bed.'
+            },
+            {
+                id: 'borrowing-control',
+                chunk: 'borrowing control',
+                vi: 'Vay mượn sự kiểm soát',
+                hook: 'Take discipline from a strong area (work) and lend it to a weak one (study)',
+                example: 'By borrowing control from my gym habit, I finally stuck to studying.'
+            }
+        ];
+
+        const ex1Data = [
+            {
+                id: 1,
+                sentence: 'Over the past few months, I developed a close attachment <span class="underline decoration-rose-400 decoration-wavy font-semibold">with</span> my morning yoga routine.',
+                wrongPart: 'with',
+                correctPart: 'to',
+                fullCorrection: 'Over the past few months, I developed a close attachment to my morning yoga routine.',
+                hint: 'Always pair "attachment" with the preposition "to".'
+            },
+            {
+                id: 2,
+                sentence: 'I heard <span class="underline decoration-rose-400 decoration-wavy font-semibold">in</span> the grapevine that our local community center is starting a weekend art club.',
+                wrongPart: 'in',
+                correctPart: 'on',
+                altCorrect: ['from', 'on the grapevine', 'from the grapevine', 'heard on the grapevine', 'heard from the grapevine'],
+                fullCorrection: 'I heard on (or from) the grapevine that our local community center is starting a weekend art club.',
+                hint: 'News travels ON or FROM the grapevine, never "in".'
+            },
+            {
+                id: 3,
+                sentence: 'Volunteering with children helped the retired teacher <span class="underline decoration-rose-400 decoration-wavy font-semibold">make</span> a void after his family moved away.',
+                wrongPart: 'make',
+                correctPart: 'fill',
+                altCorrect: ['fill a void'],
+                fullCorrection: 'Volunteering with children helped the retired teacher fill a void after his family moved away.',
+                hint: 'You don\'t create an empty space; you FILL it.'
+            },
+            {
+                id: 4,
+                sentence: 'Meeting energetic seniors in my neighborhood really helped <span class="underline decoration-rose-400 decoration-wavy font-semibold">break out</span> stereotypes about aging.',
+                wrongPart: 'break out',
+                correctPart: 'break down',
+                altCorrect: ['down', 'break down stereotypes'],
+                fullCorrection: 'Meeting energetic seniors in my neighborhood really helped break down stereotypes about aging.',
+                hint: 'Think of smashing a wall DOWN: break DOWN stereotypes.'
+            },
+            {
+                id: 5,
+                sentence: 'Hosting small creative workshops can <span class="underline decoration-rose-400 decoration-wavy font-semibold">build</span> a sense of belonging for solo freelancers.',
+                wrongPart: 'build',
+                correctPart: 'foster',
+                altCorrect: ['foster a sense of belonging'],
+                fullCorrection: 'Hosting small creative workshops can foster a sense of belonging for solo freelancers.',
+                hint: 'Use the natural C1 collocation for nurturing a feeling: FOSTER.'
+            }
+        ];
+
+        const ex2Answers = {
+            1: 'borrowing control',
+            2: 'micro-commitment floor',
+            3: 'hear on the grapevine',
+            4: 'such and such',
+            5: 'foster a sense of belonging'
+        };
+
+        const ex3Data = [
+            {
+                id: 1,
+                before: '"She felt lonely after retiring, so gardening helped her ',
+                highlight: 'replace that empty feeling',
+                after: '."',
+                accepted: ['fill a void', 'to fill a void'],
+                explanation: '"replace that empty feeling" → fill a void'
+            },
+            {
+                id: 2,
+                before: '"People think older adults are quiet, but our lively choir ',
+                highlight: 'proves that unfair belief wrong',
+                after: '."',
+                accepted: ['breaks down stereotypes', 'break down stereotypes'],
+                explanation: '"proves that unfair belief wrong" → breaks down stereotypes (Note the -s for singular subject "choir"!)'
+            },
+            {
+                id: 3,
+                before: '"They invited me to join ',
+                highlight: 'various activities like painting or cooking',
+                after: ', and I said yes."',
+                accepted: ['such and such'],
+                explanation: '"various activities like painting or cooking" → such and such'
+            }
+        ];
+
+        // 3-Step Sentence Expansion Ladder Data for all 8 chunks
+        const ladderData = [
+            {
+                chunk: 'micro-commitment floor',
+                vi: 'Mức sàn cam kết tối thiểu',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'I read English every day, even when I am busy.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'I set a micro-commitment floor of reading just one English paragraph every day.',
+                step3Prompt: 'Step 3: Full Expansion (Add Contrast + Reason/Result)',
+                step3Text: 'Even on exhausting workdays when I have zero energy, I stick to my micro-commitment floor of reading just one English paragraph so I never break my daily momentum.'
+            },
+            {
+                chunk: 'borrowing control',
+                vi: 'Vay mượn sự kiểm soát',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'I am good at finishing client work, so I use that habit to study English.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'I started borrowing control from my client design deadlines to stay consistent with English.',
+                step3Prompt: 'Step 3: Full Expansion (Add Mechanism + Outcome)',
+                step3Text: 'Instead of relying on unpredictable motivation, I practiced borrowing control from my strict client design schedule by blocking a non-negotiable 15-minute slot for English every morning.'
+            },
+            {
+                chunk: 'foster a sense of belonging',
+                vi: 'Nuôi dưỡng cảm giác thuộc về',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'Our small study group makes everyone feel welcome.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'Our weekly speaking club helps foster a sense of belonging among learners.',
+                step3Prompt: 'Step 3: Full Expansion (Add Action + Emotional Impact)',
+                step3Text: 'By starting every session with casual check-ins rather than strict grammar drills, our weekly speaking club genuinely fosters a sense of belonging among remote freelancers.'
+            },
+            {
+                chunk: 'develop a close attachment to',
+                vi: 'Gắn kết khăng khít với ai / điều gì',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'I really love my quiet morning coffee and journaling ritual now.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'Over the past year, I have developed a close attachment to my morning journaling ritual.',
+                step3Prompt: 'Step 3: Full Expansion (Add Timeframe + Why It Matters)',
+                step3Text: 'What started as a simple productivity experiment has grown into a habit I have developed a close attachment to, because those fifteen quiet minutes anchor my entire day.'
+            },
+            {
+                chunk: 'fill a void',
+                vi: 'Lấp đầy khoảng trống tinh thần',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'After finishing a big project, I felt empty, so I started painting.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'Taking up watercolor painting helped me fill a void after my big project ended.',
+                step3Prompt: 'Step 3: Full Expansion (Add Emotional Contrast + Nuance)',
+                step3Text: 'When a six-month design contract wrapped up and left my evenings unexpectedly quiet, joining a local pottery class helped fill a void I hadn\'t realized was there.'
+            },
+            {
+                chunk: 'break down stereotypes',
+                vi: 'Phá vỡ định kiến xã hội',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'My 70-year-old neighbor codes apps, which surprises people.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'My 70-year-old neighbor builds mobile apps, which really breaks down stereotypes about seniors.',
+                step3Prompt: 'Step 3: Full Expansion (Add Specific Detail + Broader Impact)',
+                step3Text: 'Watching my 70-year-old neighbor teach teenagers how to debug Python scripts effortlessly breaks down stereotypes about older adults being intimidated by modern technology.'
+            },
+            {
+                chunk: 'hear on / from the grapevine',
+                vi: 'Nghe phong phanh, nghe đồn',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'People are saying that a new coworking cafe is opening nearby.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'I heard on the grapevine that a new coworking cafe is opening down the street.',
+                step3Prompt: 'Step 3: Full Expansion (Add Uncertainty + Action)',
+                step3Text: 'Nothing has been officially announced on social media yet, but I heard on the grapevine that our favorite local roastery is opening a quiet coworking space next month.'
+            },
+            {
+                chunk: 'such and such',
+                vi: 'Cái này cái kia (nói chung chung)',
+                step1Prompt: 'Step 1: Base Idea (Simple & Direct)',
+                step1Text: 'We don\'t need to worry about small details like fonts and colors yet.',
+                step2Prompt: 'Step 2: Upgrade with Target Chunk',
+                step2Text: 'At this early stage, we don\'t need to stress over such and such minor design details.',
+                step3Prompt: 'Step 3: Full Expansion (Add Contrast between Big Picture vs. Details)',
+                step3Text: 'During our first brainstorming call, we agreed to focus purely on the user\'s core problem instead of getting bogged down in whether the button should be such and such a shade of blue.'
+            }
+        ];
+
+        const ex4Data = [
+            {
+                id: 1,
+                category: 'Daily Habits',
+                chunks: ['micro-commitment floor', 'borrowing control'],
+                question: 'What is the smallest daily rule you use to stay consistent with English or exercise?',
+                placeholder: 'e.g., Even on busy days, I keep a micro-commitment floor of...'
+            },
+            {
+                id: 2,
+                category: 'Design & Community',
+                chunks: ['foster a sense of belonging', 'develop a close attachment to'],
+                question: 'What kind of hobby, project, or group makes you feel most connected?',
+                placeholder: 'e.g., Joining a weekend sketching club really helped foster a sense of belonging...'
+            },
+            {
+                id: 3,
+                category: 'Breaking Assumptions',
+                chunks: ['break down stereotypes', 'hear on the grapevine'],
+                question: 'Have you ever met someone or heard something that surprised you and changed your first impression?',
+                placeholder: 'e.g., I once heard on the grapevine that...'
+            }
+        ];
+
+        // State Tracking
+        let progressState = {
+            hooksViewed: false,
+            ex1Score: 0,
+            ex2Score: 0,
+            ex3Score: 0,
+            laddersExplored: new Set(),
+            ex4Completed: 0
+        };
+
+        let activeLadderIndex = 0;
+        let allCardsFlipped = false;
+        let timerInterval = null;
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            renderFlashcards();
+            renderExercise1();
+            renderWordBank();
+            renderExercise3();
+            renderLadderSelector();
+            renderActiveLadder(0);
+            renderExercise4();
+            updateGlobalProgress();
+        });
+
+        // ==========================================
+        // NAVIGATION & PROGRESS
+        // ==========================================
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-slate-600', 'hover:bg-slate-100', 'border', 'border-slate-200');
+            });
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-600', 'hover:bg-slate-100', 'border', 'border-slate-200');
+                activeBtn.classList.add('bg-indigo-600', 'text-white', 'shadow-sm');
+            }
+
+            document.querySelectorAll('.tab-section').forEach(sec => sec.classList.add('hidden'));
+            const activeSec = document.getElementById(`section-${tabId}`);
+            if (activeSec) activeSec.classList.remove('hidden');
+
+            if (tabId === 'hooks') {
+                progressState.hooksViewed = true;
+                updateGlobalProgress();
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function updateGlobalProgress() {
+            const ladderPts = Math.min(progressState.laddersExplored.size, 4);
+            const ex4Pts = Math.min(progressState.ex4Completed, 2);
+            const totalEarned = progressState.ex1Score + progressState.ex2Score + progressState.ex3Score + ladderPts + ex4Pts;
+            const totalMax = 19;
+            const pct = Math.round((totalEarned / totalMax) * 100);
+
+            document.getElementById('global-progress-bar').style.width = `${pct}%`;
+            document.getElementById('global-progress-text').textContent = `${pct}%`;
+        }
+
+        function showToast(msg, isSuccess = true) {
+            const toast = document.getElementById('toast');
+            const icon = document.getElementById('toast-icon');
+            const text = document.getElementById('toast-message');
+
+            icon.textContent = isSuccess ? '✓' : '!';
+            icon.className = isSuccess ? 'text-emerald-400 font-bold' : 'text-amber-400 font-bold';
+            text.textContent = msg;
+
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2800);
+        }
+
+        function speakText(text, e) {
+            if (e) e.stopPropagation();
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text.replace('/', 'or'));
+                utterance.lang = 'en-US';
+                utterance.rate = 0.92;
+                window.speechSynthesis.speak(utterance);
+            } else {
+                showToast('Text-to-speech not supported in this browser.', false);
+            }
+        }
+
+        // ==========================================
+        // SECTION 0: FLASHCARDS
+        // ==========================================
+        function renderFlashcards() {
+            const grid = document.getElementById('flashcards-grid');
+            grid.innerHTML = chunksData.map((item, idx) => `
+                <div onclick="toggleCardFlip(this)" class="flashcard group h-56 perspective-1000 cursor-pointer select-none">
+                    <div class="flashcard-inner relative w-full h-full transition-transform duration-500 transform-style-3d">
+                        <!-- Front -->
+                        <div class="absolute inset-0 backface-hidden bg-white rounded-2xl border-2 border-slate-200 group-hover:border-indigo-400 p-5 flex flex-col justify-between shadow-sm">
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-400">#0${idx + 1}</span>
+                                <button onclick="speakText('${item.chunk.replace(/'/g, "\\'")}', event)" title="Listen" class="p-2 rounded-lg bg-slate-100 hover:bg-indigo-100 text-slate-600 hover:text-indigo-700 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path></svg>
+                                </button>
+                            </div>
+                            <div class="text-center my-auto px-1">
+                                <h3 class="text-lg font-extrabold text-slate-900 leading-snug">${item.chunk}</h3>
+                            </div>
+                            <div class="text-center text-xs font-medium text-indigo-600 flex items-center justify-center gap-1">
+                                <span>Tap to flip</span>
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                            </div>
+                        </div>
+
+                        <!-- Back -->
+                        <div class="absolute inset-0 backface-hidden rotate-y-180 bg-indigo-900 text-white rounded-2xl p-5 flex flex-col justify-between shadow-md">
+                            <div>
+                                <div class="text-[11px] font-bold uppercase tracking-wider text-indigo-300">Vietnamese Meaning</div>
+                                <div class="text-sm font-bold text-white mt-0.5">${item.vi}</div>
+                            </div>
+                            <div class="bg-indigo-950/60 p-2.5 rounded-xl border border-indigo-700/50">
+                                <div class="text-[10px] font-bold uppercase tracking-wider text-amber-300">Memory Hook</div>
+                                <p class="text-xs text-indigo-100 mt-0.5 leading-relaxed">${item.hook}</p>
+                            </div>
+                            <div class="text-[11px] text-indigo-200 italic line-clamp-2">"${item.example}"</div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleCardFlip(cardEl) {
+            const inner = cardEl.querySelector('.flashcard-inner');
+            inner.classList.toggle('rotate-y-180');
+        }
+
+        function flipAllCards() {
+            allCardsFlipped = !allCardsFlipped;
+            document.querySelectorAll('.flashcard-inner').forEach(inner => {
+                if (allCardsFlipped) {
+                    inner.classList.add('rotate-y-180');
+                } else {
+                    inner.classList.remove('rotate-y-180');
+                }
+            });
+        }
+
+        // ==========================================
+        // SECTION 1: SPOT & FIX THE MISTAKE
+        // ==========================================
+        function renderExercise1() {
+            const container = document.getElementById('ex1-container');
+            container.innerHTML = ex1Data.map(item => `
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">${item.id}</span>
+                        <div class="flex-1 space-y-3">
+                            <p class="text-base font-medium text-slate-800 leading-relaxed">${item.sentence}</p>
+                            <div class="flex flex-col sm:flex-row gap-2.5">
+                                <input type="text" id="ex1-input-${item.id}" placeholder="Type the corrected word (e.g., '${item.wrongPart}' → ?) or full sentence..." class="flex-1 px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all">
+                                <button onclick="revealEx1Hint(${item.id})" class="px-3.5 py-2 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-semibold rounded-xl transition-colors shrink-0">
+                                    Hint
+                                </button>
+                            </div>
+                            <div id="ex1-feedback-${item.id}" class="hidden text-sm p-3 rounded-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function revealEx1Hint(id) {
+            const item = ex1Data.find(x => x.id === id);
+            const fb = document.getElementById(`ex1-feedback-${id}`);
+            fb.className = 'text-sm p-3 rounded-xl bg-amber-50 text-amber-900 border border-amber-200 block';
+            fb.innerHTML = `<strong>💡 Hint:</strong> ${item.hint}`;
+        }
+
+        function checkExercise1() {
+            let correctCount = 0;
+            ex1Data.forEach(item => {
+                const inputVal = document.getElementById(`ex1-input-${item.id}`).value.trim().toLowerCase();
+                const fb = document.getElementById(`ex1-feedback-${item.id}`);
+                
+                const cleanInput = inputVal.replace(/[.,!?]/g, '');
+                const cleanFull = item.fullCorrection.toLowerCase().replace(/[.,!?]/g, '');
+                
+                const validMatches = [item.correctPart.toLowerCase(), cleanFull, ...(item.altCorrect || [])];
+                const isCorrect = validMatches.some(ans => cleanInput === ans || (cleanInput.length > 10 && cleanInput.includes(item.correctPart.toLowerCase()) && !cleanInput.includes(` ${item.wrongPart} `)));
+
+                fb.classList.remove('hidden');
+                if (isCorrect) {
+                    correctCount++;
+                    fb.className = 'text-sm p-3 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-200 block';
+                    fb.innerHTML = `<strong>✓ Spot on!</strong> ${item.fullCorrection}`;
+                } else {
+                    fb.className = 'text-sm p-3 rounded-xl bg-rose-50 text-rose-900 border border-rose-200 block';
+                    fb.innerHTML = `<strong>✗ Answer:</strong> Replace <em>"${item.wrongPart}"</em> with <strong>"${item.correctPart}"</strong>.<br><span class="text-xs text-rose-700 mt-1 block">Full sentence: ${item.fullCorrection}</span>`;
+                }
+            });
+
+            progressState.ex1Score = correctCount;
+            updateGlobalProgress();
+            showToast(`Exercise 1: ${correctCount}/5 correct!`, correctCount >= 4);
+        }
+
+        // ==========================================
+        // SECTION 2: CONTEXT GAP-FILL
+        // ==========================================
+        function renderWordBank() {
+            const bank = document.getElementById('word-bank');
+            const words = ['such and such', 'micro-commitment floor', 'borrowing control', 'hear on the grapevine', 'foster a sense of belonging'];
+            bank.innerHTML = words.map(w => `
+                <button onclick="fillNextEmptyGap('${w}')" class="px-3 py-1.5 bg-white hover:bg-indigo-50 text-slate-800 hover:text-indigo-700 border border-slate-300 hover:border-indigo-400 rounded-lg text-xs sm:text-sm font-semibold shadow-xs transition-all active:scale-95">
+                    ${w}
+                </button>
+            `).join('');
+        }
+
+        function fillNextEmptyGap(word) {
+            for (let i = 1; i <= 5; i++) {
+                const sel = document.getElementById(`gap-${i}`);
+                if (!sel.value) {
+                    sel.value = word;
+                    updateGapProgress();
+                    return;
+                }
+            }
+            showToast('All 5 blanks are filled! Click "Check Paragraph".', true);
+        }
+
+        function updateGapProgress() {
+            document.getElementById('ex2-feedback').classList.add('hidden');
+        }
+
+        function checkExercise2() {
+            let score = 0;
+            for (let i = 1; i <= 5; i++) {
+                const sel = document.getElementById(`gap-${i}`);
+                if (sel.value === ex2Answers[i]) {
+                    score++;
+                    sel.classList.remove('border-indigo-400', 'border-rose-500', 'bg-rose-50', 'text-rose-900');
+                    sel.classList.add('border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+                } else {
+                    sel.classList.remove('border-indigo-400', 'border-emerald-500', 'bg-emerald-50', 'text-emerald-900');
+                    sel.classList.add('border-rose-500', 'bg-rose-50', 'text-rose-900');
+                }
+            }
+
+            const fb = document.getElementById('ex2-feedback');
+            fb.classList.remove('hidden');
+            if (score === 5) {
+                fb.className = 'p-4 rounded-xl text-sm font-medium bg-emerald-50 text-emerald-900 border border-emerald-200 block';
+                fb.innerHTML = '🎉 <strong>Perfect 5/5!</strong> Notice how naturally all 5 chunks flow together in a real-life study reflection.';
+            } else {
+                fb.className = 'p-4 rounded-xl text-sm font-medium bg-amber-50 text-amber-900 border border-amber-200 block';
+                fb.innerHTML = `You got <strong>${score}/5</strong> right. Check the red boxes and try again, or verify the key:<br><span class="text-xs mt-1 block text-amber-800">(1) borrowing control | (2) micro-commitment floor | (3) hear on the grapevine | (4) such and such | (5) foster a sense of belonging</span>`;
+            }
+
+            progressState.ex2Score = score;
+            updateGlobalProgress();
+        }
+
+        function resetExercise2() {
+            for (let i = 1; i <= 5; i++) {
+                const sel = document.getElementById(`gap-${i}`);
+                sel.value = '';
+                sel.className = 'gap-select px-3 py-1 bg-indigo-50/70 border-b-2 border-indigo-400 rounded-lg text-indigo-900 font-semibold text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer';
+            }
+            document.getElementById('ex2-feedback').classList.add('hidden');
+        }
+
+        // ==========================================
+        // SECTION 3: 3-SECOND QUICK-SWAP
+        // ==========================================
+        function renderExercise3() {
+            const container = document.getElementById('ex3-container');
+            container.innerHTML = ex3Data.map(item => `
+                <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-start gap-3">
+                        <span class="w-7 h-7 rounded-lg bg-indigo-100 text-indigo-700 font-bold text-sm flex items-center justify-center shrink-0 mt-0.5">${item.id}</span>
+                        <div class="flex-1 space-y-3">
+                            <p class="text-base sm:text-lg font-medium text-slate-800">
+                                ${item.before}<span class="px-2 py-0.5 bg-indigo-100 text-indigo-900 font-bold rounded-md">${item.highlight}</span>${item.after}
+                            </p>
+                            <input type="text" id="ex3-input-${item.id}" placeholder="Type target chunk replacement..." class="w-full sm:w-96 px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white">
+                            <div id="ex3-feedback-${item.id}" class="hidden text-sm p-3 rounded-xl"></div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function startReflexTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            let timeLeft = 3.0;
+            const display = document.getElementById('timer-display');
+            const btn = document.getElementById('timer-btn');
+            
+            btn.textContent = 'Go!';
+            display.textContent = '3.0s';
+            display.classList.remove('text-rose-600');
+
+            timerInterval = setInterval(() => {
+                timeLeft -= 0.1;
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    display.textContent = '0.0s';
+                    display.classList.add('text-rose-600');
+                    btn.textContent = 'Restart 3s';
+                    showToast('Time\'s up! Did you say the chunk aloud?', false);
+                } else {
+                    display.textContent = `${timeLeft.toFixed(1)}s`;
+                }
+            }, 100);
+        }
+
+        function checkExercise3() {
+            let score = 0;
+            ex3Data.forEach(item => {
+                const val = document.getElementById(`ex3-input-${item.id}`).value.trim().toLowerCase().replace(/[.,!?]/g, '');
+                const fb = document.getElementById(`ex3-feedback-${item.id}`);
+                fb.classList.remove('hidden');
+
+                if (item.accepted.includes(val)) {
+                    score++;
+                    fb.className = 'text-sm p-3 rounded-xl bg-emerald-50 text-emerald-900 border border-emerald-200 block';
+                    fb.innerHTML = `<strong>✓ Fast & Natural!</strong> ${item.explanation}`;
+                } else {
+                    fb.className = 'text-sm p-3 rounded-xl bg-rose-50 text-rose-900 border border-rose-200 block';
+                    fb.innerHTML = `<strong>✗ Expected:</strong> ${item.explanation}`;
+                }
+            });
+
+            progressState.ex3Score = score;
+            updateGlobalProgress();
+            showToast(`Quick-Swap: ${score}/3 correct!`, score === 3);
+        }
+
+        // ==========================================
+        // SECTION 4: 3-STEP SENTENCE EXPANSION LADDER
+        // ==========================================
+        function renderLadderSelector() {
+            const container = document.getElementById('ladder-selector');
+            container.innerHTML = ladderData.map((item, idx) => `
+                <button onclick="renderActiveLadder(${idx})" id="ladder-pill-${idx}" class="ladder-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all ${idx === 0 ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs' : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-indigo-50'}">
+                    ${idx + 1}. ${item.chunk}
+                </button>
+            `).join('');
+        }
+
+        function renderActiveLadder(index) {
+            activeLadderIndex = index;
+            progressState.laddersExplored.add(index);
+            updateGlobalProgress();
+
+            document.querySelectorAll('.ladder-pill').forEach((btn, idx) => {
+                if (idx === index) {
+                    btn.className = 'ladder-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-indigo-600 text-white border-indigo-600 shadow-xs';
+                } else {
+                    btn.className = 'ladder-pill px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold border transition-all bg-slate-50 text-slate-700 border-slate-200 hover:bg-indigo-50';
+                }
+            });
+
+            const data = ladderData[index];
+            const workspace = document.getElementById('ladder-workspace');
+
+            workspace.innerHTML = `
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-200">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Target Chunk #${index + 1}</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-0.5">${data.chunk}</h3>
+                        <p class="text-sm text-slate-500">${data.vi}</p>
+                    </div>
+                    <button onclick="revealAllLadderSteps()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold rounded-xl transition-colors self-start sm:self-auto">
+                        Reveal All 3 Steps
+                    </button>
+                </div>
+
+                <!-- Ladder Steps -->
+                <div class="space-y-4 relative">
+                    <!-- Step 1 -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 text-xs font-bold bg-slate-200 text-slate-700 rounded-md">${data.step1Prompt}</span>
+                            <button onclick="speakText('${data.step1Text.replace(/'/g, "\\'")}', event)" class="text-xs font-semibold text-indigo-600 hover:underline flex items-center gap-1">
+                                <span>🔊 Listen</span>
+                            </button>
+                        </div>
+                        <p class="text-base font-medium text-slate-800">${data.step1Text}</p>
+                    </div>
+
+                    <!-- Arrow Down -->
+                    <div class="flex justify-center -my-2">
+                        <div class="w-7 h-7 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs font-bold shadow-xs">↓</div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-indigo-50/60 border border-indigo-200 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 text-xs font-bold bg-indigo-600 text-white rounded-md">${data.step2Prompt}</span>
+                            <button onclick="toggleLadderStep(2)" id="btn-reveal-2" class="text-xs font-bold text-indigo-700 hover:text-indigo-900 underline">
+                                Show Model Step 2
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-600">Try saying or typing Step 1 using <strong>"${data.chunk}"</strong> before revealing:</p>
+                        <input type="text" placeholder="Your Step 2 sentence..." class="w-full px-3.5 py-2 bg-white border border-indigo-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <div id="model-step-2" class="hidden pt-2 border-t border-indigo-200/70 flex items-start justify-between gap-3">
+                            <p class="text-base font-semibold text-indigo-950">${data.step2Text}</p>
+                            <button onclick="speakText('${data.step2Text.replace(/'/g, "\\'")}', event)" class="px-2.5 py-1 bg-indigo-100 hover:bg-indigo-200 text-indigo-800 text-xs font-bold rounded-lg shrink-0">🔊</button>
+                        </div>
+                    </div>
+
+                    <!-- Arrow Down -->
+                    <div class="flex justify-center -my-2">
+                        <div class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs font-bold shadow-xs">↓</div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/60 border border-amber-200 space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-0.5 text-xs font-bold bg-amber-500 text-slate-950 rounded-md">${data.step3Prompt}</span>
+                            <button onclick="toggleLadderStep(3)" id="btn-reveal-3" class="text-xs font-bold text-amber-800 hover:text-amber-950 underline">
+                                Show Model Step 3
+                            </button>
+                        </div>
+                        <p class="text-xs text-slate-600">Now expand Step 2 by adding a <em>why, when, or contrast clause</em>:</p>
+                        <textarea rows="2" placeholder="Your expanded C1 sentence..." class="w-full px-3.5 py-2 bg-white border border-amber-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        <div id="model-step-3" class="hidden pt-2 border-t border-amber-200/70 flex items-start justify-between gap-3">
+                            <p class="text-base font-semibold text-slate-900 leading-relaxed">${data.step3Text}</p>
+                            <button onclick="speakText('${data.step3Text.replace(/'/g, "\\'")}', event)" class="px-2.5 py-1 bg-amber-200 hover:bg-amber-300 text-amber-950 text-xs font-bold rounded-lg shrink-0">🔊</button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleLadderStep(stepNum) {
+            const el = document.getElementById(`model-step-${stepNum}`);
+            el.classList.toggle('hidden');
+        }
+
+        function revealAllLadderSteps() {
+            document.getElementById('model-step-2').classList.remove('hidden');
+            document.getElementById('model-step-3').classList.remove('hidden');
+        }
+
+        // ==========================================
+        // SECTION 5: EXERCISE 4 (YOUR TURN)
+        // ==========================================
+        function renderExercise4() {
+            const container = document.getElementById('ex4-container');
+            container.innerHTML = ex4Data.map(item => `
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-indigo-600">Prompt ${item.id}: ${item.category}</span>
+                        <div class="flex flex-wrap gap-1.5">
+                            ${item.chunks.map(c => `<span class="px-2.5 py-0.5 text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full">${c}</span>`).join('')}
+                        </div>
+                    </div>
+                    <p class="text-base font-bold text-slate-900">${item.question}</p>
+                    <textarea id="ex4-text-${item.id}" oninput="evaluateEx4()" rows="2" placeholder="${item.placeholder}" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"></textarea>
+                    <div id="ex4-status-${item.id}" class="text-xs font-medium text-slate-500 flex items-center gap-1.5">
+                        <span>Waiting for your sentence...</span>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function evaluateEx4() {
+            let completedPrompts = 0;
+            let compiledLines = [];
+
+            ex4Data.forEach(item => {
+                const text = document.getElementById(`ex4-text-${item.id}`).value.trim();
+                const statusEl = document.getElementById(`ex4-status-${item.id}`);
+                const lower = text.toLowerCase();
+
+                if (!text) {
+                    statusEl.className = 'text-xs font-medium text-slate-400';
+                    statusEl.textContent = 'Optional: Write 1–2 sentences using one of the suggested chunks.';
+                    return;
+                }
+
+                const matchedChunk = item.chunks.find(chunk => {
+                    if (chunk === 'foster a sense of belonging') return /foster(s|ed|ing)? a sense of belonging/.test(lower);
+                    if (chunk === 'develop a close attachment to') return /develop(s|ed|ing)? a close attachment to/.test(lower);
+                    if (chunk === 'break down stereotypes') return /break(s|ing)? down stereotypes|broke down stereotypes|broken down stereotypes/.test(lower);
+                    if (chunk === 'hear on the grapevine') return /hear(s|d|ing)? (on|from) the grapevine/.test(lower);
+                    return lower.includes(chunk.toLowerCase());
+                });
+
+                if (matchedChunk) {
+                    completedPrompts++;
+                    statusEl.className = 'text-xs font-semibold text-emerald-700';
+                    statusEl.innerHTML = `✓ Great! Detected target chunk: <strong>"${matchedChunk}"</strong>`;
+                } else {
+                    statusEl.className = 'text-xs font-semibold text-amber-700';
+                    statusEl.innerHTML = `⚠️ Keep going — make sure to include <strong>${item.chunks.join('</strong> or <strong>')}</strong>.`;
+                }
+
+                compiledLines.push(`Prompt ${item.id} (${item.category}):\n"${text}"`);
+            });
+
+            progressState.ex4Completed = completedPrompts;
+            updateGlobalProgress();
+
+            const outputBox = document.getElementById('compiled-output');
+            if (compiledLines.length > 0) {
+                outputBox.textContent = compiledLines.join('\n\n');
+            } else {
+                outputBox.textContent = 'Your written answers will appear here automatically as you type...';
+            }
+        }
+
+        function copyPersonalResponses() {
+            const content = document.getElementById('compiled-output').textContent;
+            if (content.startsWith('Your written answers will appear')) {
+                showToast('Please write at least one answer first!', false);
+                return;
+            }
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = content;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast('Copied! Paste into our chat for feedback.', true);
+            } catch (err) {
+                showToast('Could not copy automatically. Please select and copy manually.', false);
+            }
+            document.body.removeChild(tempInput);
+        }
+    </script>
+</body>
+</html>

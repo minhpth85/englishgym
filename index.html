@@ -1,0 +1,2014 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The English Gym — BBC 6 Minute English Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Work Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: '#FAF8F5',
+            olive: {
+              DEFAULT: '#285d02',
+              hover: '#1f4901',
+            },
+            citron: '#E5A93C',
+            ink: '#1F2421',
+            muted: '#5A625E',
+            stone: '#E5E2DC',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* 3D Flashcard Flip */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    /* Smooth panel transition */
+    .tab-panel {
+      animation: fadeSlideIn 0.2s ease-out;
+    }
+    @keyframes fadeSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased min-h-screen flex flex-col">
+  <!-- Frozen Top Header & Centered 3-Tab Navigation -->
+  <div class="sticky top-0 z-30 bg-white/95 backdrop-blur border-b border-stone shadow-sm">
+    <header class="border-b border-stone/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 sm:py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3.5">
+        <!-- Brand -->
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-xl bg-olive text-white flex items-center justify-center font-bold text-lg shadow-sm shrink-0">
+            EG
+          </div>
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <h1 class="text-xl sm:text-2xl font-bold tracking-tight text-ink">
+                The English Gym
+              </h1>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-citron/20 text-ink border border-citron/50">
+                IELTS 7.0
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-muted mt-0.5">
+              BBC 6 Minute English &amp; Lexical Hub
+            </p>
+          </div>
+        </div>
+
+        <!-- Compact Progress Stats -->
+        <div class="w-full md:w-72 bg-cream border border-stone rounded-xl px-4 py-2.5">
+          <div class="flex items-center justify-between text-xs font-semibold mb-1.5">
+            <span class="text-muted">Tiến độ luyện tập</span>
+            <span id="header-progress-text" class="text-ink">0 / 0 bài đã xong</span>
+          </div>
+          <div class="w-full h-2.5 bg-stone/70 rounded-full overflow-hidden">
+            <div
+              id="header-progress-bar"
+              class="h-full bg-citron rounded-full transition-all duration-300"
+              style="width: 0%"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto py-2.5" aria-label="Main Navigation">
+      <button
+        type="button"
+        data-tab="lessons"
+        class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all"
+      >
+        📚 Kho Bài Học
+      </button>
+      <button
+        type="button"
+        data-tab="chunks"
+        class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all"
+      >
+        🧩 Ngân Hàng Chunks
+      </button>
+      <button
+        type="button"
+        data-tab="reviews"
+        class="tab-btn whitespace-nowrap px-4 py-2 rounded-xl text-sm font-semibold transition-all"
+      >
+        📅 Weekly Review
+      </button>
+    </nav>
+  </div>
+
+  <!-- Main Workspace -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <!-- ==================== TAB 1: KHO BÀI HỌC ==================== -->
+    <section id="tab-lessons" class="tab-panel space-y-6">
+      <!-- Continue Learning + Random 5-min Action -->
+      <div class="bg-white border border-stone border-l-4 border-l-citron rounded-xl p-5 sm:p-6 shadow-sm flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-citron">
+            Continue Learning
+          </div>
+          <h2 id="continue-title" class="text-lg sm:text-xl font-bold text-ink">
+            Đang tải bài học gần nhất...
+          </h2>
+          <p id="continue-meta" class="text-sm text-muted"></p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 shrink-0">
+          <button
+            id="btn-continue-open"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-olive hover:bg-olive-hover text-white text-sm font-semibold transition-colors"
+          >
+            Mở lại bài này
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+          <button
+            id="btn-random-lesson"
+            type="button"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-cream hover:bg-citron/15 text-ink border border-stone hover:border-citron text-sm font-semibold transition-colors"
+          >
+            🎲 Random 1 bài 5 phút
+          </button>
+        </div>
+      </div>
+
+      <!-- Toolbar: Search + Filter Pills -->
+      <div class="bg-white border border-stone rounded-xl p-4 sm:p-5 space-y-4">
+        <div class="relative">
+          <svg class="w-4 h-4 text-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+          </svg>
+          <input
+            id="lesson-search"
+            type="text"
+            placeholder="Tìm tức thì theo tên bài học hoặc từ khóa chunk (vd: fill a void, stereotypes)..."
+            class="w-full pl-10 pr-4 py-2.5 text-sm bg-cream border border-stone rounded-xl text-ink placeholder:text-muted/70 focus:outline-none focus:border-olive transition-colors"
+          />
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-1">
+          <!-- Topic Pills -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-muted mr-1">Chủ đề:</span>
+            <div id="lesson-topic-pills" class="flex flex-wrap items-center gap-1.5"></div>
+          </div>
+
+          <!-- Status Pills -->
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-muted mr-1">Trạng thái:</span>
+            <div id="lesson-status-pills" class="flex flex-wrap items-center gap-1.5"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lessons Grid (3 columns Desktop, 1 column Mobile) -->
+      <div id="lessons-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+      <div id="lessons-empty" class="hidden bg-white border border-stone rounded-xl p-10 text-center">
+        <p class="text-base font-semibold text-ink">Không tìm thấy bài học phù hợp</p>
+        <p class="text-sm text-muted mt-1">Thử chọn "Tất cả" hoặc tìm với từ khóa chunk khác.</p>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: NGÂN HÀNG CHUNKS ==================== -->
+    <section id="tab-chunks" class="tab-panel hidden space-y-6">
+      <!-- SRS Due Today Banner -->
+      <div class="bg-white border border-stone rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 shadow-sm">
+        <div class="space-y-1">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-citron/20 border border-citron/50 text-ink">
+              🎯 Lặp lại ngắt quãng (SRS)
+            </span>
+            <span id="srs-due-badge" class="text-xs font-semibold text-olive"></span>
+          </div>
+          <h2 class="text-base sm:text-lg font-bold text-ink">
+            Chunks cần ôn hôm nay
+          </h2>
+          <p id="srs-due-desc" class="text-xs sm:text-sm text-muted">
+            Hệ thống tự động xếp lịch ôn lại theo chu kỳ 1 → 3 → 7 → 14 → 30 ngày dựa trên mức độ phản xạ của bạn.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 shrink-0">
+          <button
+            id="btn-srs-review-today"
+            type="button"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-olive hover:bg-olive-hover text-white text-sm font-semibold transition-colors shadow-sm"
+          >
+            Ôn ngay hôm nay
+          </button>
+        </div>
+      </div>
+
+      <!-- Filter & View Switcher Bar -->
+      <div class="bg-white border border-stone rounded-xl p-4 sm:p-5 space-y-4">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
+          <div class="flex flex-col sm:flex-row flex-1 gap-3">
+            <div class="relative flex-1">
+              <svg class="w-4 h-4 text-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+              </svg>
+              <input
+                id="chunk-search"
+                type="text"
+                placeholder="Tìm chunk, nghĩa, tag, ngữ cảnh hoặc bài nguồn..."
+                class="w-full pl-10 pr-4 py-2.5 text-sm bg-cream border border-stone rounded-xl text-ink placeholder:text-muted/70 focus:outline-none focus:border-olive transition-colors"
+              />
+            </div>
+
+            <select
+              id="chunk-lesson-filter"
+              aria-label="Lọc theo bài nguồn"
+              class="sm:w-64 px-3.5 py-2.5 text-sm bg-cream border border-stone rounded-xl text-ink font-medium focus:outline-none focus:border-olive transition-colors"
+            >
+              <option value="all">Tất cả bài học</option>
+            </select>
+          </div>
+
+          <!-- 2 View Mode Buttons -->
+          <div class="inline-flex p-1 bg-cream border border-stone rounded-xl self-start lg:self-auto shrink-0">
+            <button
+              id="btn-view-table"
+              type="button"
+              class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+            >
+              Bảng tra cứu
+            </button>
+            <button
+              id="btn-view-flashcard"
+              type="button"
+              class="px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
+            >
+              Chế độ Flashcard
+            </button>
+          </div>
+        </div>
+
+        <!-- Memory Status Filter Pills -->
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-semibold uppercase tracking-wider text-muted mr-1">Trạng thái nhớ:</span>
+            <div id="chunk-status-pills" class="flex flex-wrap items-center gap-1.5"></div>
+          </div>
+
+          <button
+            id="btn-reset-chunk-filters"
+            type="button"
+            class="hidden text-xs font-semibold text-olive hover:underline"
+          >
+            Xóa bộ lọc
+          </button>
+        </div>
+      </div>
+
+      <!-- View 1: Lookup Table -->
+      <div id="chunks-table-wrapper" class="bg-white border border-stone rounded-xl overflow-hidden shadow-sm">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-cream border-b border-stone text-xs font-semibold uppercase tracking-wider text-muted">
+                <th class="py-3.5 px-4 sm:px-5">Chunk</th>
+                <th class="py-3.5 px-4 sm:px-5">Nghĩa &amp; Ngữ cảnh</th>
+                <th class="py-3.5 px-4 sm:px-5">Câu mẫu</th>
+                <th class="py-3.5 px-4 sm:px-5">Bài nguồn</th>
+                <th class="py-3.5 px-4 sm:px-5 text-right">Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody id="chunks-table-body" class="divide-y divide-stone text-sm"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- View 2: 3D Flashcard -->
+      <div id="chunks-flashcard-wrapper" class="hidden max-w-2xl mx-auto space-y-4 py-2">
+        <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-semibold text-muted px-1">
+          <div class="flex items-center gap-2">
+            <span id="flashcard-counter" class="text-ink">Thẻ 1 / 8</span>
+            <span class="hidden sm:inline text-muted/60">•</span>
+            <span class="hidden sm:inline">Phím tắt: Space (lật), ←/→ (chuyển), 1/2/3 (đánh dấu), S (nghe)</span>
+          </div>
+
+          <div class="flex items-center gap-1.5">
+            <button
+              id="btn-fc-smart-sort"
+              type="button"
+              class="px-2.5 py-1.5 rounded-lg border border-stone bg-white hover:bg-cream text-xs font-semibold text-ink transition-colors"
+              title="Đưa các thẻ Hay quên và Mới gặp lên trước"
+            >
+              Ưu tiên Hay quên
+            </button>
+            <button
+              id="btn-fc-shuffle"
+              type="button"
+              class="px-2.5 py-1.5 rounded-lg border border-stone bg-white hover:bg-cream text-xs font-semibold text-ink transition-colors"
+              title="Xáo trộn ngẫu nhiên thứ tự thẻ"
+            >
+              🔀 Xáo trộn
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="flashcard-card"
+          role="button"
+          tabindex="0"
+          aria-label="Lật thẻ flashcard"
+          class="perspective-1000 cursor-pointer select-none"
+        >
+          <div
+            id="flashcard-inner"
+            class="relative w-full min-h-[340px] sm:min-h-[360px] transition-transform duration-500 transform-style-3d"
+          >
+            <!-- Front -->
+            <div class="absolute inset-0 backface-hidden bg-white border border-stone rounded-xl p-6 sm:p-10 shadow-sm hover:shadow-md transition-shadow flex flex-col items-center justify-center text-center">
+              <div class="flex items-center gap-2 mb-4">
+                <span id="fc-front-status" class="px-3 py-1 rounded-full text-xs font-semibold"></span>
+                <span id="fc-front-register" class="px-2.5 py-1 rounded-full text-xs font-medium bg-cream border border-stone text-muted"></span>
+              </div>
+              <h3 id="fc-chunk" class="text-2xl sm:text-4xl font-bold text-ink tracking-tight"></h3>
+              <div class="flex items-center gap-2 mt-2">
+                <p id="fc-phonetic" class="text-sm sm:text-base text-muted"></p>
+                <button
+                  id="btn-fc-speak-chunk"
+                  type="button"
+                  aria-label="Nghe phát âm chunk"
+                  title="Nghe phát âm (phím S)"
+                  class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-cream border border-stone hover:border-olive text-olive transition-colors"
+                >
+                  🔊
+                </button>
+              </div>
+              <span class="mt-8 inline-flex items-center gap-1.5 text-xs font-semibold text-olive bg-olive/10 px-3 py-1.5 rounded-full">
+                Chạm để lật xem nghĩa &amp; câu mẫu
+              </span>
+            </div>
+
+            <!-- Back -->
+            <div class="absolute inset-0 backface-hidden rotate-y-180 bg-white border-2 border-citron rounded-xl p-6 sm:p-8 shadow-sm flex flex-col justify-between">
+              <div class="space-y-3">
+                <div class="flex flex-wrap items-start justify-between gap-2">
+                  <div>
+                    <h4 id="fc-back-chunk" class="text-xl font-bold text-olive"></h4>
+                    <div id="fc-back-tags" class="flex flex-wrap gap-1 mt-1"></div>
+                  </div>
+                  <span id="fc-back-source" class="text-xs font-medium px-2.5 py-1 rounded-lg bg-cream border border-stone text-muted"></span>
+                </div>
+                <p id="fc-meaning" class="text-base sm:text-lg font-semibold text-ink"></p>
+                <p id="fc-context" class="text-sm text-muted leading-relaxed"></p>
+                <div class="bg-cream border border-stone rounded-xl p-4">
+                  <div class="flex items-center justify-between gap-2 mb-1">
+                    <p class="text-[11px] font-bold uppercase tracking-wider text-muted">Câu mẫu IELTS</p>
+                    <button
+                      id="btn-fc-speak-example"
+                      type="button"
+                      class="text-xs font-semibold text-olive hover:underline"
+                    >
+                      🔊 Nghe câu mẫu
+                    </button>
+                  </div>
+                  <p id="fc-example" class="text-sm sm:text-base italic text-ink leading-relaxed"></p>
+                </div>
+              </div>
+              <p class="text-xs text-muted text-center mt-3">Nhấn "Lật thẻ" để quay lại mặt trước</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flashcard Controls -->
+        <div class="bg-white border border-stone rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-2 w-full sm:w-auto justify-center">
+            <button
+              id="btn-fc-prev"
+              type="button"
+              class="px-3.5 py-2 rounded-xl border border-stone bg-cream hover:bg-stone/40 text-sm font-semibold text-ink transition-colors"
+            >
+              ← Trước
+            </button>
+            <button
+              id="btn-fc-flip"
+              type="button"
+              class="px-4 py-2 rounded-xl bg-olive hover:bg-olive-hover text-white text-sm font-semibold transition-colors"
+            >
+              Lật thẻ
+            </button>
+            <button
+              id="btn-fc-next"
+              type="button"
+              class="px-3.5 py-2 rounded-xl border border-stone bg-cream hover:bg-stone/40 text-sm font-semibold text-ink transition-colors"
+            >
+              Tiếp →
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-1.5">
+            <button type="button" data-fc-rate="new" class="fc-rate-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-stone bg-cream hover:bg-stone/40 text-ink transition-colors">
+              1 • Mới gặp
+            </button>
+            <button type="button" data-fc-rate="hard" class="fc-rate-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-citron/60 bg-citron/20 hover:bg-citron/35 text-ink transition-colors">
+              2 • Hay quên
+            </button>
+            <button type="button" data-fc-rate="mastered" class="fc-rate-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-olive hover:bg-olive-hover text-white transition-colors">
+              3 • Đã phản xạ
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="chunks-empty" class="hidden bg-white border border-stone rounded-xl p-10 text-center space-y-3">
+        <p class="text-base font-semibold text-ink">Không có chunk nào khớp bộ lọc</p>
+        <p class="text-sm text-muted">Thử chọn "Tất cả" hoặc đổi từ khóa tìm kiếm.</p>
+        <button
+          id="btn-empty-reset-chunks"
+          type="button"
+          class="inline-flex items-center px-4 py-2 rounded-xl bg-olive hover:bg-olive-hover text-white text-xs font-semibold transition-colors"
+        >
+          Đặt lại bộ lọc
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 3: WEEKLY REVIEW ==================== -->
+    <section id="tab-reviews" class="tab-panel hidden space-y-6">
+      <div class="bg-white border border-stone rounded-xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div>
+          <h2 class="text-lg font-bold text-ink">Lộ trình Weekly English Revision</h2>
+          <p class="text-sm text-muted mt-0.5">
+            Sắp xếp từ tuần mới nhất xuống cũ nhất để ôn tập tổng hợp và duy trì phản xạ Speaking.
+          </p>
+        </div>
+        <span id="reviews-summary-badge" class="inline-flex items-center self-start sm:self-auto px-3.5 py-1.5 rounded-xl bg-citron/20 border border-citron/40 text-xs font-semibold text-ink"></span>
+      </div>
+
+      <!-- Vertical Timeline -->
+      <div id="reviews-timeline" class="relative space-y-5 before:hidden sm:before:block sm:before:absolute sm:before:left-5 sm:before:top-7 sm:before:bottom-7 sm:before:w-0.5 sm:before:bg-stone"></div>
+    </section>
+  </main>
+
+  <footer class="mt-auto border-t border-stone bg-white/80 py-5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-muted">
+      Đây là thư viện học tập của Minh Fam.
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div
+    id="toast"
+    class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-ink text-white text-sm font-medium px-4 py-3 rounded-xl shadow-lg border border-white/10"
+  ></div>
+
+  <!-- External Data Files (Optional - fallback built-in below) -->
+  <script src="data/lessons-data.js"></script>
+  <script src="data/chunks-data.js"></script>
+  <script src="data/reviews-data.js"></script>
+
+  <!-- App Logic -->
+  <script>
+    (function () {
+      // Built-in fallback data so Live Preview works even if data/*.js are empty or missing
+      const FALLBACK_LESSONS = [
+        {
+          id: 'learning-from-different-generations-6min',
+          episodeCode: 'BBC 6 Minute English',
+          title: 'Learning from different generations',
+          topic: 'Society & Generations',
+          duration: '6 mins',
+          level: 'B1–B2',
+          summary:
+            'Khám phá dự án kết nối người cao tuổi đã nghỉ hưu và trẻ mầm non tại Anh, giúp xóa bỏ định kiến thế hệ và tìm lại niềm vui sống.',
+          chunks: [
+            'fill a void',
+            'such and such',
+            'hear on the grapevine',
+            'break down stereotypes',
+            'big character',
+            'choir',
+            'generation',
+            'retired',
+            'nursery',
+            'lively',
+          ],
+          labUrl: 'lessons/Learning_from_different_generations.html',
+          defaultStatus: 'not_started',
+        },
+        {
+          id: 'making-mum-friends-6min',
+          episodeCode: 'BBC 6 Minute English • 2024',
+          title: "Making 'mum friends'",
+          topic: 'Society & Relationships',
+          duration: '6 mins',
+          level: 'B1–B2',
+          summary:
+            'Khám phá câu chuyện kết bạn ở cổng trường của các bậc phụ huynh: từ áp lực hòa nhập vào các nhóm khép kín (cliques) đến niềm vui khi bắt sóng được với người hợp cạ.',
+          chunks: [
+            'fit into',
+            'down to luck',
+            'click with',
+            'clique',
+            'play date',
+            'glam',
+            'drop off / pick up',
+            'thrive on',
+            'left out',
+          ],
+          labUrl: 'lessons/Making_mum_friends.html',
+          defaultStatus: 'not_started',
+        },
+        {
+          id: 'is-rejection-good-for-us-6min',
+          episodeCode: 'BBC 6 Minute English • Ep. 260917',
+          title: 'Is rejection good for us?',
+          topic: 'Psychology & Confidence',
+          duration: '6 mins',
+          level: 'B1–B2',
+          summary:
+            'Tìm hiểu trào lưu "rejection therapy" — chủ động đối mặt với lời từ chối để vượt qua nỗi sợ bị đánh giá, giảm chủ nghĩa hoàn hảo và rèn sự tự tin.',
+          chunks: [
+            'rejection',
+            'spike',
+            'socially anxious',
+            'come easier',
+            'perfectionism',
+            'appraise',
+            'get used to',
+            'have a go',
+            'face your fears',
+          ],
+          labUrl: 'lessons/Is_rejection_good_for_us.html',
+          defaultStatus: 'not_started',
+        },
+        {
+          id: 'are-you-drinking-enough-water-6min',
+          episodeCode: 'BBC 6 Minute English • Ep. 250102',
+          title: 'Are you drinking enough water?',
+          topic: 'Health & Lifestyle',
+          duration: '6 mins',
+          level: 'B1–B2',
+          summary:
+            'Khám phá sự thật đằng sau lời khuyên uống 2 lít nước mỗi ngày: lượng nước cơ thể thực sự cần, cách nhận biết triệu chứng mất nước và những cụm từ tự nhiên trong giao tiếp.',
+          chunks: [
+            'arrive at',
+            'take grip on',
+            'pretty much',
+            'ballpark figure',
+            'dehydration',
+            'symptom',
+            'consist of',
+            'recommendation',
+            'replace',
+            'sweat',
+          ],
+          labUrl: 'lessons/Are_you_drinking_enough_water.html',
+          defaultStatus: 'not_started',
+        },
+        {
+          id: 'which-country-has-the-best-schools-6min',
+          episodeCode: 'BBC 6 Minute English • 2025',
+          title: 'Which country has the best schools?',
+          topic: 'Education & Society',
+          duration: '6 mins',
+          level: 'B1–B2',
+          summary:
+            'Tìm hiểu bảng xếp hạng giáo dục PISA, lý do các quốc gia nhỏ như Estonia hay Singapore vượt mặt nhiều nước lớn, và bí quyết xây dựng nền giáo dục không phân tách học sinh.',
+          chunks: [
+            'contentious',
+            'outpace',
+            'outperform',
+            'rival',
+            'knowledge economy',
+            'regardless of',
+            'segregate',
+            'carry out',
+            'prioritise',
+            'correspondent',
+          ],
+          labUrl: 'lessons/Which_country_has_the_best_schools.html',
+          defaultStatus: 'not_started',
+        },
+      ];
+
+      const FALLBACK_CHUNKS = [
+        {
+          id: 'hb-fill-a-void',
+          legacyId: 'chunk-1',
+          chunk: 'fill a void',
+          phonetic: '/fɪl ə vɔɪd/',
+          meaningVi: 'Lấp đầy khoảng trống (cảm xúc, tinh thần hoặc nhu cầu)',
+          context: 'Thường dùng trong IELTS Speaking Part 2/3 khi nói về thói quen, sở thích hoặc mối quan hệ.',
+          example: 'Many people take up a new creative hobby to fill a void after moving to a new city.',
+          sourceLessonId: 'heartbreak-6min',
+          sourceLessonTitle: 'Why does heartbreak hurt so much?',
+          tags: ['collocation', 'emotions', 'speaking-part-2'],
+          register: 'neutral',
+          addedAt: '2026-11-14',
+          defaultStatus: 'new',
+        },
+        {
+          id: 'hb-hear-on-the-grapevine',
+          legacyId: 'chunk-2',
+          chunk: 'hear on the grapevine',
+          phonetic: '/hɪər ɒn ðə ˈɡreɪpvaɪn/',
+          meaningVi: 'Nghe phong thanh, nghe đồn qua lời truyền miệng',
+          context: 'Idiom tự nhiên cực hay cho Speaking Part 1 & 2 khi kể về tin tức không chính thức.',
+          example: 'I heard on the grapevine that our local community centre is launching a free speaking club.',
+          sourceLessonId: 'heartbreak-6min',
+          sourceLessonTitle: 'Why does heartbreak hurt so much?',
+          tags: ['idiom', 'communication', 'speaking-part-1'],
+          register: 'informal',
+          addedAt: '2026-11-14',
+          defaultStatus: 'hard',
+        },
+        {
+          id: 'hb-weather-the-storm',
+          legacyId: 'chunk-3',
+          chunk: 'weather the storm',
+          phonetic: '/ˈweðə ðə stɔːm/',
+          meaningVi: 'Vượt qua giai đoạn khó khăn, sóng gió',
+          context: 'Diễn đạt khả năng trụ vững trước áp lực tâm lý hoặc biến cố cá nhân.',
+          example: 'Having a supportive network of friends helps us weather the storm during stressful exam periods.',
+          sourceLessonId: 'heartbreak-6min',
+          sourceLessonTitle: 'Why does heartbreak hurt so much?',
+          tags: ['idiom', 'resilience', 'speaking-part-3'],
+          register: 'neutral',
+          addedAt: '2026-11-14',
+          defaultStatus: 'mastered',
+        },
+        {
+          id: 'hb-come-to-terms-with',
+          legacyId: 'chunk-4',
+          chunk: 'come to terms with',
+          phonetic: '/kʌm tə tɜːmz wɪð/',
+          meaningVi: 'Chấp nhận sự thật (thường là điều khó khăn hoặc ngoài ý muốn)',
+          context: 'Phù hợp khi nói về quá trình trưởng thành hoặc thích nghi với thay đổi lớn.',
+          example: 'It took him several months to come to terms with the fact that his study abroad plans were delayed.',
+          sourceLessonId: 'heartbreak-6min',
+          sourceLessonTitle: 'Why does heartbreak hurt so much?',
+          tags: ['phrasal-chunk', 'resilience', 'speaking-part-2'],
+          register: 'neutral',
+          addedAt: '2026-11-14',
+          defaultStatus: 'new',
+        },
+        {
+          id: 'mc-break-down-stereotypes',
+          legacyId: 'chunk-5',
+          chunk: 'break down stereotypes',
+          phonetic: '/breɪk daʊn ˈsteriətaɪps/',
+          meaningVi: 'Phá bỏ những định kiến, khuôn mẫu xã hội',
+          context: 'Từ vựng đắt giá cho các chủ đề IELTS Writing/Speaking về xã hội và văn hóa.',
+          example: 'Authentic media representation plays a crucial role in helping society break down stereotypes.',
+          sourceLessonId: 'micro-commitments-6min',
+          sourceLessonTitle: 'Breaking stereotypes with micro-habits',
+          tags: ['collocation', 'society', 'ielts-writing'],
+          register: 'formal',
+          addedAt: '2026-11-16',
+          defaultStatus: 'new',
+        },
+        {
+          id: 'mc-micro-commitment-floor',
+          legacyId: 'chunk-6',
+          chunk: 'micro-commitment floor',
+          phonetic: '/ˈmaɪkrəʊ kəˈmɪtmənt flɔːr/',
+          meaningVi: 'Ngưỡng cam kết tối thiểu (mức hành động nhỏ nhất để duy trì thói quen)',
+          context: 'Thuật ngữ hiện đại về quản trị thói quen; rất ấn tượng khi nói về cách học tiếng Anh.',
+          example: 'Setting a micro-commitment floor of just five minutes a day keeps my English practice consistent.',
+          sourceLessonId: 'micro-commitments-6min',
+          sourceLessonTitle: 'Breaking stereotypes with micro-habits',
+          tags: ['term', 'habits', 'productivity'],
+          register: 'neutral',
+          addedAt: '2026-11-16',
+          defaultStatus: 'hard',
+        },
+        {
+          id: 'mc-build-momentum',
+          legacyId: 'chunk-7',
+          chunk: 'build momentum',
+          phonetic: '/bɪld məˈmentəm/',
+          meaningVi: 'Tạo đà, tích lũy động lực để phát triển liên tục',
+          context: 'Collocation phổ biến khi nói về tiến độ học tập hoặc sự tự tin khi nói ngoại ngữ.',
+          example: 'Once you master ten core lexical chunks, you quickly build momentum and speak more fluently.',
+          sourceLessonId: 'micro-commitments-6min',
+          sourceLessonTitle: 'Breaking stereotypes with micro-habits',
+          tags: ['collocation', 'habits', 'speaking-part-3'],
+          register: 'neutral',
+          addedAt: '2026-11-16',
+          defaultStatus: 'mastered',
+        },
+        {
+          id: 'mc-silver-lining',
+          legacyId: 'chunk-8',
+          chunk: 'silver lining',
+          phonetic: '/ˌsɪlvə ˈlaɪnɪŋ/',
+          meaningVi: 'Tia hy vọng, điểm sáng tích cực trong tình huống khó khăn',
+          context: 'Idiom tự nhiên khi đánh giá mặt tích cực của một trở ngại.',
+          example: 'Every setback has a silver lining; failing that mock test showed me exactly which skills to fix.',
+          sourceLessonId: 'micro-commitments-6min',
+          sourceLessonTitle: 'Breaking stereotypes with micro-habits',
+          tags: ['idiom', 'mindset', 'speaking-part-2'],
+          register: 'informal',
+          addedAt: '2026-11-16',
+          defaultStatus: 'new',
+        },
+      ];
+
+      const FALLBACK_REVIEWS = [
+        {
+          id: 'week-46',
+          weekLabel: 'Week 46 • Nov 10 – Nov 16, 2026',
+          date: '2026-11-16',
+          title: 'Emotional Resilience & Social Dynamics',
+          summary:
+            'Phiên ôn tập tuần 46: luyện phản xạ IELTS Speaking Part 2 & 3 kết hợp các cụm từ về tâm lý, định kiến xã hội và thói quen bền vững.',
+          focusChunks: ['fill a void', 'hear on the grapevine', 'break down stereotypes', 'micro-commitment floor'],
+          reviewUrl: 'reviews/week-46-revision.html',
+          defaultCompleted: false,
+        },
+        {
+          id: 'week-45',
+          weekLabel: 'Week 45 • Nov 03 – Nov 09, 2026',
+          date: '2026-11-09',
+          title: 'Overcoming Adversity & Momentum',
+          summary:
+            'Phiên ôn tập tuần 45: củng cố các collocations diễn tả cách vượt qua áp lực, chấp nhận thay đổi và tạo đà tiến bộ.',
+          focusChunks: ['weather the storm', 'come to terms with', 'build momentum', 'silver lining'],
+          reviewUrl: '',
+          defaultCompleted: true,
+        },
+      ];
+
+      const lessons =
+        Array.isArray(window.LESSONS_DATA) && window.LESSONS_DATA.length > 0
+          ? window.LESSONS_DATA
+          : FALLBACK_LESSONS;
+
+      const baseChunks =
+        Array.isArray(window.CHUNKS_DATA) && window.CHUNKS_DATA.length > 0
+          ? window.CHUNKS_DATA
+          : FALLBACK_CHUNKS;
+
+      const reviewsRaw =
+        Array.isArray(window.REVIEWS_DATA) && window.REVIEWS_DATA.length > 0
+          ? window.REVIEWS_DATA
+          : FALLBACK_REVIEWS;
+
+      const reviews = [...reviewsRaw].sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      const STORAGE_KEYS = {
+        lessonStatuses: 'english_gym_lesson_statuses',
+        chunkStatuses: 'english_gym_chunk_statuses',
+        reviewStatuses: 'english_gym_review_statuses',
+        savedChunkIds: 'english_gym_saved_chunk_ids',
+        customChunks: 'english_gym_custom_chunks',
+        chunkSrs: 'english_gym_chunk_srs',
+        lastLessonId: 'english_gym_last_lesson_id',
+        activeTab: 'english_gym_active_tab',
+      };
+
+      function getTodayStr() {
+        const now = new Date();
+        const y = now.getFullYear();
+        const m = String(now.getMonth() + 1).padStart(2, '0');
+        const d = String(now.getDate()).padStart(2, '0');
+        return `${y}-${m}-${d}`;
+      }
+
+      function addDays(dateStr, days) {
+        const [y, m, d] = dateStr.split('-').map(Number);
+        const dt = new Date(y, m - 1, d);
+        dt.setDate(dt.getDate() + days);
+        const ny = dt.getFullYear();
+        const nm = String(dt.getMonth() + 1).padStart(2, '0');
+        const nd = String(dt.getDate()).padStart(2, '0');
+        return `${ny}-${nm}-${nd}`;
+      }
+
+      function diffDays(fromStr, toStr) {
+        const [fy, fm, fd] = fromStr.split('-').map(Number);
+        const [ty, tm, td] = toStr.split('-').map(Number);
+        const a = new Date(fy, fm - 1, fd);
+        const b = new Date(ty, tm - 1, td);
+        return Math.round((b - a) / 86400000);
+      }
+
+      function loadJson(key, fallback) {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw ? JSON.parse(raw) : fallback;
+        } catch (e) {
+          return fallback;
+        }
+      }
+
+      function loadMap(key, items, defaultField) {
+        const saved = loadJson(key, {});
+        const map = {};
+        let migrated = false;
+        items.forEach((item) => {
+          if (saved[item.id] !== undefined) {
+            map[item.id] = saved[item.id];
+          } else if (item.legacyId && saved[item.legacyId] !== undefined) {
+            map[item.id] = saved[item.legacyId];
+            migrated = true;
+          } else {
+            map[item.id] = item[defaultField];
+          }
+        });
+        Object.keys(saved).forEach((k) => {
+          if (map[k] === undefined) map[k] = saved[k];
+        });
+        if (migrated) {
+          saveMap(key, map);
+        }
+        return map;
+      }
+
+      function saveMap(key, map) {
+        try {
+          localStorage.setItem(key, JSON.stringify(map));
+        } catch (e) {
+          // Ignore storage quota errors
+        }
+      }
+
+      const initialCustomChunks = loadJson(STORAGE_KEYS.customChunks, []);
+      const allKnownChunks = [...baseChunks, ...initialCustomChunks];
+      const storedSavedIds = loadJson(STORAGE_KEYS.savedChunkIds, null);
+      const initialSavedIds = Array.isArray(storedSavedIds)
+        ? storedSavedIds
+        : baseChunks.map((c) => c.id);
+
+      const state = {
+        activeTab: localStorage.getItem(STORAGE_KEYS.activeTab) || 'lessons',
+        lessonStatuses: loadMap(STORAGE_KEYS.lessonStatuses, lessons, 'defaultStatus'),
+        chunkStatuses: loadMap(STORAGE_KEYS.chunkStatuses, allKnownChunks, 'defaultStatus'),
+        reviewStatuses: loadMap(STORAGE_KEYS.reviewStatuses, reviews, 'defaultCompleted'),
+        customChunks: initialCustomChunks,
+        savedChunkIds: initialSavedIds,
+        chunkSrs: loadJson(STORAGE_KEYS.chunkSrs, {}),
+        lastLessonId: localStorage.getItem(STORAGE_KEYS.lastLessonId) || (lessons[0] ? lessons[0].id : ''),
+        highlightedLessonId: null,
+        selectedTopic: 'all',
+        selectedLessonStatus: 'all',
+        selectedChunkStatus: 'all',
+        selectedChunkLesson: 'all',
+        chunkViewMode: 'table', // 'table' | 'flashcard'
+        flashcardOrderMode: 'default', // 'default' | 'smart' | 'shuffled'
+        shuffledChunkIds: [],
+        flashcardIndex: 0,
+        flashcardFlipped: false,
+      };
+
+      const SRS_INTERVALS = [1, 3, 7, 14, 30];
+
+      function getBankChunks() {
+        const savedSet = new Set(state.savedChunkIds);
+        const combined = [...baseChunks, ...state.customChunks];
+        const seen = new Set();
+        return combined.filter((item) => {
+          if (!savedSet.has(item.id) || seen.has(item.id)) return false;
+          seen.add(item.id);
+          return true;
+        });
+      }
+
+      function getChunkSrsInfo(chunkId) {
+        const today = getTodayStr();
+        const existing = state.chunkSrs[chunkId];
+        if (existing && existing.nextReviewAt) return existing;
+        const status = state.chunkStatuses[chunkId] || 'new';
+        return {
+          interval: status === 'mastered' ? 3 : 0,
+          reps: status === 'mastered' ? 1 : 0,
+          nextReviewAt: status === 'mastered' ? addDays(today, 3) : today,
+          lastReviewedAt: null,
+        };
+      }
+
+      function isChunkDueToday(chunkId) {
+        const today = getTodayStr();
+        return getChunkSrsInfo(chunkId).nextReviewAt <= today;
+      }
+
+      function formatSrsBadge(chunkId) {
+        const today = getTodayStr();
+        const info = getChunkSrsInfo(chunkId);
+        const days = diffDays(today, info.nextReviewAt);
+        if (days < 0) return { label: `Quá hạn ${Math.abs(days)} ngày`, isDue: true };
+        if (days === 0) return { label: 'Ôn hôm nay', isDue: true };
+        if (days === 1) return { label: 'Ngày mai', isDue: false };
+        return { label: `Còn ${days} ngày`, isDue: false };
+      }
+
+      function scheduleChunkSrs(chunkId, rate) {
+        const today = getTodayStr();
+        const prev = getChunkSrsInfo(chunkId);
+        let interval = 0;
+        let reps = 0;
+        if (rate === 'new') {
+          interval = 0;
+          reps = 0;
+        } else if (rate === 'hard') {
+          interval = 1;
+          reps = 0;
+        } else {
+          reps = (prev.reps || 0) + 1;
+          interval = SRS_INTERVALS[Math.min(reps - 1, SRS_INTERVALS.length - 1)];
+        }
+        state.chunkSrs[chunkId] = {
+          interval,
+          reps,
+          nextReviewAt: addDays(today, interval),
+          lastReviewedAt: today,
+        };
+        saveMap(STORAGE_KEYS.chunkSrs, state.chunkSrs);
+      }
+
+      function findChunkByText(chunkText, lessonId) {
+        const norm = chunkText.trim().toLowerCase();
+        const combined = [...baseChunks, ...state.customChunks];
+        return (
+          combined.find(
+            (c) => c.chunk.toLowerCase() === norm && (!lessonId || c.sourceLessonId === lessonId)
+          ) || combined.find((c) => c.chunk.toLowerCase() === norm)
+        );
+      }
+
+      function isLessonChunkSaved(chunkText, lessonId) {
+        const found = findChunkByText(chunkText, lessonId);
+        return Boolean(found && state.savedChunkIds.includes(found.id));
+      }
+
+      function toggleSaveLessonChunk(chunkText, lesson) {
+        const norm = chunkText.trim();
+        if (!norm) return;
+        let target = findChunkByText(norm, lesson.id);
+
+        if (!target) {
+          const slug = norm
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/(^-|-$)/g, '');
+          target = {
+            id: `custom-${lesson.id}-${slug}`,
+            chunk: norm,
+            phonetic: '',
+            meaningVi: 'Chunk tự lưu từ bài học (chạm để cập nhật hoặc ôn flashcard)',
+            context: `Trích từ bài "${lesson.title}".`,
+            example: '',
+            sourceLessonId: lesson.id,
+            sourceLessonTitle: lesson.title,
+            tags: ['saved-from-lesson'],
+            register: 'neutral',
+            addedAt: getTodayStr(),
+            defaultStatus: 'new',
+          };
+          state.customChunks.push(target);
+          saveMap(STORAGE_KEYS.customChunks, state.customChunks);
+        }
+
+        const idx = state.savedChunkIds.indexOf(target.id);
+        if (idx === -1) {
+          state.savedChunkIds.push(target.id);
+          saveMap(STORAGE_KEYS.savedChunkIds, state.savedChunkIds);
+          if (!state.chunkStatuses[target.id]) {
+            state.chunkStatuses[target.id] = 'new';
+            saveMap(STORAGE_KEYS.chunkStatuses, state.chunkStatuses);
+          }
+          if (!state.chunkSrs[target.id]) {
+            scheduleChunkSrs(target.id, state.chunkStatuses[target.id] || 'new');
+          }
+          showToast(`✓ Đã lưu "${target.chunk}" vào Ngân hàng Chunks`);
+        } else {
+          state.savedChunkIds.splice(idx, 1);
+          saveMap(STORAGE_KEYS.savedChunkIds, state.savedChunkIds);
+          showToast(`Đã bỏ "${target.chunk}" khỏi Ngân hàng Chunks`);
+        }
+
+        renderLessons();
+        renderChunkLessonFilter();
+        renderChunks();
+      }
+
+      // Helpers
+      let toastTimer = null;
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.remove('hidden');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.add('hidden'), 3200);
+      }
+
+      function esc(str) {
+        return String(str)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      const LESSON_STATUS_META = {
+        not_started: {
+          label: 'Chưa học',
+          next: 'in_progress',
+          badgeClass: 'bg-cream border border-stone text-muted',
+        },
+        in_progress: {
+          label: 'Đang luyện',
+          next: 'completed',
+          badgeClass: 'bg-citron/20 border border-citron/60 text-ink',
+        },
+        completed: {
+          label: 'Đã xong',
+          next: 'not_started',
+          badgeClass: 'bg-olive/10 border border-olive/30 text-olive',
+        },
+      };
+
+      const CHUNK_STATUS_META = {
+        new: {
+          label: 'Mới gặp',
+          badgeClass: 'bg-cream border border-stone text-muted',
+        },
+        hard: {
+          label: 'Hay quên',
+          badgeClass: 'bg-citron/20 border border-citron/60 text-ink',
+        },
+        mastered: {
+          label: 'Đã phản xạ',
+          badgeClass: 'bg-olive/10 border border-olive/30 text-olive',
+        },
+      };
+
+      // 1. Header Progress
+      function renderHeaderProgress() {
+        const total = lessons.length;
+        const completed = lessons.filter((l) => state.lessonStatuses[l.id] === 'completed').length;
+        const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+        document.getElementById('header-progress-text').textContent = `${completed} / ${total} bài đã xong`;
+        document.getElementById('header-progress-bar').style.width = `${pct}%`;
+      }
+
+      // 2. Tab Switching
+      function switchTab(tabName) {
+        state.activeTab = tabName;
+        try {
+          localStorage.setItem(STORAGE_KEYS.activeTab, tabName);
+        } catch (e) {}
+
+        document.querySelectorAll('.tab-btn').forEach((btn) => {
+          const isActive = btn.dataset.tab === tabName;
+          btn.classList.toggle('bg-olive', isActive);
+          btn.classList.toggle('text-white', isActive);
+          btn.classList.toggle('shadow-sm', isActive);
+          btn.classList.toggle('text-muted', !isActive);
+          btn.classList.toggle('hover:bg-cream', !isActive);
+          btn.classList.toggle('hover:text-ink', !isActive);
+        });
+
+        ['lessons', 'chunks', 'reviews'].forEach((name) => {
+          document.getElementById(`tab-${name}`).classList.toggle('hidden', name !== tabName);
+        });
+      }
+
+      // 3. Tab 1: Lessons
+      function openLessonLab(lesson) {
+        state.lastLessonId = lesson.id;
+        try {
+          localStorage.setItem(STORAGE_KEYS.lastLessonId, lesson.id);
+        } catch (e) {}
+        renderContinueBanner();
+
+        if (lesson.labUrl) {
+          window.location.href = lesson.labUrl;
+        } else {
+          showToast(`Speaking Lab cho "${lesson.title}" đang được chuẩn bị.`);
+        }
+      }
+
+      function renderContinueBanner() {
+        const lesson = lessons.find((l) => l.id === state.lastLessonId) || lessons[0];
+        if (!lesson) return;
+
+        document.getElementById('continue-title').textContent = lesson.title;
+        document.getElementById('continue-meta').textContent =
+          `${lesson.episodeCode} • ${lesson.topic} • ${lesson.chunks.length} lexical chunks`;
+
+        document.getElementById('btn-continue-open').onclick = () => openLessonLab(lesson);
+      }
+
+      function renderLessonFilterPills() {
+        const topicContainer = document.getElementById('lesson-topic-pills');
+        const topics = ['all', ...new Set(lessons.map((l) => l.topic))];
+        topicContainer.innerHTML = '';
+
+        topics.forEach((topic) => {
+          const isActive = state.selectedTopic === topic;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = topic === 'all' ? 'Tất cả' : topic;
+          btn.className = `px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+            isActive
+              ? 'bg-olive text-white'
+              : 'bg-cream border border-stone text-muted hover:text-ink hover:border-ink/30'
+          }`;
+          btn.addEventListener('click', () => {
+            state.selectedTopic = topic;
+            renderLessonFilterPills();
+            renderLessons();
+          });
+          topicContainer.appendChild(btn);
+        });
+
+        const statusContainer = document.getElementById('lesson-status-pills');
+        const statuses = [
+          { value: 'all', label: 'Tất cả' },
+          { value: 'not_started', label: 'Chưa học' },
+          { value: 'in_progress', label: 'Đang luyện' },
+          { value: 'completed', label: 'Đã xong' },
+        ];
+        statusContainer.innerHTML = '';
+
+        statuses.forEach((st) => {
+          const isActive = state.selectedLessonStatus === st.value;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = st.label;
+          btn.className = `px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+            isActive
+              ? 'bg-ink text-white'
+              : 'bg-cream border border-stone text-muted hover:text-ink hover:border-ink/30'
+          }`;
+          btn.addEventListener('click', () => {
+            state.selectedLessonStatus = st.value;
+            renderLessonFilterPills();
+            renderLessons();
+          });
+          statusContainer.appendChild(btn);
+        });
+      }
+
+      function renderLessons() {
+        const query = document.getElementById('lesson-search').value.trim().toLowerCase();
+
+        const filtered = lessons.filter((lesson) => {
+          const status = state.lessonStatuses[lesson.id] || 'not_started';
+          const matchesTopic = state.selectedTopic === 'all' || lesson.topic === state.selectedTopic;
+          const matchesStatus = state.selectedLessonStatus === 'all' || status === state.selectedLessonStatus;
+          const matchesQuery =
+            !query ||
+            lesson.title.toLowerCase().includes(query) ||
+            lesson.summary.toLowerCase().includes(query) ||
+            lesson.chunks.some((c) => c.toLowerCase().includes(query));
+          return matchesTopic && matchesStatus && matchesQuery;
+        });
+
+        const grid = document.getElementById('lessons-grid');
+        const empty = document.getElementById('lessons-empty');
+        grid.innerHTML = '';
+
+        if (filtered.length === 0) {
+          empty.classList.remove('hidden');
+          return;
+        }
+        empty.classList.add('hidden');
+
+        filtered.forEach((lesson) => {
+          const status = state.lessonStatuses[lesson.id] || 'not_started';
+          const meta = LESSON_STATUS_META[status];
+          const isHighlighted = state.highlightedLessonId === lesson.id;
+
+          const card = document.createElement('article');
+          card.className = `bg-white border ${
+            isHighlighted ? 'border-citron ring-2 ring-citron/40' : 'border-stone'
+          } rounded-xl p-5 shadow-sm hover:shadow-md transition-all flex flex-col justify-between`;
+
+          card.innerHTML = `
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-3">
+                <span class="text-xs font-semibold px-2.5 py-1 rounded-lg bg-cream border border-stone text-muted">
+                  ${esc(lesson.topic)}
+                </span>
+                <button
+                  type="button"
+                  data-toggle-lesson="${esc(lesson.id)}"
+                  title="Nhấn để đổi trạng thái"
+                  class="text-xs font-semibold px-2.5 py-1 rounded-full transition-opacity hover:opacity-80 ${meta.badgeClass}"
+                >
+                  ${esc(meta.label)}
+                </button>
+              </div>
+
+              <p class="text-xs font-medium text-muted mb-1">${esc(lesson.episodeCode)}</p>
+              <h3 class="text-lg font-bold text-ink leading-snug mb-2">${esc(lesson.title)}</h3>
+              <p class="text-sm text-muted leading-relaxed mb-4">${esc(lesson.summary)}</p>
+
+              <div class="mb-5">
+                <div class="flex items-center justify-between gap-2 mb-2">
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-muted">
+                    Lexical Chunks (chạm để lưu vào Ngân hàng)
+                  </p>
+                </div>
+                <div class="flex flex-wrap gap-1.5">
+                  ${lesson.chunks
+                    .slice(0, 6)
+                    .map((c) => {
+                      const saved = isLessonChunkSaved(c, lesson.id);
+                      return `<button
+                        type="button"
+                        data-save-chunk="${esc(c)}"
+                        title="${saved ? 'Nhấn để bỏ khỏi Ngân hàng Chunks' : 'Nhấn để lưu vào Ngân hàng Chunks'}"
+                        class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-medium transition-colors ${
+                          saved
+                            ? 'bg-olive/10 border-olive/40 text-olive hover:bg-olive/15'
+                            : 'bg-cream border-stone text-ink hover:border-olive hover:text-olive'
+                        }"
+                      >
+                        <span>${esc(c)}</span>
+                        <span class="font-bold">${saved ? '✓' : '+'}</span>
+                      </button>`;
+                    })
+                    .join('')}
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-stone flex items-center justify-between gap-2">
+              <span class="text-xs font-medium text-muted">${esc(lesson.duration)} • ${esc(lesson.level)}</span>
+              <button
+                type="button"
+                data-open-lab="${esc(lesson.id)}"
+                class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-olive hover:bg-olive-hover text-white text-xs sm:text-sm font-semibold transition-colors"
+              >
+                Mở Speaking Lab
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          `;
+
+          card.querySelectorAll('[data-save-chunk]').forEach((btn) => {
+            btn.addEventListener('click', () => {
+              toggleSaveLessonChunk(btn.dataset.saveChunk, lesson);
+            });
+          });
+
+          card.querySelector(`[data-toggle-lesson="${lesson.id}"]`).addEventListener('click', () => {
+            const current = state.lessonStatuses[lesson.id] || 'not_started';
+            state.lessonStatuses[lesson.id] = LESSON_STATUS_META[current].next;
+            saveMap(STORAGE_KEYS.lessonStatuses, state.lessonStatuses);
+            renderHeaderProgress();
+            renderLessons();
+          });
+
+          card.querySelector(`[data-open-lab="${lesson.id}"]`).addEventListener('click', () => {
+            openLessonLab(lesson);
+          });
+
+          grid.appendChild(card);
+        });
+      }
+
+      // 4. Tab 2: Chunks
+      const REGISTER_LABELS = {
+        informal: 'Informal',
+        neutral: 'Neutral',
+        formal: 'Formal',
+      };
+
+      const STATUS_PRIORITY = {
+        hard: 0,
+        new: 1,
+        mastered: 2,
+      };
+
+      const lessonById = Object.fromEntries(lessons.map((l) => [l.id, l]));
+
+      function getChunkLessonTitle(item) {
+        if (item.sourceLessonId && lessonById[item.sourceLessonId]) {
+          return lessonById[item.sourceLessonId].title;
+        }
+        return item.sourceLessonTitle || 'Chưa gắn bài';
+      }
+
+      function speakEnglish(text) {
+        if (!('speechSynthesis' in window) || !text) {
+          showToast('Trình duyệt hiện tại không hỗ trợ đọc phát âm.');
+          return;
+        }
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'en-GB';
+        utterance.rate = 0.95;
+        const voices = window.speechSynthesis.getVoices();
+        const enVoice =
+          voices.find((v) => v.lang === 'en-GB') ||
+          voices.find((v) => v.lang.startsWith('en-'));
+        if (enVoice) utterance.voice = enVoice;
+        window.speechSynthesis.speak(utterance);
+      }
+
+      function renderChunkLessonFilter() {
+        const select = document.getElementById('chunk-lesson-filter');
+        const currentVal = state.selectedChunkLesson;
+        const bankChunks = getBankChunks();
+        const lessonMap = new Map();
+
+        lessons.forEach((l) => lessonMap.set(l.id, l.title));
+        bankChunks.forEach((c) => {
+          if (c.sourceLessonId && !lessonMap.has(c.sourceLessonId)) {
+            lessonMap.set(c.sourceLessonId, getChunkLessonTitle(c));
+          }
+        });
+
+        select.innerHTML = '<option value="all">Tất cả bài học</option>';
+        lessonMap.forEach((title, id) => {
+          const count = bankChunks.filter((c) => c.sourceLessonId === id).length;
+          const opt = document.createElement('option');
+          opt.value = id;
+          opt.textContent = `${title} (${count})`;
+          select.appendChild(opt);
+        });
+
+        select.value = lessonMap.has(currentVal) ? currentVal : 'all';
+        state.selectedChunkLesson = select.value;
+      }
+
+      function getChunksMatchingSearchAndLesson() {
+        const query = document.getElementById('chunk-search').value.trim().toLowerCase();
+        return getBankChunks().filter((item) => {
+          const lessonTitle = getChunkLessonTitle(item);
+          const matchesLesson =
+            state.selectedChunkLesson === 'all' || item.sourceLessonId === state.selectedChunkLesson;
+          if (!matchesLesson) return false;
+          if (!query) return true;
+
+          const tagsText = Array.isArray(item.tags) ? item.tags.join(' ').toLowerCase() : '';
+          const registerText = (item.register || '').toLowerCase();
+          return (
+            item.chunk.toLowerCase().includes(query) ||
+            item.meaningVi.toLowerCase().includes(query) ||
+            item.context.toLowerCase().includes(query) ||
+            lessonTitle.toLowerCase().includes(query) ||
+            tagsText.includes(query) ||
+            registerText.includes(query)
+          );
+        });
+      }
+
+      function renderSrsDueBanner() {
+        const bank = getBankChunks();
+        const dueCount = bank.filter((c) => isChunkDueToday(c.id)).length;
+        const badge = document.getElementById('srs-due-badge');
+        const btn = document.getElementById('btn-srs-review-today');
+        const desc = document.getElementById('srs-due-desc');
+
+        if (dueCount > 0) {
+          badge.textContent = `• ${dueCount} thẻ đến hạn hôm nay`;
+          desc.textContent =
+            'Hệ thống tự động xếp lịch ôn lại theo chu kỳ 1 → 3 → 7 → 14 → 30 ngày dựa trên mức độ phản xạ của bạn.';
+          btn.disabled = false;
+          btn.textContent = `Ôn ngay ${dueCount} thẻ hôm nay`;
+          btn.className =
+            'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-olive hover:bg-olive-hover text-white text-sm font-semibold transition-colors shadow-sm';
+        } else {
+          badge.textContent = '• Đã hoàn thành mục tiêu hôm nay ✓';
+          desc.textContent =
+            'Tuyệt vời! Bạn đã ôn hết các chunk đến hạn hôm nay. Hãy quay lại vào ngày mai hoặc thêm chunk mới từ Kho Bài Học.';
+          btn.disabled = true;
+          btn.textContent = '✓ Hôm nay đã ôn xong';
+          btn.className =
+            'inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-cream border border-stone text-muted text-sm font-semibold cursor-default';
+        }
+      }
+
+      function renderChunkStatusPills() {
+        const container = document.getElementById('chunk-status-pills');
+        const baseList = getChunksMatchingSearchAndLesson();
+        const counts = { all: baseList.length, due: 0, new: 0, hard: 0, mastered: 0 };
+        baseList.forEach((item) => {
+          if (isChunkDueToday(item.id)) counts.due += 1;
+          const st = state.chunkStatuses[item.id] || 'new';
+          if (counts[st] !== undefined) counts[st] += 1;
+        });
+
+        const options = [
+          { value: 'all', label: `Tất cả (${counts.all})` },
+          { value: 'due', label: `🎯 Cần ôn hôm nay (${counts.due})` },
+          { value: 'new', label: `Mới gặp (${counts.new})` },
+          { value: 'hard', label: `Hay quên (${counts.hard})` },
+          { value: 'mastered', label: `Đã phản xạ (${counts.mastered})` },
+        ];
+        container.innerHTML = '';
+
+        options.forEach((opt) => {
+          const isActive = state.selectedChunkStatus === opt.value;
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = opt.label;
+          btn.className = `px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+            isActive
+              ? opt.value === 'due'
+                ? 'bg-citron text-ink'
+                : 'bg-olive text-white'
+              : 'bg-cream border border-stone text-muted hover:text-ink hover:border-ink/30'
+          }`;
+          btn.addEventListener('click', () => {
+            state.selectedChunkStatus = opt.value;
+            state.flashcardIndex = 0;
+            state.flashcardFlipped = false;
+            renderChunks();
+          });
+          container.appendChild(btn);
+        });
+      }
+
+      function getFilteredChunks() {
+        const baseList = getChunksMatchingSearchAndLesson();
+        const filtered = baseList.filter((item) => {
+          if (state.selectedChunkStatus === 'due') {
+            return isChunkDueToday(item.id);
+          }
+          const status = state.chunkStatuses[item.id] || 'new';
+          return state.selectedChunkStatus === 'all' || status === state.selectedChunkStatus;
+        });
+
+        if (state.chunkViewMode === 'flashcard') {
+          if (state.flashcardOrderMode === 'smart') {
+            return [...filtered].sort((a, b) => {
+              const pa = STATUS_PRIORITY[state.chunkStatuses[a.id] || 'new'] ?? 1;
+              const pb = STATUS_PRIORITY[state.chunkStatuses[b.id] || 'new'] ?? 1;
+              return pa - pb;
+            });
+          }
+          if (state.flashcardOrderMode === 'shuffled' && state.shuffledChunkIds.length > 0) {
+            const rank = new Map(state.shuffledChunkIds.map((id, idx) => [id, idx]));
+            return [...filtered].sort((a, b) => (rank.get(a.id) ?? 9999) - (rank.get(b.id) ?? 9999));
+          }
+        }
+        return filtered;
+      }
+
+      function updateChunkFilterResetButton() {
+        const hasSearch = document.getElementById('chunk-search').value.trim() !== '';
+        const hasFilters =
+          hasSearch || state.selectedChunkLesson !== 'all' || state.selectedChunkStatus !== 'all';
+        document.getElementById('btn-reset-chunk-filters').classList.toggle('hidden', !hasFilters);
+      }
+
+      function resetChunkFilters() {
+        document.getElementById('chunk-search').value = '';
+        state.selectedChunkLesson = 'all';
+        document.getElementById('chunk-lesson-filter').value = 'all';
+        state.selectedChunkStatus = 'all';
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+      }
+
+      function renderChunkViewModeButtons() {
+        const btnTable = document.getElementById('btn-view-table');
+        const btnFlash = document.getElementById('btn-view-flashcard');
+        const isTable = state.chunkViewMode === 'table';
+
+        btnTable.classList.toggle('bg-olive', isTable);
+        btnTable.classList.toggle('text-white', isTable);
+        btnTable.classList.toggle('text-muted', !isTable);
+
+        btnFlash.classList.toggle('bg-olive', !isTable);
+        btnFlash.classList.toggle('text-white', !isTable);
+        btnFlash.classList.toggle('text-muted', isTable);
+
+        const btnSmart = document.getElementById('btn-fc-smart-sort');
+        const btnShuffle = document.getElementById('btn-fc-shuffle');
+        const isSmart = state.flashcardOrderMode === 'smart';
+        const isShuffled = state.flashcardOrderMode === 'shuffled';
+
+        btnSmart.classList.toggle('bg-olive', isSmart);
+        btnSmart.classList.toggle('text-white', isSmart);
+        btnSmart.classList.toggle('border-olive', isSmart);
+
+        btnShuffle.classList.toggle('bg-citron/25', isShuffled);
+        btnShuffle.classList.toggle('border-citron', isShuffled);
+      }
+
+      function renderChunks() {
+        renderSrsDueBanner();
+        renderChunkStatusPills();
+        updateChunkFilterResetButton();
+        renderChunkViewModeButtons();
+        const filtered = getFilteredChunks();
+        const tableWrapper = document.getElementById('chunks-table-wrapper');
+        const flashWrapper = document.getElementById('chunks-flashcard-wrapper');
+        const empty = document.getElementById('chunks-empty');
+
+        if (filtered.length === 0) {
+          tableWrapper.classList.add('hidden');
+          flashWrapper.classList.add('hidden');
+          empty.classList.remove('hidden');
+          return;
+        }
+        empty.classList.add('hidden');
+
+        if (state.chunkViewMode === 'table') {
+          tableWrapper.classList.remove('hidden');
+          flashWrapper.classList.add('hidden');
+          renderChunksTable(filtered);
+        } else {
+          tableWrapper.classList.add('hidden');
+          flashWrapper.classList.remove('hidden');
+          if (state.flashcardIndex >= filtered.length) {
+            state.flashcardIndex = 0;
+          }
+          renderFlashcard(filtered);
+        }
+      }
+
+      function renderChunksTable(filtered) {
+        const tbody = document.getElementById('chunks-table-body');
+        tbody.innerHTML = '';
+
+        filtered.forEach((item) => {
+          const status = state.chunkStatuses[item.id] || 'new';
+          const srsBadge = formatSrsBadge(item.id);
+          const lessonTitle = getChunkLessonTitle(item);
+          const registerLabel = REGISTER_LABELS[item.register] || '';
+          const tagsHtml = Array.isArray(item.tags)
+            ? item.tags
+                .map(
+                  (t) =>
+                    `<span class="px-2 py-0.5 rounded-md bg-cream border border-stone text-[11px] text-muted">#${esc(t)}</span>`
+                )
+                .join('')
+            : '';
+
+          const tr = document.createElement('tr');
+          tr.className = 'hover:bg-cream/60 transition-colors align-top';
+
+          tr.innerHTML = `
+            <td class="py-4 px-4 sm:px-5 min-w-[190px]">
+              <div class="flex items-center gap-1.5">
+                <p class="font-bold text-olive text-base">${esc(item.chunk)}</p>
+                <button
+                  type="button"
+                  data-speak-chunk="${esc(item.id)}"
+                  aria-label="Nghe phát âm"
+                  class="text-xs text-muted hover:text-olive transition-colors"
+                  title="Nghe phát âm"
+                >🔊</button>
+              </div>
+              <p class="text-xs text-muted mt-0.5">${esc(item.phonetic || '')}</p>
+              <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                ${
+                  registerLabel
+                    ? `<span class="inline-block px-2 py-0.5 rounded-full bg-cream border border-stone text-[11px] font-medium text-muted">${esc(registerLabel)}</span>`
+                    : ''
+                }
+                <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold ${
+                  srsBadge.isDue
+                    ? 'bg-citron/20 border border-citron/50 text-ink'
+                    : 'bg-cream border border-stone text-muted'
+                }">${esc(srsBadge.label)}</span>
+              </div>
+            </td>
+            <td class="py-4 px-4 sm:px-5 min-w-[240px]">
+              <p class="font-semibold text-ink">${esc(item.meaningVi)}</p>
+              <p class="text-xs text-muted mt-1 leading-relaxed">${esc(item.context)}</p>
+              ${tagsHtml ? `<div class="flex flex-wrap gap-1 mt-2">${tagsHtml}</div>` : ''}
+            </td>
+            <td class="py-4 px-4 sm:px-5 min-w-[240px]">
+              <p class="text-sm italic text-ink/90 leading-relaxed">${
+                item.example ? `"${esc(item.example)}"` : '<span class="text-muted not-italic text-xs">Chưa có câu mẫu</span>'
+              }</p>
+            </td>
+            <td class="py-4 px-4 sm:px-5 min-w-[170px]">
+              <button
+                type="button"
+                data-filter-lesson="${esc(item.sourceLessonId || '')}"
+                class="text-left inline-block text-xs font-medium px-2.5 py-1 rounded-lg bg-cream border border-stone text-muted hover:border-olive hover:text-olive transition-colors"
+                title="Lọc các chunk thuộc bài này"
+              >
+                ${esc(lessonTitle)}
+              </button>
+            </td>
+            <td class="py-4 px-4 sm:px-5 text-right whitespace-nowrap">
+              <div class="inline-flex flex-col items-end gap-1.5">
+                <select
+                  data-chunk-status="${esc(item.id)}"
+                  aria-label="Trạng thái nhớ"
+                  class="text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-stone bg-cream text-ink focus:outline-none focus:border-olive"
+                >
+                  <option value="new" ${status === 'new' ? 'selected' : ''}>Mới gặp</option>
+                  <option value="hard" ${status === 'hard' ? 'selected' : ''}>Hay quên</option>
+                  <option value="mastered" ${status === 'mastered' ? 'selected' : ''}>Đã phản xạ</option>
+                </select>
+                <button
+                  type="button"
+                  data-remove-bank-chunk="${esc(item.id)}"
+                  class="text-[11px] text-muted hover:text-red-600 transition-colors"
+                >
+                  Bỏ khỏi ngân hàng
+                </button>
+              </div>
+            </td>
+          `;
+
+          tr.querySelector(`[data-speak-chunk="${item.id}"]`).addEventListener('click', () => {
+            speakEnglish(item.chunk);
+          });
+
+          tr.querySelector('[data-filter-lesson]').addEventListener('click', (e) => {
+            const lessonId = e.currentTarget.dataset.filterLesson;
+            if (!lessonId) return;
+            state.selectedChunkLesson = lessonId;
+            document.getElementById('chunk-lesson-filter').value = lessonId;
+            state.flashcardIndex = 0;
+            renderChunks();
+          });
+
+          tr.querySelector(`[data-chunk-status="${item.id}"]`).addEventListener('change', (e) => {
+            const nextRate = e.target.value;
+            state.chunkStatuses[item.id] = nextRate;
+            saveMap(STORAGE_KEYS.chunkStatuses, state.chunkStatuses);
+            scheduleChunkSrs(item.id, nextRate);
+            renderChunks();
+          });
+
+          tr.querySelector(`[data-remove-bank-chunk="${item.id}"]`).addEventListener('click', () => {
+            state.savedChunkIds = state.savedChunkIds.filter((id) => id !== item.id);
+            saveMap(STORAGE_KEYS.savedChunkIds, state.savedChunkIds);
+            renderLessons();
+            renderChunkLessonFilter();
+            renderChunks();
+            showToast(`Đã bỏ "${item.chunk}" khỏi Ngân hàng Chunks`);
+          });
+
+          tbody.appendChild(tr);
+        });
+      }
+
+      function renderFlashcard(filtered) {
+        const item = filtered[state.flashcardIndex];
+        const status = state.chunkStatuses[item.id] || 'new';
+        const meta = CHUNK_STATUS_META[status];
+        const srsBadge = formatSrsBadge(item.id);
+        const registerLabel = REGISTER_LABELS[item.register] || 'Neutral';
+
+        document.getElementById('flashcard-counter').textContent =
+          `Thẻ ${state.flashcardIndex + 1} / ${filtered.length}`;
+
+        document.getElementById('flashcard-inner').classList.toggle('rotate-y-180', state.flashcardFlipped);
+
+        const frontStatus = document.getElementById('fc-front-status');
+        frontStatus.textContent = meta.label;
+        frontStatus.className = `px-3 py-1 rounded-full text-xs font-semibold ${meta.badgeClass}`;
+
+        document.getElementById('fc-front-register').textContent = `${registerLabel} • ${srsBadge.label}`;
+        document.getElementById('fc-chunk').textContent = item.chunk;
+        document.getElementById('fc-phonetic').textContent = item.phonetic || '';
+
+        document.getElementById('fc-back-chunk').textContent = item.chunk;
+        document.getElementById('fc-back-source').textContent = getChunkLessonTitle(item);
+        document.getElementById('fc-meaning').textContent = item.meaningVi;
+        document.getElementById('fc-context').textContent = item.context;
+        document.getElementById('fc-example').textContent = item.example
+          ? `"${item.example}"`
+          : 'Chưa có câu mẫu cho cụm từ này.';
+
+        const tagsContainer = document.getElementById('fc-back-tags');
+        tagsContainer.innerHTML = Array.isArray(item.tags)
+          ? item.tags
+              .map(
+                (t) =>
+                  `<span class="px-2 py-0.5 rounded-md bg-cream border border-stone text-[11px] text-muted">#${esc(t)}</span>`
+              )
+              .join('')
+          : '';
+      }
+
+      function rateCurrentFlashcard(rate) {
+        const filtered = getFilteredChunks();
+        if (filtered.length === 0) return;
+        const currentItem = filtered[state.flashcardIndex];
+        state.chunkStatuses[currentItem.id] = rate;
+        saveMap(STORAGE_KEYS.chunkStatuses, state.chunkStatuses);
+        scheduleChunkSrs(currentItem.id, rate);
+        const srsInfo = formatSrsBadge(currentItem.id);
+
+        const nextFiltered = getFilteredChunks();
+        if (nextFiltered.length > 0) {
+          const stillExistsIdx = nextFiltered.findIndex((c) => c.id === currentItem.id);
+          if (stillExistsIdx !== -1) {
+            state.flashcardIndex = (stillExistsIdx + 1) % nextFiltered.length;
+          } else if (state.flashcardIndex >= nextFiltered.length) {
+            state.flashcardIndex = 0;
+          }
+        } else {
+          state.flashcardIndex = 0;
+        }
+        state.flashcardFlipped = false;
+        renderChunks();
+        showToast(
+          `Đã đánh dấu "${currentItem.chunk}" là "${CHUNK_STATUS_META[rate].label}" • Lịch ôn: ${srsInfo.label}`
+        );
+      }
+
+      // 5. Tab 3: Weekly Reviews
+      function renderReviews() {
+        const completedCount = reviews.filter((r) => state.reviewStatuses[r.id]).length;
+        document.getElementById('reviews-summary-badge').textContent =
+          `${completedCount} / ${reviews.length} tuần đã hoàn thành`;
+
+        const container = document.getElementById('reviews-timeline');
+        container.innerHTML = '';
+
+        reviews.forEach((rev) => {
+          const isDone = Boolean(state.reviewStatuses[rev.id]);
+
+          const row = document.createElement('article');
+          row.className = 'relative sm:pl-12';
+
+          row.innerHTML = `
+            <!-- Timeline Node -->
+            <span class="hidden sm:flex absolute left-3 top-6 w-4 h-4 rounded-full border-2 ${
+              isDone ? 'bg-olive border-olive' : 'bg-white border-citron'
+            }"></span>
+
+            <div class="bg-white border border-stone rounded-xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-3">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-wider text-olive">
+                    ${esc(rev.weekLabel)}
+                  </span>
+                  <h3 class="text-lg sm:text-xl font-bold text-ink mt-1">${esc(rev.title)}</h3>
+                </div>
+
+                <button
+                  type="button"
+                  data-toggle-review="${esc(rev.id)}"
+                  class="self-start text-xs font-semibold px-3 py-1.5 rounded-full transition-colors ${
+                    isDone
+                      ? 'bg-olive/10 border border-olive/30 text-olive'
+                      : 'bg-citron/20 border border-citron/60 text-ink'
+                  }"
+                >
+                  ${isDone ? '✓ Đã hoàn thành' : 'Chưa hoàn thành'}
+                </button>
+              </div>
+
+              <p class="text-sm text-muted leading-relaxed mb-4">${esc(rev.summary)}</p>
+
+              <div class="mb-5">
+                <p class="text-[11px] font-semibold uppercase tracking-wider text-muted mb-2">
+                  Chunks trọng tâm
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  ${rev.focusChunks
+                    .map(
+                      (c) =>
+                        `<span class="px-3 py-1 rounded-lg bg-cream border border-stone text-xs font-semibold text-ink">${esc(c)}</span>`
+                    )
+                    .join('')}
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-stone flex items-center justify-between gap-3">
+                <span class="text-xs text-muted">Cập nhật: ${esc(rev.date)}</span>
+                <button
+                  type="button"
+                  data-open-review="${esc(rev.id)}"
+                  class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-olive hover:bg-olive-hover text-white text-xs sm:text-sm font-semibold transition-colors"
+                >
+                  Mở Phòng Luyện Tuần
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          `;
+
+          row.querySelector(`[data-toggle-review="${rev.id}"]`).addEventListener('click', () => {
+            state.reviewStatuses[rev.id] = !state.reviewStatuses[rev.id];
+            saveMap(STORAGE_KEYS.reviewStatuses, state.reviewStatuses);
+            renderReviews();
+          });
+
+          row.querySelector(`[data-open-review="${rev.id}"]`).addEventListener('click', () => {
+            if (rev.reviewUrl) {
+              window.location.href = rev.reviewUrl;
+            } else {
+              showToast(`Phòng luyện "${rev.weekLabel}" là dữ liệu mẫu lưu trữ. Hãy thử mở Week 46 nhé!`);
+            }
+          });
+
+          container.appendChild(row);
+        });
+      }
+
+      // Wire up Events
+      document.querySelectorAll('.tab-btn').forEach((btn) => {
+        btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+      });
+
+      document.getElementById('lesson-search').addEventListener('input', renderLessons);
+
+      document.getElementById('btn-random-lesson').addEventListener('click', () => {
+        if (lessons.length === 0) return;
+        const pick = lessons[Math.floor(Math.random() * lessons.length)];
+        state.highlightedLessonId = pick.id;
+        state.lastLessonId = pick.id;
+        try {
+          localStorage.setItem(STORAGE_KEYS.lastLessonId, pick.id);
+        } catch (e) {}
+        renderContinueBanner();
+        renderLessons();
+        showToast(`🎲 Gợi ý luyện 5 phút: "${pick.title}"`);
+      });
+
+      document.getElementById('chunk-search').addEventListener('input', () => {
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+      });
+
+      document.getElementById('chunk-lesson-filter').addEventListener('change', (e) => {
+        state.selectedChunkLesson = e.target.value;
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+      });
+
+      document.getElementById('btn-reset-chunk-filters').addEventListener('click', resetChunkFilters);
+      document.getElementById('btn-empty-reset-chunks').addEventListener('click', resetChunkFilters);
+
+      document.getElementById('btn-view-table').addEventListener('click', () => {
+        state.chunkViewMode = 'table';
+        renderChunks();
+      });
+      document.getElementById('btn-view-flashcard').addEventListener('click', () => {
+        state.chunkViewMode = 'flashcard';
+        state.flashcardFlipped = false;
+        renderChunks();
+      });
+
+      document.getElementById('btn-fc-smart-sort').addEventListener('click', () => {
+        state.flashcardOrderMode = state.flashcardOrderMode === 'smart' ? 'default' : 'smart';
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+        showToast(
+          state.flashcardOrderMode === 'smart'
+            ? 'Đã ưu tiên thẻ Hay quên & Mới gặp lên trước'
+            : 'Đã quay về thứ tự mặc định'
+        );
+      });
+
+      document.getElementById('btn-srs-review-today').addEventListener('click', () => {
+        state.selectedChunkStatus = 'due';
+        state.chunkViewMode = 'flashcard';
+        state.flashcardOrderMode = 'smart';
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+      });
+
+      document.getElementById('btn-fc-shuffle').addEventListener('click', () => {
+        const ids = getBankChunks().map((c) => c.id);
+        for (let i = ids.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [ids[i], ids[j]] = [ids[j], ids[i]];
+        }
+        state.shuffledChunkIds = ids;
+        state.flashcardOrderMode = 'shuffled';
+        state.flashcardIndex = 0;
+        state.flashcardFlipped = false;
+        renderChunks();
+        showToast('🔀 Đã xáo trộn bộ thẻ Flashcard');
+      });
+
+      const toggleFlip = () => {
+        state.flashcardFlipped = !state.flashcardFlipped;
+        document.getElementById('flashcard-inner').classList.toggle('rotate-y-180', state.flashcardFlipped);
+      };
+
+      const flashcardEl = document.getElementById('flashcard-card');
+      flashcardEl.addEventListener('click', toggleFlip);
+      document.getElementById('btn-fc-flip').addEventListener('click', toggleFlip);
+
+      document.getElementById('btn-fc-speak-chunk').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const filtered = getFilteredChunks();
+        if (filtered.length > 0) speakEnglish(filtered[state.flashcardIndex].chunk);
+      });
+
+      document.getElementById('btn-fc-speak-example').addEventListener('click', (e) => {
+        e.stopPropagation();
+        const filtered = getFilteredChunks();
+        if (filtered.length > 0) speakEnglish(filtered[state.flashcardIndex].example);
+      });
+
+      const goPrevFlashcard = () => {
+        const filtered = getFilteredChunks();
+        if (filtered.length === 0) return;
+        state.flashcardIndex = (state.flashcardIndex - 1 + filtered.length) % filtered.length;
+        state.flashcardFlipped = false;
+        renderFlashcard(filtered);
+      };
+
+      const goNextFlashcard = () => {
+        const filtered = getFilteredChunks();
+        if (filtered.length === 0) return;
+        state.flashcardIndex = (state.flashcardIndex + 1) % filtered.length;
+        state.flashcardFlipped = false;
+        renderFlashcard(filtered);
+      };
+
+      document.getElementById('btn-fc-prev').addEventListener('click', goPrevFlashcard);
+      document.getElementById('btn-fc-next').addEventListener('click', goNextFlashcard);
+
+      document.querySelectorAll('.fc-rate-btn').forEach((btn) => {
+        btn.addEventListener('click', () => rateCurrentFlashcard(btn.dataset.fcRate));
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (state.activeTab !== 'chunks' || state.chunkViewMode !== 'flashcard') return;
+        const tag = document.activeElement ? document.activeElement.tagName : '';
+        if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+        if (getFilteredChunks().length === 0) return;
+
+        if (e.key === ' ' || e.key === 'Enter') {
+          if (tag === 'BUTTON' && document.activeElement !== flashcardEl) return;
+          e.preventDefault();
+          toggleFlip();
+        } else if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goPrevFlashcard();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          goNextFlashcard();
+        } else if (e.key === '1') {
+          e.preventDefault();
+          rateCurrentFlashcard('new');
+        } else if (e.key === '2') {
+          e.preventDefault();
+          rateCurrentFlashcard('hard');
+        } else if (e.key === '3') {
+          e.preventDefault();
+          rateCurrentFlashcard('mastered');
+        } else if (e.key === 's' || e.key === 'S') {
+          e.preventDefault();
+          const filtered = getFilteredChunks();
+          if (filtered.length > 0) speakEnglish(filtered[state.flashcardIndex].chunk);
+        }
+      });
+
+      // Initialize UI
+      renderHeaderProgress();
+      renderContinueBanner();
+      renderLessonFilterPills();
+      renderLessons();
+      renderChunkLessonFilter();
+      renderChunks();
+      renderReviews();
+      switchTab(state.activeTab);
+    })();
+  </script>
+</body>
+</html>
